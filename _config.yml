@@ -1,0 +1,96 @@
+# Site settings
+title: "React.js Master Learning Guide"
+description: "Complete React.js learning path from beginner to production-ready developer"
+url: "https://codetreatise.github.io"
+baseurl: "/React-Guide"
+
+# Author information
+author:
+  name: "CodeTreatise"
+  email: "contact@codetreatise.com"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Kramdown settings
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+
+# Navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Learning Plan"
+    url: "/REACT_LEARNING_MASTER_PLAN/"
+  - title: "Quick Start"
+    url: "/QUICK_START_GUIDE/"
+  - title: "Progress"
+    url: "/LEARNING_COMPLETION_SUMMARY/"
+
+# Collections for better organization
+collections:
+  chapters:
+    output: true
+    permalink: /:collection/:name/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - .git/
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - README.md
+
+# Include files that start with dot
+include:
+  - .htaccess
+
+# Pagination
+paginate: 10
+paginate_path: "/page:num/"
+
+# SEO settings
+google_analytics: # Add your Google Analytics ID if you have one
+lang: en_US
+
+# Social links (optional)
+github_username: CodeTreatise
+twitter_username: # Add if you have one
+
+# Date format
+date_format: "%B %d, %Y"
+
+# Default layouts
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "chapters"
+    values:
+      layout: "chapter"
