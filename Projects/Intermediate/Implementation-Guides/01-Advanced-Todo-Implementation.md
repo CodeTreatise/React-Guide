@@ -145,6 +145,7 @@ export const useTodos = () => {
 #### Local Storage Hook
 ```jsx
 {% raw %}
+{% raw %}
 // src/hooks/useLocalStorage.js
 import { useState, useEffect } from 'react';
 
@@ -175,6 +176,7 @@ export const useLocalStorage = (key, initialValue) => {
   return [storedValue, setValue];
 };
 {% endraw %}
+{% endraw %}
 ```
 
 #### Debounce Hook
@@ -202,6 +204,7 @@ export const useDebounce = (value, delay) => {
 #### Keyboard Shortcuts Hook
 ```jsx
 {% raw %}
+{% raw %}
 // src/hooks/useKeyboardShortcuts.js
 import { useEffect, useCallback } from 'react';
 
@@ -223,6 +226,7 @@ export const useKeyboardShortcuts = (shortcuts) => {
     };
   }, [handleKeyPress]);
 };
+{% endraw %}
 {% endraw %}
 ```
 
@@ -456,6 +460,7 @@ function getFilteredTodos(state) {
 ### 3. Enhanced Todo Hook
 ```jsx
 {% raw %}
+{% raw %}
 // src/hooks/useTodos.js (Enhanced version)
 import { useReducer, useCallback, useMemo, useEffect } from 'react';
 import { useLocalStorage } from './useLocalStorage';
@@ -662,6 +667,7 @@ export const useTodos = () => {
     importTodos
   };
 };
+{% endraw %}
 {% endraw %}
 ```
 
@@ -929,6 +935,7 @@ export default TodoList;
 #### Todo Item Component
 ```jsx
 {% raw %}
+{% raw %}
 // src/components/TodoList/TodoItem.jsx
 import React, { useState } from 'react';
 import { format, isToday, isPast } from 'date-fns';
@@ -1045,6 +1052,7 @@ const TodoItem = ({ todo, isSelected, onToggle, onDelete, onSelect, onUpdate }) 
 };
 
 export default TodoItem;
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1461,6 +1469,7 @@ export default TodoItem;
 ### Performance Testing
 ```jsx
 {% raw %}
+{% raw %}
 // Test with large datasets
 const generateTestTodos = (count) => {
   return Array.from({ length: count }, (_, i) => ({
@@ -1473,6 +1482,7 @@ const generateTestTodos = (count) => {
     tags: [`tag${i % 5}`, `tag${(i + 1) % 5}`]
   }));
 };
+{% endraw %}
 {% endraw %}
 ```
 

@@ -254,6 +254,7 @@ function App() {
 
 ```jsx
 {% raw %}
+{% raw %}
 // Theme Context Example
 const ThemeContext = createContext();
 
@@ -333,6 +334,7 @@ function ThemedButton({ children, ...props }) {
     </button>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -576,6 +578,7 @@ export default counterSlice.reducer;
 
 ```jsx
 {% raw %}
+{% raw %}
 // store/userSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
@@ -652,6 +655,7 @@ const userSlice = createSlice({
 export const { clearError, logout } = userSlice.actions;
 export default userSlice.reducer;
 {% endraw %}
+{% endraw %}
 ```
 
 #### Using RTK in Components
@@ -715,6 +719,7 @@ Zustand is a small, fast, and scalable state management solution.
 
 ```jsx
 {% raw %}
+{% raw %}
 // store/useStore.js
 import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
@@ -763,6 +768,7 @@ const useStore = create(
 );
 
 export default useStore;
+{% endraw %}
 {% endraw %}
 ```
 

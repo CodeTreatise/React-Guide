@@ -416,6 +416,7 @@ export type UserWithoutId = Omit<User, 'id'>;
 
 ```typescript
 {% raw %}
+{% raw %}
 // components/UserProfile/UserProfile.tsx
 import React, { useState, useCallback, useMemo } from 'react';
 import { User, UserPreferences } from '@types/user';
@@ -518,10 +519,12 @@ const UserProfile: React.FC<UserProfileProps> = ({
 
 export default UserProfile;
 {% endraw %}
+{% endraw %}
 ```
 
 4. **Custom Hooks with TypeScript**
 ```typescript
+{% raw %}
 {% raw %}
 // hooks/useApi.ts
 import { useState, useEffect, useCallback } from 'react';
@@ -578,10 +581,12 @@ function useApi<T = any>(
 
 export default useApi;
 {% endraw %}
+{% endraw %}
 ```
 
 5. **Generic Components with TypeScript**
 ```typescript
+{% raw %}
 {% raw %}
 // components/DataTable/DataTable.tsx
 import React, { useMemo } from 'react';
@@ -659,6 +664,7 @@ function DataTable<T extends Record<string, any>>({
 }
 
 export default DataTable;
+{% endraw %}
 {% endraw %}
 ```
 
@@ -750,6 +756,7 @@ const UserDashboard: React.FC<{ userId: string }> = ({ userId }) => {
 2. **Open/Closed Principle (OCP)**
 ```typescript
 {% raw %}
+{% raw %}
 // Base button component open for extension
 interface BaseButtonProps {
   children: React.ReactNode;
@@ -796,6 +803,7 @@ const IconButton: React.FC<BaseButtonProps & { icon: React.ReactNode }> = ({
     </BaseButton>
   );
 };
+{% endraw %}
 {% endraw %}
 ```
 
@@ -941,6 +949,7 @@ const AdminUserCard: React.FC<User & EditableActions & DeletableActions> = ({
 5. **Dependency Inversion Principle (DIP)**
 ```typescript
 {% raw %}
+{% raw %}
 // High-level interface
 interface UserRepository {
   getUser(id: string): Promise<User>;
@@ -1004,6 +1013,7 @@ const UserService: React.FC<{ repository: UserRepository; userId: string }> = ({
   
   return user ? <UserProfile user={user} onUpdate={handleUpdate} /> : null;
 };
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1387,6 +1397,7 @@ export default ErrorBoundary;
 3. **Performance Monitoring Hook**
 ```typescript
 {% raw %}
+{% raw %}
 // hooks/usePerformanceMonitor.ts
 import { useEffect, useRef, useCallback } from 'react';
 
@@ -1456,10 +1467,12 @@ const MyComponent: React.FC = () => {
   return <div>Component content</div>;
 };
 {% endraw %}
+{% endraw %}
 ```
 
 4. **Debug Utilities**
 ```typescript
+{% raw %}
 {% raw %}
 // utils/debug.ts
 export const debugUtils = {
@@ -1533,6 +1546,7 @@ export const debugUtils = {
     };
   }
 };
+{% endraw %}
 {% endraw %}
 ```
 

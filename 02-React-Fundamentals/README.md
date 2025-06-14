@@ -317,6 +317,7 @@ function DynamicContent() {
 
 ```jsx
 {% raw %}
+{% raw %}
 // Simple functional component
 function Greeting() {
     return <h1>Hello, World!</h1>;
@@ -347,6 +348,7 @@ const Button = ({ children, variant = 'primary', onClick }) => (
         {children}
     </button>
 );
+{% endraw %}
 {% endraw %}
 ```
 
@@ -460,6 +462,7 @@ function UserProfile({ user, showEmail, onEdit }) {
 
 ```jsx
 {% raw %}
+{% raw %}
 // With destructuring and defaults
 function ProductCard({ 
     title, 
@@ -508,6 +511,7 @@ function Button({ variant = 'primary', size = 'medium', children, ...restProps }
 >
     Submit
 </Button>
+{% endraw %}
 {% endraw %}
 ```
 
@@ -677,6 +681,7 @@ function UserForm() {
 
 ```jsx
 {% raw %}
+{% raw %}
 function TodoApp() {
     const [todos, setTodos] = useState([]);
     const [inputValue, setInputValue] = useState('');
@@ -786,6 +791,7 @@ function TodoApp() {
         </div>
     );
 }
+{% endraw %}
 {% endraw %}
 ```
 

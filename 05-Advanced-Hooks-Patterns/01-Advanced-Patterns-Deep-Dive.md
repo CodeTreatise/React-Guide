@@ -15,6 +15,7 @@
 #### Core Utility Hooks
 ```jsx
 {% raw %}
+{% raw %}
 // hooks/useToggle.js - Simple boolean state management
 export function useToggle(initialValue = false) {
   const [value, setValue] = useState(initialValue);
@@ -99,10 +100,12 @@ export function useLocalStorage(key, initialValue) {
   return [storedValue, setValue, removeValue];
 }
 {% endraw %}
+{% endraw %}
 ```
 
 #### Advanced Data Fetching Hooks
 ```jsx
+{% raw %}
 {% raw %}
 // hooks/useAsync.js - Generic async operation handler
 export function useAsync(asyncFunction, dependencies = []) {
@@ -175,6 +178,7 @@ export function useApi(url, options = {}) {
   
   return { ...state, request, refetch: request };
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -627,6 +631,7 @@ export function useShoppingCart() {
 ### 2. Real-time Chat Hook
 ```jsx
 {% raw %}
+{% raw %}
 // hooks/useChatRoom.js
 export function useChatRoom(roomId) {
   const [messages, setMessages] = useState([]);
@@ -698,6 +703,7 @@ export function useChatRoom(roomId) {
     isConnected: connectionState === 'connected'
   };
 }
+{% endraw %}
 {% endraw %}
 ```
 

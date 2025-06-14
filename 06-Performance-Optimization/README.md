@@ -463,6 +463,7 @@ function App() {
 #### Performance Metrics Hook
 ```jsx
 {% raw %}
+{% raw %}
 function usePerformanceMetrics() {
   const [metrics, setMetrics] = useState({});
   
@@ -496,6 +497,7 @@ function usePerformanceMetrics() {
   
   return { metrics, measurePerformance };
 }
+{% endraw %}
 {% endraw %}
 ```
 

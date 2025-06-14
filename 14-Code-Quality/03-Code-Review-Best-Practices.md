@@ -163,6 +163,7 @@ export default UserProfile
 
 ```typescript
 {% raw %}
+{% raw %}
 // ✅ Good: Single Responsibility Principle
 const UserAvatar: React.FC<{ user: User; size?: 'sm' | 'md' | 'lg' }> = ({ 
   user, 
@@ -225,6 +226,7 @@ const Layout = ({ user, setUser }: { user: User | null; setUser: (user: User) =>
 const Header = ({ user, setUser }: { user: User | null; setUser: (user: User) => void }) => {
   return <UserMenu user={user} setUser={setUser} />
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -405,6 +407,7 @@ const GoodList: React.FC<{ items: Item[] }> = ({ items }) => {
 
 ```typescript
 {% raw %}
+{% raw %}
 // ❌ Anti-Pattern: Mutating props
 const BadComponent: React.FC<{ user: User }> = ({ user }) => {
   // Never mutate props directly
@@ -505,11 +508,13 @@ const ExpensiveComputation: React.FC<{ items: Item[] }> = ({ items }) => {
   return <div>Total: {expensiveValue}</div>
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Security Review Points
 
 ```typescript
+{% raw %}
 {% raw %}
 // ✅ Good: Proper input validation and sanitization
 const UserForm: React.FC<{ onSubmit: (data: UserData) => void }> = ({ onSubmit }) => {
@@ -613,6 +618,7 @@ const SecureApiComponent: React.FC = () => {
   return <div>User Profile</div>
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## Review Feedback Guidelines
@@ -701,6 +707,7 @@ const filteredItems = useMemo(() =>
 
 ```yaml
 {% raw %}
+{% raw %}
 # .github/workflows/pr-review.yml
 name: PR Review Automation
 
@@ -752,6 +759,7 @@ jobs:
               repo: context.repo.repo,
               body: '❌ Automated checks failed. Please review the errors and fix them before merging.'
             })
+{% endraw %}
 {% endraw %}
 ```
 

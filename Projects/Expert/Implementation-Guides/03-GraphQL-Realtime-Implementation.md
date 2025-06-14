@@ -313,6 +313,7 @@ export const CollaborativeEditor: React.FC<CollaborativeEditorProps> = ({ docume
 #### 1.1 Server Setup with Apollo Server
 ```typescript
 {% raw %}
+{% raw %}
 // packages/server/src/index.ts
 import express from 'express';
 import { ApolloServer } from 'apollo-server-express';
@@ -379,6 +380,7 @@ async function startServer() {
 startServer().catch(error => {
   console.error('Failed to start server:', error);
 });
+{% endraw %}
 {% endraw %}
 ```
 
@@ -792,6 +794,7 @@ export class OperationalTransform {
 #### 2.1 Apollo Client with Advanced Caching
 ```typescript
 {% raw %}
+{% raw %}
 // packages/client/src/apollo/client.ts
 import {
   ApolloClient,
@@ -941,10 +944,12 @@ export const client = new ApolloClient({
   },
 });
 {% endraw %}
+{% endraw %}
 ```
 
 #### 2.2 Advanced Collaborative Editor
 ```typescript
+{% raw %}
 {% raw %}
 // packages/client/src/components/CollaborativeEditor.tsx
 import React, { useState, useEffect, useRef, useCallback } from 'react';
@@ -1277,10 +1282,12 @@ export const CollaborativeEditor: React.FC<CollaborativeEditorProps> = ({
   );
 };
 {% endraw %}
+{% endraw %}
 ```
 
 #### 2.3 Real-time Presence System
 ```typescript
+{% raw %}
 {% raw %}
 // packages/client/src/components/PresenceIndicator.tsx
 import React, { useEffect, useState } from 'react';
@@ -1389,6 +1396,7 @@ export const PresenceIndicator: React.FC<PresenceIndicatorProps> = ({
     </div>
   );
 };
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1532,6 +1540,7 @@ export const CommentSystem: React.FC<CommentSystemProps> = ({ documentId }) => {
 #### 3.2 Version History
 ```typescript
 {% raw %}
+{% raw %}
 // packages/client/src/components/VersionHistory.tsx
 import React, { useState } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
@@ -1674,12 +1683,14 @@ export const VersionHistory: React.FC<VersionHistoryProps> = ({ documentId }) =>
   );
 };
 {% endraw %}
+{% endraw %}
 ```
 
 ### Phase 4: Performance Optimization
 
 #### 4.1 Redis Caching Service
 ```typescript
+{% raw %}
 {% raw %}
 // packages/server/src/services/RedisService.ts
 import Redis from 'ioredis';
@@ -1736,10 +1747,12 @@ export class RedisService {
   }
 }
 {% endraw %}
+{% endraw %}
 ```
 
 #### 4.2 Client-side Performance Optimizations
 ```typescript
+{% raw %}
 {% raw %}
 // packages/client/src/hooks/useCollaborationOptimized.ts
 import { useCallback, useRef, useMemo } from 'react';
@@ -1853,6 +1866,7 @@ export const useCollaborationOptimized = (documentId: string, userId: string) =>
     // ... other methods
   };
 };
+{% endraw %}
 {% endraw %}
 ```
 

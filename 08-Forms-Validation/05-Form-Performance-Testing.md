@@ -23,6 +23,7 @@ This comprehensive guide covers advanced performance optimization techniques, co
 
 ```jsx
 {% raw %}
+{% raw %}
 import { memo, useMemo, useCallback, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
@@ -166,6 +167,7 @@ const useFormPerformance = () => {
     trackMemoryUsage
   };
 };
+{% endraw %}
 {% endraw %}
 ```
 
@@ -863,6 +865,7 @@ setInterval(() => {
 
 ```jsx
 {% raw %}
+{% raw %}
 // Optimistic update hook
 const useOptimisticUpdates = () => {
   const [optimisticData, setOptimisticData] = useState({});
@@ -1000,6 +1003,7 @@ const useOfflineForm = () => {
   };
 };
 {% endraw %}
+{% endraw %}
 ```
 
 ## 🧪 Testing Strategies
@@ -1007,6 +1011,7 @@ const useOfflineForm = () => {
 ### Comprehensive Form Testing
 
 ```jsx
+{% raw %}
 {% raw %}
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -1239,6 +1244,7 @@ describe('Form Integration Tests', () => {
   });
 });
 {% endraw %}
+{% endraw %}
 ```
 
 ### Visual Regression Testing
@@ -1292,6 +1298,7 @@ test.describe('Form Visual Tests', () => {
 ### Real-Time Performance Tracking
 
 ```jsx
+{% raw %}
 {% raw %}
 // Performance monitoring service
 class FormPerformanceMonitor {
@@ -1501,6 +1508,7 @@ const PerformanceDashboard = () => {
   );
 };
 {% endraw %}
+{% endraw %}
 ```
 
 ## 🛠 Debugging Tools
@@ -1508,6 +1516,7 @@ const PerformanceDashboard = () => {
 ### Advanced Form Debugging
 
 ```jsx
+{% raw %}
 {% raw %}
 // Form debugging context
 const FormDebugContext = createContext();
@@ -1642,6 +1651,7 @@ const useDebugForm = (options) => {
 
   return form;
 };
+{% endraw %}
 {% endraw %}
 ```
 

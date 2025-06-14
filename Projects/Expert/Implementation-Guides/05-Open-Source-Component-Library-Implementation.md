@@ -1103,6 +1103,7 @@ MIT © [Your Organization](https://github.com/yourorg)
 
 ```javascript
 {% raw %}
+{% raw %}
 // scripts/release.js
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -1250,11 +1251,13 @@ if (!validTypes.includes(type)) {
 const releaseManager = new ReleaseManager();
 releaseManager.release(type);
 {% endraw %}
+{% endraw %}
 ```
 
 ### GitHub Actions CI/CD
 
 ```yaml
+{% raw %}
 {% raw %}
 # .github/workflows/ci.yml
 name: CI
@@ -1401,6 +1404,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./storybook-static
+{% endraw %}
 {% endraw %}
 ```
 

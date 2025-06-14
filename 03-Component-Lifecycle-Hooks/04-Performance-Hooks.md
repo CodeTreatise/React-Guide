@@ -24,6 +24,7 @@ Performance hooks in React help optimize your application by preventing unnecess
 
 ```javascript
 {% raw %}
+{% raw %}
 // ❌ SLOW: Expensive calculation on every render
 function ExpensiveComponent({ items, filter }) {
   // This runs on every render, even if items/filter haven't changed
@@ -87,6 +88,7 @@ const ExpensiveChild = React.memo(({ item, onClick }) => {
     </div>
   );
 });
+{% endraw %}
 {% endraw %}
 ```
 
@@ -269,6 +271,7 @@ function DeepMemoComponent({ complexConfig }) {
 
 ```javascript
 {% raw %}
+{% raw %}
 function ParentComponent({ items }) {
   const [filter, setFilter] = useState('');
   const [sortOrder, setSortOrder] = useState('asc');
@@ -367,6 +370,7 @@ const ItemComponent = React.memo(({ item, onClick }) => {
     </li>
   );
 });
+{% endraw %}
 {% endraw %}
 ```
 
@@ -480,6 +484,7 @@ React.memo is a higher-order component that memoizes the result of a component a
 
 ```javascript
 {% raw %}
+{% raw %}
 // ❌ BAD: Component re-renders even when props haven't changed
 function ExpensiveComponent({ name, age, hobbies }) {
   console.log(`Rendering ${name}`); // Logs on every parent render
@@ -535,11 +540,13 @@ function ParentComponent() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### React.memo with Custom Comparison
 
 ```javascript
+{% raw %}
 {% raw %}
 // Custom comparison function for complex props
 const ComplexComponent = React.memo(
@@ -599,11 +606,13 @@ function OptimizedParent() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Memo Patterns and Best Practices
 
 ```javascript
+{% raw %}
 {% raw %}
 // Pattern 1: Memoizing expensive list items
 const ListItem = React.memo(({ item, onEdit, onDelete, isSelected }) => {
@@ -703,6 +712,7 @@ function UserForm({ user, errors, onChange }) {
     </form>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -958,6 +968,7 @@ function useLazyRef(initializer) {
 
 ```javascript
 {% raw %}
+{% raw %}
 function usePerformanceTimer(name) {
   const startTimeRef = useRef();
   const endTimeRef = useRef();
@@ -1001,11 +1012,13 @@ function DataProcessingComponent({ data }) {
   return <DataDisplay data={processedData} />;
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Render Count Hook
 
 ```javascript
+{% raw %}
 {% raw %}
 function useRenderCount(componentName) {
   const renderCount = useRef(0);
@@ -1057,6 +1070,7 @@ function DebuggableComponent(props) {
     </div>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1259,6 +1273,7 @@ function useVariableVirtualList({
 
 ```javascript
 {% raw %}
+{% raw %}
 const VirtualList = React.memo(({ 
   items, 
   itemHeight = 50, 
@@ -1348,6 +1363,7 @@ function LargeListExample() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ---
@@ -1357,6 +1373,7 @@ function LargeListExample() {
 ### Component Lazy Loading
 
 ```javascript
+{% raw %}
 {% raw %}
 // Lazy load components
 const LazyDashboard = React.lazy(() => import('./Dashboard'));
@@ -1416,11 +1433,13 @@ function App() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Lazy Data Loading
 
 ```javascript
+{% raw %}
 {% raw %}
 function useLazyData(url, options = {}) {
   const [data, setData] = useState(null);
@@ -1511,6 +1530,7 @@ function LazyDataComponent({ url }) {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ---
@@ -1575,6 +1595,7 @@ function ComponentWithCleanup() {
 
 ```javascript
 {% raw %}
+{% raw %}
 function useMemoryLeakDetection(componentName) {
   const mountTime = useRef(Date.now());
   const isUnmounted = useRef(false);
@@ -1626,6 +1647,7 @@ function useSafeAsync() {
   return { safeSetState, safeAsyncOperation };
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ---
@@ -1635,6 +1657,7 @@ function useSafeAsync() {
 ### Common Mistakes to Avoid
 
 ```javascript
+{% raw %}
 {% raw %}
 // ❌ ANTI-PATTERN 1: Creating objects in render
 function BadComponent({ items }) {
@@ -1763,6 +1786,7 @@ function ReasonablyOptimizedComponent({ count }) {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ---
@@ -1772,6 +1796,7 @@ function ReasonablyOptimizedComponent({ count }) {
 ### React DevTools Profiler Hook
 
 ```javascript
+{% raw %}
 {% raw %}
 function useProfiler(id, onRender) {
   const { Profiler } = React;
@@ -1851,6 +1876,7 @@ function MonitoredComponent({ data }) {
     </ProfilerWrapper>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 

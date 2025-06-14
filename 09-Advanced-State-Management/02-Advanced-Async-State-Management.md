@@ -55,6 +55,7 @@ const ASYNC_ACTIONS = {
 
 ```javascript
 {% raw %}
+{% raw %}
 function createAsyncReducer(actionType) {
   const initialState = {
     data: null,
@@ -129,6 +130,7 @@ function createAsyncReducer(actionType) {
     }
   }
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -228,6 +230,7 @@ function PostEditor({ postId }) {
 
 ```javascript
 {% raw %}
+{% raw %}
 // Advanced async middleware with cancellation and retries
 const asyncMiddleware = (store) => (next) => (action) => {
   if (!action.async) {
@@ -325,11 +328,13 @@ const fetchUserAction = (userId) => ({
   payload: { userId }
 })
 {% endraw %}
+{% endraw %}
 ```
 
 ### Request Deduplication Middleware
 
 ```javascript
+{% raw %}
 {% raw %}
 const deduplicationMiddleware = (store) => {
   const pendingRequests = new Map()
@@ -368,6 +373,7 @@ const fetchDataAction = (params) => ({
   },
   payload: params
 })
+{% endraw %}
 {% endraw %}
 ```
 
@@ -578,6 +584,7 @@ function createSSEChannel(url) {
 
 ```javascript
 {% raw %}
+{% raw %}
 import { BehaviorSubject, combineLatest, fromEvent, merge } from 'rxjs'
 import { 
   map, 
@@ -759,6 +766,7 @@ function SearchComponent() {
   )
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## React Query & SWR Advanced
@@ -766,6 +774,7 @@ function SearchComponent() {
 ### Advanced React Query Patterns
 
 ```javascript
+{% raw %}
 {% raw %}
 import { 
   useQuery, 
@@ -915,11 +924,13 @@ function useBackgroundSync() {
   }, [queryClient])
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Advanced SWR Patterns
 
 ```javascript
+{% raw %}
 {% raw %}
 import useSWR, { useSWRConfig } from 'swr'
 import useSWRMutation from 'swr/mutation'
@@ -1024,6 +1035,7 @@ function usePrefetch() {
   return { prefetch, warmCache }
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## State Machines for Async Operations
@@ -1031,6 +1043,7 @@ function usePrefetch() {
 ### XState Integration
 
 ```javascript
+{% raw %}
 {% raw %}
 import { createMachine, assign, interpret } from 'xstate'
 import { useMachine } from '@xstate/react'
@@ -1170,6 +1183,7 @@ function DataFetcher({ url }) {
     </div>
   )
 }
+{% endraw %}
 {% endraw %}
 ```
 

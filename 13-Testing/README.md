@@ -109,6 +109,7 @@ global.IntersectionObserver = class IntersectionObserver {
 #### **Basic Component Testing**
 ```jsx
 {% raw %}
+{% raw %}
 // Button.jsx
 import React from 'react';
 
@@ -133,6 +134,7 @@ const Button = ({
 };
 
 export default Button;
+{% endraw %}
 {% endraw %}
 ```
 
@@ -485,6 +487,7 @@ describe('useCounter', () => {
 #### **Testing Async Hooks**
 ```javascript
 {% raw %}
+{% raw %}
 // hooks/useApi.js
 import { useState, useEffect } from 'react';
 
@@ -520,6 +523,7 @@ export const useApi = (url) => {
 
   return { data, loading, error };
 };
+{% endraw %}
 {% endraw %}
 ```
 
@@ -690,6 +694,7 @@ describe('ThemeContext', () => {
 #### **Mocking External Dependencies**
 ```javascript
 {% raw %}
+{% raw %}
 // utils/api.js
 export const fetchUser = async (id) => {
   const response = await fetch(`/api/users/${id}`);
@@ -698,6 +703,7 @@ export const fetchUser = async (id) => {
   }
   return response.json();
 };
+{% endraw %}
 {% endraw %}
 ```
 

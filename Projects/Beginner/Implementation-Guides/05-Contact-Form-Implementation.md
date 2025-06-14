@@ -100,6 +100,7 @@ const [value, setValue] = useState('');
 
 ```javascript
 {% raw %}
+{% raw %}
 // src/utils/validators.js
 export const validators = {
   required: (value) => {
@@ -181,6 +182,7 @@ export const validateForm = (formData, validationRules) => {
 
   return { errors, isValid };
 };
+{% endraw %}
 {% endraw %}
 ```
 
@@ -338,6 +340,7 @@ export const useFormSubmission = () => {
 
 ```javascript
 {% raw %}
+{% raw %}
 // src/components/FormField.js
 import React from 'react';
 import './FormField.css';
@@ -445,11 +448,13 @@ const FormField = ({
 
 export default FormField;
 {% endraw %}
+{% endraw %}
 ```
 
 ### Step 6: Create Validation Message Component
 
 ```javascript
+{% raw %}
 {% raw %}
 // src/components/ValidationMessage.js
 import React from 'react';
@@ -482,11 +487,13 @@ const ValidationMessage = ({ type = 'error', message, className = '' }) => {
 
 export default ValidationMessage;
 {% endraw %}
+{% endraw %}
 ```
 
 ### Step 7: Create Form Progress Component
 
 ```javascript
+{% raw %}
 {% raw %}
 // src/components/FormProgress.js
 import React from 'react';
@@ -541,11 +548,13 @@ const FormProgress = ({ formData, validationRules }) => {
 
 export default FormProgress;
 {% endraw %}
+{% endraw %}
 ```
 
 ### Step 8: Create Submission Status Component
 
 ```javascript
+{% raw %}
 {% raw %}
 // src/components/SubmissionStatus.js
 import React from 'react';
@@ -613,11 +622,13 @@ const SubmissionStatus = ({
 
 export default SubmissionStatus;
 {% endraw %}
+{% endraw %}
 ```
 
 ### Step 9: Create the Main Contact Form Component
 
 ```javascript
+{% raw %}
 {% raw %}
 // src/components/ContactForm.js
 import React from 'react';
@@ -943,6 +954,7 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+{% endraw %}
 {% endraw %}
 ```
 

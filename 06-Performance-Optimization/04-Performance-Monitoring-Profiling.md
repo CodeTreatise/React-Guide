@@ -50,6 +50,7 @@ const PERFORMANCE_THRESHOLDS = {
 
 ```jsx
 {% raw %}
+{% raw %}
 // Central performance monitoring system
 class PerformanceMonitor {
   constructor(config = {}) {
@@ -205,6 +206,7 @@ class PerformanceMonitor {
 // Global performance monitor instance
 const performanceMonitor = new PerformanceMonitor();
 {% endraw %}
+{% endraw %}
 ```
 
 ## React DevTools Profiler
@@ -212,6 +214,7 @@ const performanceMonitor = new PerformanceMonitor();
 ### Advanced Profiler Integration
 
 ```jsx
+{% raw %}
 {% raw %}
 import { Profiler } from 'react';
 
@@ -338,6 +341,7 @@ function useComponentPerformance(componentName) {
   };
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Profiler Data Analysis
@@ -456,6 +460,7 @@ function useProfilerAnalyzer() {
 
 ```jsx
 {% raw %}
+{% raw %}
 // User interaction performance tracking
 function useInteractionTracking() {
   const interactions = useRef([]);
@@ -570,6 +575,7 @@ function TrackedButton({ onClick, children, ...props }) {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## Real-Time Performance Monitoring
@@ -577,6 +583,7 @@ function TrackedButton({ onClick, children, ...props }) {
 ### Performance Dashboard Hook
 
 ```jsx
+{% raw %}
 {% raw %}
 // Real-time performance dashboard
 function usePerformanceDashboard() {
@@ -716,6 +723,7 @@ function PerformanceDashboard() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## Performance Budgets & Alerts
@@ -723,6 +731,7 @@ function PerformanceDashboard() {
 ### Performance Budget System
 
 ```jsx
+{% raw %}
 {% raw %}
 // Performance budget configuration
 const PERFORMANCE_BUDGETS = {
@@ -802,6 +811,7 @@ class PerformanceBudgetMonitor {
     return 'low';
   }
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -911,6 +921,7 @@ class BrowserPerformanceAPI {
 
 ```jsx
 {% raw %}
+{% raw %}
 // Performance test framework
 class PerformanceTestSuite {
   constructor() {
@@ -996,6 +1007,7 @@ class PerformanceTestSuite {
   }
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## Performance Analytics & Reporting
@@ -1003,6 +1015,7 @@ class PerformanceTestSuite {
 ### Analytics Integration
 
 ```jsx
+{% raw %}
 {% raw %}
 // Performance analytics service
 class PerformanceAnalytics {
@@ -1110,6 +1123,7 @@ function usePerformanceAnalytics() {
     trackComponentRender
   };
 }
+{% endraw %}
 {% endraw %}
 ```
 

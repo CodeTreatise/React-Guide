@@ -230,6 +230,7 @@ const CardHeader = ({ title, subtitle, action, className = '' }) => {
 
 ```jsx
 {% raw %}
+{% raw %}
 // Advanced responsive utilities
 const ResponsiveGrid = ({ children }) => {
   return (
@@ -282,6 +283,7 @@ const Container = ({ size = 'default', children, className = '' }) => {
   )
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ---
@@ -296,6 +298,7 @@ npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion
 ```
 
 ```jsx
+{% raw %}
 {% raw %}
 // App.js - Provider setup
 import React from 'react'
@@ -374,6 +377,7 @@ function App() {
     </ChakraProvider>
   )
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -767,6 +771,7 @@ const DashboardShell = ({ children }) => {
 
 ```jsx
 {% raw %}
+{% raw %}
 // Spacing utilities
 const SpacingSystem = {
   Stack: ({ gap = 'md', children, ...props }) => (
@@ -864,11 +869,13 @@ const Layout = {
   ),
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Responsive Utility Patterns
 
 ```jsx
+{% raw %}
 {% raw %}
 // Responsive visibility
 const ResponsiveUtilities = {
@@ -911,6 +918,7 @@ const ResponsiveSpacing = {
     return <div className={paddingClass}>{children}</div>
   },
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1060,6 +1068,7 @@ const useOptimizedStyles = (theme, dependencies) => {
 
 ```jsx
 {% raw %}
+{% raw %}
 // Design tokens
 const tokens = {
   colors: {
@@ -1198,11 +1207,13 @@ const Button = createComponent(({
   )
 })
 {% endraw %}
+{% endraw %}
 ```
 
 ### Component Composition System
 
 ```jsx
+{% raw %}
 {% raw %}
 // Compound component pattern
 const Card = ({ children, className, ...props }) => {
@@ -1295,6 +1306,7 @@ const ExampleCard = () => (
   </Card>
 )
 {% endraw %}
+{% endraw %}
 ```
 
 ---
@@ -1304,6 +1316,7 @@ const ExampleCard = () => (
 ### From CSS to Utility-First
 
 ```jsx
+{% raw %}
 {% raw %}
 // Before: Traditional CSS
 /*
@@ -1353,6 +1366,7 @@ const migrationMap = {
 const convertCSSToTailwind = (cssClass) => {
   return migrationMap[cssClass] || cssClass
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1410,6 +1424,7 @@ const useProgressiveMigration = (oldComponent, newComponent, feature = 'new-ui')
 
 ```jsx
 {% raw %}
+{% raw %}
 // 1. Conditional styling
 const ConditionalStyling = ({ isActive, theme, children }) => {
   // ❌ Bad: Creates new object on every render
@@ -1459,11 +1474,13 @@ const ConditionalComponentLoader = ({ component: componentName, ...props }) => {
   )
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Accessibility Patterns
 
 ```jsx
+{% raw %}
 {% raw %}
 // Focus management
 const AccessibleModal = ({ isOpen, onClose, children }) => {
@@ -1546,6 +1563,7 @@ const AccessibleButton = ({ children, variant = 'primary', ...props }) => {
     </button>
   )
 }
+{% endraw %}
 {% endraw %}
 ```
 

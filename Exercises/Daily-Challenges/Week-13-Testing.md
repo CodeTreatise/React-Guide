@@ -546,6 +546,7 @@ describe('Chart Component', () => {
 2. **Mock API Calls with MSW**
 ```javascript
 {% raw %}
+{% raw %}
 // test/mocks/handlers.js
 import { rest } from 'msw';
 
@@ -575,6 +576,7 @@ export const handlers = [
     );
   })
 ];
+{% endraw %}
 {% endraw %}
 ```
 

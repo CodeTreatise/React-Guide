@@ -902,6 +902,7 @@ spec:
 
 ```yaml
 {% raw %}
+{% raw %}
 # .github/workflows/security-scan.yml
 name: Container Security Scan
 
@@ -936,6 +937,7 @@ jobs:
     - name: Check for critical vulnerabilities
       run: |
         trivy image --severity CRITICAL --exit-code 1 react-app:${{ github.sha }}
+{% endraw %}
 {% endraw %}
 ```
 

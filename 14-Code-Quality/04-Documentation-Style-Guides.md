@@ -226,6 +226,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ```typescript
 {% raw %}
+{% raw %}
 // API documentation with TypeScript
 /**
  * User API endpoints and types
@@ -398,11 +399,13 @@ export const createUser = async (userData: CreateUserRequest): Promise<UserRespo
   return response.json()
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Component Documentation
 
 ```typescript
+{% raw %}
 {% raw %}
 // Component documentation template
 /**
@@ -591,6 +594,7 @@ export default Button
  * 7. Disable buttons when action is not available
  * 8. Use aria-label for icon-only buttons
  */
+{% endraw %}
 {% endraw %}
 ```
 

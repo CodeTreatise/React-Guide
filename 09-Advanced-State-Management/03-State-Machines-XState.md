@@ -379,6 +379,7 @@ const mediaPlayerMachine = createMachine({
 
 ```javascript
 {% raw %}
+{% raw %}
 // Machine with parallel regions
 const appMachine = createMachine({
   id: 'app',
@@ -491,6 +492,7 @@ const appMachine = createMachine({
   }
 })
 {% endraw %}
+{% endraw %}
 ```
 
 ## State Machine Services
@@ -498,6 +500,7 @@ const appMachine = createMachine({
 ### Invoking Services
 
 ```javascript
+{% raw %}
 {% raw %}
 // Data fetching machine with services
 const dataFetchMachine = createMachine({
@@ -591,6 +594,7 @@ const dataFetchMachine = createMachine({
     shouldRetry: (context) => context.retryCount < 3
   }
 })
+{% endraw %}
 {% endraw %}
 ```
 
@@ -699,6 +703,7 @@ const roomMachine = createMachine({
 ### Using XState with React
 
 ```javascript
+{% raw %}
 {% raw %}
 import { useMachine, useActor } from '@xstate/react'
 
@@ -830,6 +835,7 @@ function DataList({ url }) {
 
   return <div>No data</div>
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -979,6 +985,7 @@ function usePaginatedData(fetchFn, pageSize = 10) {
 
 ```javascript
 {% raw %}
+{% raw %}
 // Composable machines
 const createCRUDMachine = (entityName, apiService) => {
   return createMachine({
@@ -1102,6 +1109,7 @@ const createCRUDMachine = (entityName, apiService) => {
 // Usage
 const userCRUDMachine = createCRUDMachine('user', userApiService)
 const postCRUDMachine = createCRUDMachine('post', postApiService)
+{% endraw %}
 {% endraw %}
 ```
 

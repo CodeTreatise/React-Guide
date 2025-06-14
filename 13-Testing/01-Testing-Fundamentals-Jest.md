@@ -305,6 +305,7 @@ describe('Utility functions', () => {
 
 ```javascript
 {% raw %}
+{% raw %}
 // api/userService.js
 export const fetchUser = async (id) => {
   const response = await fetch(`/api/users/${id}`)
@@ -403,6 +404,7 @@ describe('User Service', () => {
     })
   })
 })
+{% endraw %}
 {% endraw %}
 ```
 
@@ -766,6 +768,7 @@ describe('ErrorBoundary', () => {
 
 ```javascript
 {% raw %}
+{% raw %}
 // hooks/useApi.js
 import { useState, useEffect, useCallback } from 'react'
 
@@ -875,6 +878,7 @@ describe('useApi hook', () => {
     })
   })
 })
+{% endraw %}
 {% endraw %}
 ```
 
@@ -990,6 +994,7 @@ export const testUtils = {
 
 ```yaml
 {% raw %}
+{% raw %}
 # .github/workflows/test.yml
 name: Test Suite
 
@@ -1028,6 +1033,7 @@ jobs:
         file: ./coverage/lcov.info
         flags: unittests
         name: codecov-umbrella
+{% endraw %}
 {% endraw %}
 ```
 

@@ -18,6 +18,7 @@
 
 ```jsx
 {% raw %}
+{% raw %}
 import React, { createContext, useContext, useState, Children, cloneElement } from 'react'
 
 // Context for sharing state between compound components
@@ -175,11 +176,13 @@ const AccordionExample = () => {
   )
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Advanced Compound Component with Flexible API
 
 ```jsx
+{% raw %}
 {% raw %}
 // Flexible Tab component with multiple API patterns
 const TabsContext = createContext()
@@ -365,6 +368,7 @@ const TabsExample = () => {
   )
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ---
@@ -374,6 +378,7 @@ const TabsExample = () => {
 ### Provider Pattern with Multiple Contexts
 
 ```jsx
+{% raw %}
 {% raw %}
 // Multi-level context for complex component hierarchies
 const FormContext = createContext()
@@ -636,6 +641,7 @@ const FormExample = () => {
     </Form>
   )
 }
+{% endraw %}
 {% endraw %}
 ```
 

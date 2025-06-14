@@ -281,6 +281,7 @@ export class ReactAppStack extends cdk.Stack {
 #### **GitHub Actions Workflow**
 ```yaml
 {% raw %}
+{% raw %}
 # .github/workflows/deploy.yml
 name: Deploy React App
 
@@ -453,10 +454,12 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
 {% endraw %}
+{% endraw %}
 ```
 
 #### **Advanced CI/CD Configuration**
 ```yaml
+{% raw %}
 {% raw %}
 # .github/workflows/advanced-deploy.yml
 name: Advanced Deploy Pipeline
@@ -556,6 +559,7 @@ jobs:
       - name: Monitor and rollback if needed
         run: |
           echo "Monitoring deployment..."
+{% endraw %}
 {% endraw %}
 ```
 
@@ -814,6 +818,7 @@ export const securityHeaders = {
 #### **Environment Variable Management**
 ```typescript
 {% raw %}
+{% raw %}
 // src/config/environment.ts
 interface EnvironmentConfig {
   apiUrl: string;
@@ -882,6 +887,7 @@ export const createApiClient = () => {
     }
   };
 };
+{% endraw %}
 {% endraw %}
 ```
 

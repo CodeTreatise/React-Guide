@@ -18,6 +18,7 @@ Hooks are functions that let you "hook into" React features from function compon
 
 ```jsx
 {% raw %}
+{% raw %}
 import React, { useState, useEffect } from 'react';
 
 function Example() {
@@ -38,6 +39,7 @@ function Example() {
     </div>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -74,6 +76,7 @@ function GoodExample() {
 
 ```jsx
 {% raw %}
+{% raw %}
 // ❌ Don't call Hooks from regular JavaScript functions
 function formatName(user) {
   const [formattedName, setFormattedName] = useState(''); // 🔴 Wrong!
@@ -101,6 +104,7 @@ function useFormattedName(user) {
   
   return formattedName;
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -315,6 +319,7 @@ function DataFetcher() {
 
 ```jsx
 {% raw %}
+{% raw %}
 function SearchResults({ query }) {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -354,6 +359,7 @@ function SearchResults({ query }) {
     </div>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -437,6 +443,7 @@ function SearchInput() {
 
 ```jsx
 {% raw %}
+{% raw %}
 function ConditionalEffect({ shouldFetch, userId }) {
   const [userData, setUserData] = useState(null);
   
@@ -454,6 +461,7 @@ function ConditionalEffect({ shouldFetch, userId }) {
   
   return <div>{userData?.name || 'No user data'}</div>;
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -554,6 +562,7 @@ function Parent() {
 ### useReducer for Complex State
 
 ```jsx
+{% raw %}
 {% raw %}
 const initialState = {
   users: [],
@@ -664,6 +673,7 @@ function UserManager() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### useRef Patterns
@@ -685,6 +695,7 @@ function AutoFocusInput() {
 #### Storing Mutable Values
 
 ```jsx
+{% raw %}
 {% raw %}
 function TrackingComponent() {
   const [count, setCount] = useState(0);
@@ -712,6 +723,7 @@ function TrackingComponent() {
     </div>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -800,6 +812,7 @@ function ToggleExample() {
 
 ```jsx
 {% raw %}
+{% raw %}
 function useAsync(asyncFunction, dependencies = []) {
   const [state, setState] = useState({
     data: null,
@@ -851,6 +864,7 @@ function UserProfile({ userId }) {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## Hook Testing
@@ -890,6 +904,7 @@ describe('useToggle', () => {
 
 ```jsx
 {% raw %}
+{% raw %}
 import { renderHook } from '@testing-library/react';
 import { useEffect, useState } from 'react';
 
@@ -914,6 +929,7 @@ test('should update document title', () => {
   
   expect(document.title).toBe('Count: 10');
 });
+{% endraw %}
 {% endraw %}
 ```
 

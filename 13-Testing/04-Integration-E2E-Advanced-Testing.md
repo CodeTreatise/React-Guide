@@ -363,6 +363,7 @@ describe('User Journey E2E Tests', () => {
 
 ```javascript
 {% raw %}
+{% raw %}
 // Custom commands
 // cypress/support/commands.js
 Cypress.Commands.add('login', (email, password) => {
@@ -423,6 +424,7 @@ describe('User Management E2E', () => {
       .should('contain', 'Admin');
   });
 });
+{% endraw %}
 {% endraw %}
 ```
 
@@ -646,6 +648,7 @@ test('should match dark theme', async ({ page }) => {
 
 ```javascript
 {% raw %}
+{% raw %}
 // .storybook/test-runner.js
 const { getStoryContext } = require('@storybook/test-runner');
 
@@ -666,6 +669,7 @@ module.exports = {
     });
   }
 };
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1048,6 +1052,7 @@ describe('Error Monitoring', () => {
 
 ```yaml
 {% raw %}
+{% raw %}
 # .github/workflows/test.yml
 name: Test Suite
 
@@ -1117,6 +1122,7 @@ jobs:
       with:
         name: playwright-report
         path: playwright-report/
+{% endraw %}
 {% endraw %}
 ```
 

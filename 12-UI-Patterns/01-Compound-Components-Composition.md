@@ -69,6 +69,7 @@ The Context API provides a cleaner approach for complex compound components:
 
 ```jsx
 {% raw %}
+{% raw %}
 import React, { createContext, useContext, useState } from 'react'
 
 // Step 1: Create context
@@ -190,11 +191,13 @@ const TabsExample = () => (
   </Tabs>
 )
 {% endraw %}
+{% endraw %}
 ```
 
 ## Advanced Modal Compound Component
 
 ```jsx
+{% raw %}
 {% raw %}
 import React, { createContext, useContext, useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
@@ -327,11 +330,13 @@ const ModalExample = () => {
   )
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## Dropdown Compound Component
 
 ```jsx
+{% raw %}
 {% raw %}
 const DropdownContext = createContext()
 
@@ -453,11 +458,13 @@ const DropdownExample = () => (
   </Dropdown>
 )
 {% endraw %}
+{% endraw %}
 ```
 
 ## Form Builder Compound Component
 
 ```jsx
+{% raw %}
 {% raw %}
 const FormContext = createContext()
 
@@ -703,6 +710,7 @@ const FormExample = () => (
     </Form.Button>
   </Form>
 )
+{% endraw %}
 {% endraw %}
 ```
 

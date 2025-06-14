@@ -686,6 +686,7 @@ collaborative-platform/
 ### Operational Transform Implementation
 ```jsx
 {% raw %}
+{% raw %}
 // src/algorithms/operationalTransform.js
 export class Operation {
   constructor(type, position, content, author) {
@@ -826,6 +827,7 @@ export const useCollaboration = (documentId, userId) => {
     applyOperation
   };
 };
+{% endraw %}
 {% endraw %}
 ```
 

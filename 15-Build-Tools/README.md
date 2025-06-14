@@ -475,6 +475,7 @@ export default defineConfig(({ command, mode }) => {
 #### **Vite Plugin Development**
 ```typescript
 {% raw %}
+{% raw %}
 // plugins/vite-plugin-react-inspector.ts
 import { Plugin } from 'vite';
 
@@ -521,6 +522,7 @@ export function reactInspector(options: ReactInspectorOptions = {}): Plugin {
     }
   };
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -623,6 +625,7 @@ const DataVisualization = () => (
 #### **Dynamic Import Utilities**
 ```typescript
 {% raw %}
+{% raw %}
 // src/utils/dynamicImport.ts
 interface ImportOptions {
   timeout?: number;
@@ -695,6 +698,7 @@ export const addResourceHint = (href: string, rel: 'preload' | 'prefetch') => {
   document.head.appendChild(link);
 };
 {% endraw %}
+{% endraw %}
 ```
 
 ### 5. Bundle Optimization
@@ -757,6 +761,7 @@ module.exports = {
 
 #### **Bundle Analysis and Monitoring**
 ```typescript
+{% raw %}
 {% raw %}
 // src/utils/bundleAnalysis.ts
 interface BundleMetrics {
@@ -846,6 +851,7 @@ ${this.generateRecommendations()}
   }
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### 6. Module Federation
@@ -921,6 +927,7 @@ module.exports = {
 
 #### **Dynamic Module Loading**
 ```typescript
+{% raw %}
 {% raw %}
 // src/utils/moduleLoader.ts
 interface RemoteModule {
@@ -1020,6 +1027,7 @@ export const RemoteComponent: React.FC<RemoteComponentProps> = ({
   
   return <Component {...props} />;
 };
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1195,6 +1203,7 @@ module.exports = {
 #### **Smart Image Component**
 ```typescript
 {% raw %}
+{% raw %}
 // src/components/OptimizedImage.tsx
 import React, { useState, useRef, useEffect } from 'react';
 
@@ -1298,6 +1307,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 };
 
 export default OptimizedImage;
+{% endraw %}
 {% endraw %}
 ```
 

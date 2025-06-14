@@ -186,7 +186,9 @@ const age = 30;
 const message = 'Hello, my name is ' + name + ' and I am ' + age + ' years old.';
 
 // New way (template literals)
+{% raw %}
 const message = `Hello, my name is ${name} and I am ${age} years old.`;
+{% endraw %}
 {% endraw %}
 ```
 
@@ -195,6 +197,7 @@ const message = `Hello, my name is ${name} and I am ${age} years old.`;
 ```javascript
 {% raw %}
 // Multi-line strings
+{% raw %}
 const html = `
     <div class="user-card">
         <h2>${user.name}</h2>
@@ -220,6 +223,7 @@ const userList = `
 const formatDate = (date) => date.toLocaleDateString();
 const message = `Today is ${formatDate(new Date())}`;
 {% endraw %}
+{% endraw %}
 ```
 
 ### React Usage Examples
@@ -227,6 +231,7 @@ const message = `Today is ${formatDate(new Date())}`;
 ```javascript
 {% raw %}
 // Dynamic class names
+{% raw %}
 const Button = ({ variant, disabled }) => (
     <button 
         className={`btn btn-${variant} ${disabled ? 'btn-disabled' : ''}`}

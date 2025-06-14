@@ -20,6 +20,7 @@ Modern React applications require sophisticated data fetching solutions that han
 
 ```javascript
 {% raw %}
+{% raw %}
 // Without data fetching library - Complex manual state management
 function UserProfile({ userId }) {
   const [user, setUser] = useState(null)
@@ -86,6 +87,7 @@ function UserProfile({ userId }) {
   return <div>{user.name}</div>
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## React Query Advanced Patterns
@@ -93,6 +95,7 @@ function UserProfile({ userId }) {
 ### Query Configuration and Optimization
 
 ```javascript
+{% raw %}
 {% raw %}
 import { useQuery, useQueries, useInfiniteQuery, QueryClient } from '@tanstack/react-query'
 
@@ -226,11 +229,13 @@ function InfinitePostsList({ filters }) {
   )
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Mutations and Optimistic Updates
 
 ```javascript
+{% raw %}
 {% raw %}
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 
@@ -378,6 +383,7 @@ function useDeletePost() {
   })
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Advanced Query Management
@@ -477,6 +483,7 @@ function useQuerySync() {
 ### Advanced SWR Configuration
 
 ```javascript
+{% raw %}
 {% raw %}
 import useSWR, { useSWRConfig, SWRConfig } from 'swr'
 import useSWRMutation from 'swr/mutation'
@@ -605,11 +612,13 @@ function useInfinitePosts(limit = 20) {
   }
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### SWR Mutations and Cache Management
 
 ```javascript
+{% raw %}
 {% raw %}
 // SWR mutations
 function useCreatePost() {
@@ -690,6 +699,7 @@ function useCacheManager() {
     preload
   }
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -795,6 +805,7 @@ function selectDataFetchingLibrary(requirements) {
 
 ```javascript
 {% raw %}
+{% raw %}
 // Browser storage integration
 class PersistentQueryCache {
   constructor(storage = localStorage, keyPrefix = 'query-cache:') {
@@ -896,11 +907,13 @@ function usePersistentQuery(queryKey, queryFn, options = {}) {
   return query
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Cache Invalidation Strategies
 
 ```javascript
+{% raw %}
 {% raw %}
 // Tag-based cache invalidation
 class TaggedQueryCache {
@@ -1000,6 +1013,7 @@ function UserProfile({ userId }) {
   )
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## Real-time Data Synchronization
@@ -1007,6 +1021,7 @@ function UserProfile({ userId }) {
 ### WebSocket Integration
 
 ```javascript
+{% raw %}
 {% raw %}
 // WebSocket hook with React Query
 function useWebSocketQuery(queryKey, wsUrl, options = {}) {
@@ -1122,6 +1137,7 @@ function useChatRoom(roomId) {
   }
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Server-Sent Events (SSE)
@@ -1232,6 +1248,7 @@ function useNotifications() {
 ### Offline-First Data Strategy
 
 ```javascript
+{% raw %}
 {% raw %}
 // Service Worker integration for offline caching
 class OfflineQueryManager {
@@ -1378,6 +1395,7 @@ function OfflineIndicator() {
     </div>
   )
 }
+{% endraw %}
 {% endraw %}
 ```
 

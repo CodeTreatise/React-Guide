@@ -125,6 +125,7 @@ export default DataFetcher;
 ### Step 4: Compound Components Pattern
 ```jsx
 {% raw %}
+{% raw %}
 // src/components/Compound/Accordion.jsx
 import React, { createContext, useContext, useState } from 'react';
 import './Accordion.css';
@@ -204,6 +205,7 @@ Accordion.Content = AccordionContent;
 
 export default Accordion;
 {% endraw %}
+{% endraw %}
 ```
 
 ---
@@ -280,6 +282,7 @@ export default withErrorBoundary;
 
 ```jsx
 {% raw %}
+{% raw %}
 // src/hocs/withTracking.js
 import React, { useEffect } from 'react';
 
@@ -302,6 +305,7 @@ const withTracking = (eventName) => (WrappedComponent) => {
 };
 
 export default withTracking;
+{% endraw %}
 {% endraw %}
 ```
 
@@ -547,6 +551,7 @@ export default Modal;
 #### Tab System Component
 ```jsx
 {% raw %}
+{% raw %}
 // src/components/Compound/Tabs.jsx
 import React, { createContext, useContext, useState } from 'react';
 import './Tabs.css';
@@ -620,6 +625,7 @@ Tabs.Panels = TabPanels;
 Tabs.Panel = TabPanel;
 
 export default Tabs;
+{% endraw %}
 {% endraw %}
 ```
 
@@ -871,6 +877,7 @@ export const useComponentPatterns = () => {
 
 #### Pattern Examples Dashboard
 ```jsx
+{% raw %}
 {% raw %}
 // src/components/PatternsDashboard.jsx
 import React, { useState } from 'react';
@@ -1126,6 +1133,7 @@ export default compose(
   withLoading,
   withErrorBoundary
 )(PatternsDashboard);
+{% endraw %}
 {% endraw %}
 ```
 

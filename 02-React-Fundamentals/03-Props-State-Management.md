@@ -27,6 +27,7 @@ function Greeting({ name, age }) {
 
 ```jsx
 {% raw %}
+{% raw %}
 import PropTypes from 'prop-types';
 
 function UserCard({ user, isOnline, onClick }) {
@@ -54,11 +55,13 @@ UserCard.defaultProps = {
   isOnline: false
 };
 {% endraw %}
+{% endraw %}
 ```
 
 ### Default Props
 
 ```jsx
+{% raw %}
 {% raw %}
 // Method 1: defaultProps
 function Button({ text, variant, size }) {
@@ -82,6 +85,7 @@ function Button({ text, variant = 'primary', size = 'medium' }) {
     </button>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -351,6 +355,7 @@ function Navigation({ children }) {
 
 ```jsx
 {% raw %}
+{% raw %}
 function Tabs({ children, defaultTab = 0 }) {
   const [activeTab, setActiveTab] = useState(defaultTab);
   
@@ -399,6 +404,7 @@ function TabPanel({ children, index, activeTab }) {
   <TabPanel>Content for Tab 2</TabPanel>
   <TabPanel>Content for Tab 3</TabPanel>
 </Tabs>
+{% endraw %}
 {% endraw %}
 ```
 
@@ -598,6 +604,7 @@ const badUpdate = () => {
 
 ```jsx
 {% raw %}
+{% raw %}
 // Good: Single responsibility
 function UserAvatar({ src, alt, size = 'medium' }) {
   return (
@@ -629,6 +636,7 @@ function UserCard({ user, onEdit }) {
     </div>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 

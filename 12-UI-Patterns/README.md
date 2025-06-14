@@ -27,6 +27,7 @@ This module covers advanced UI patterns essential for building complex, accessib
 ### 1. Compound Components Pattern
 ```javascript
 {% raw %}
+{% raw %}
 // Advanced compound component implementation
 import { createContext, useContext, cloneElement, Children } from 'react'
 
@@ -159,10 +160,12 @@ function App() {
   )
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### 2. Render Props and Function as Children
 ```javascript
+{% raw %}
 {% raw %}
 // Advanced render props pattern for data fetching
 function DataFetcher({ 
@@ -299,10 +302,12 @@ function App() {
   )
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### 3. Advanced Accessibility Patterns
 ```javascript
+{% raw %}
 {% raw %}
 // Comprehensive accessible modal implementation
 import { useEffect, useRef, useCallback } from 'react'
@@ -584,10 +589,12 @@ function AccessibleCombobox({
   )
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### 4. Virtual Scrolling and Infinite Lists
 ```javascript
+{% raw %}
 {% raw %}
 // Advanced virtual scrolling implementation
 import { useVirtualizer } from '@tanstack/react-virtual'
@@ -755,10 +762,12 @@ function useInfiniteScroll(fetchMore, hasNextPage, threshold = 1.0) {
   return { loadMoreRef, isFetching }
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### 5. Advanced Form Patterns
 ```javascript
+{% raw %}
 {% raw %}
 // Multi-step form with validation
 function MultiStepForm({ steps, onSubmit, validationSchema }) {
@@ -1036,10 +1045,12 @@ function DynamicForm({ schema, onSubmit, initialValues = {} }) {
   )
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### 6. Complex Navigation Patterns
 ```javascript
+{% raw %}
 {% raw %}
 // Breadcrumb navigation with dynamic routing
 function Breadcrumbs({ routes, separator = ">" }) {
@@ -1219,6 +1230,7 @@ function MegaMenu({ menuItems }) {
     </nav>
   )
 }
+{% endraw %}
 {% endraw %}
 ```
 

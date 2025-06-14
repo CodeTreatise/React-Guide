@@ -122,6 +122,7 @@
 
 ```jsx
 {% raw %}
+{% raw %}
 import React, { useState, useEffect } from 'react'
 import './animations.css'
 
@@ -197,6 +198,7 @@ const DynamicAnimationComponent = ({ color, duration, delay }) => {
     </div>
   )
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -388,6 +390,7 @@ const ComplexAnimationSequence = () => {
 
 ```jsx
 {% raw %}
+{% raw %}
 import { useSpring, animated, useTransition, useChain, useSpringRef } from '@react-spring/web'
 import { useState } from 'react'
 
@@ -486,6 +489,7 @@ const PhysicsAnimation = () => {
   )
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ---
@@ -540,6 +544,7 @@ const PhysicsAnimation = () => {
 ### React Responsive Hooks
 
 ```jsx
+{% raw %}
 {% raw %}
 import { useState, useEffect } from 'react'
 
@@ -701,6 +706,7 @@ const ResponsiveImage = ({ src, alt, sizes }) => {
   )
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ---
@@ -773,6 +779,7 @@ const ResponsiveImage = ({ src, alt, sizes }) => {
 ### Touch-Friendly Interactions
 
 ```jsx
+{% raw %}
 {% raw %}
 import React, { useState, useRef } from 'react'
 
@@ -946,6 +953,7 @@ const MobileModal = ({ isOpen, onClose, children }) => {
   )
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ---
@@ -1086,6 +1094,7 @@ const MotionAwareComponent = ({ children }) => {
 
 ```jsx
 {% raw %}
+{% raw %}
 import { motion, AnimateSharedLayout } from 'framer-motion'
 
 const SharedElementExample = () => {
@@ -1146,6 +1155,7 @@ const SharedElementExample = () => {
     </div>
   )
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1329,6 +1339,7 @@ const AccessibleLoader = ({ isLoading, children }) => {
 
 ```jsx
 {% raw %}
+{% raw %}
 const ProductGallery = ({ products }) => {
   const [selectedProduct, setSelectedProduct] = useState(null)
   const [filter, setFilter] = useState('all')
@@ -1416,11 +1427,13 @@ const ProductGallery = ({ products }) => {
   )
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Dashboard with Animated Charts
 
 ```jsx
+{% raw %}
 {% raw %}
 const AnimatedDashboard = ({ data }) => {
   const [selectedMetric, setSelectedMetric] = useState('revenue')
@@ -1491,6 +1504,7 @@ const AnimatedChart = ({ data }) => {
     </div>
   )
 }
+{% endraw %}
 {% endraw %}
 ```
 

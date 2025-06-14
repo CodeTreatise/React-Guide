@@ -27,6 +27,7 @@ This module covers comprehensive data fetching strategies for modern React appli
 ### 1. Modern Data Fetching with React Query / TanStack Query
 ```javascript
 {% raw %}
+{% raw %}
 // Advanced React Query setup
 import { QueryClient, QueryClientProvider, useQuery, useMutation, useInfiniteQuery } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
@@ -139,10 +140,12 @@ function useInfiniteUsers(filters = {}) {
   })
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### 2. Advanced SWR Patterns
 ```javascript
+{% raw %}
 {% raw %}
 import useSWR, { useSWRConfig, SWRConfig } from 'swr'
 import useSWRInfinite from 'swr/infinite'
@@ -285,10 +288,12 @@ function useInfiniteUserList(filters = {}) {
   }
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### 3. Real-time Data with WebSockets
 ```javascript
+{% raw %}
 {% raw %}
 // WebSocket hook with automatic reconnection
 function useWebSocket(url, options = {}) {
@@ -437,10 +442,12 @@ function useRealTimeData(endpoint, initialData = null) {
   }
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### 4. Server-Sent Events (SSE)
 ```javascript
+{% raw %}
 {% raw %}
 // Server-Sent Events hook
 function useServerSentEvents(url, options = {}) {
@@ -549,10 +556,12 @@ function useNotifications() {
   }
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### 5. Offline-First Data Strategies
 ```javascript
+{% raw %}
 {% raw %}
 // Service Worker registration and management
 function useServiceWorker() {
@@ -784,6 +793,7 @@ function useOfflineFetch() {
     isReady,
   }
 }
+{% endraw %}
 {% endraw %}
 ```
 

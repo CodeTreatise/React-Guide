@@ -15,6 +15,7 @@
 ### Pipeline Architecture
 ```yaml
 {% raw %}
+{% raw %}
 # CI/CD Pipeline Structure
 stages:
   - build
@@ -67,6 +68,7 @@ pipeline:
       - deployment_verification
       - performance_monitoring
       - alert_setup
+{% endraw %}
 {% endraw %}
 ```
 
@@ -163,6 +165,7 @@ export const getCurrentEnvironment = (): EnvironmentConfig => {
 
 ### Complete Production Workflow
 ```yaml
+{% raw %}
 {% raw %}
 # .github/workflows/production.yml
 name: Production Deployment
@@ -482,10 +485,12 @@ jobs:
             -H "Content-Type: application/json" \
             -d '{"deployment": "success", "version": "${{ github.sha }}", "environment": "production"}'
 {% endraw %}
+{% endraw %}
 ```
 
 ### Feature Branch Workflow
 ```yaml
+{% raw %}
 {% raw %}
 # .github/workflows/feature.yml
 name: Feature Branch
@@ -550,6 +555,7 @@ jobs:
               **Bundle Size:** ![Bundle Size](https://img.shields.io/badge/Bundle-${process.env.BUNDLE_SIZE || 'Unknown'}-green)
               `
             });
+{% endraw %}
 {% endraw %}
 ```
 
@@ -749,6 +755,7 @@ monitor:health:
 
 ### Declarative Pipeline
 ```groovy
+{% raw %}
 {% raw %}
 // Jenkinsfile
 pipeline {
@@ -1029,6 +1036,7 @@ pipeline {
     }
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## Azure DevOps
@@ -1200,6 +1208,7 @@ stages:
 ### Blue-Green Deployment
 ```bash
 {% raw %}
+{% raw %}
 #!/bin/bash
 # scripts/blue-green-deploy.sh
 
@@ -1263,6 +1272,7 @@ npm run test:production:smoke
 
 echo "✅ Blue-green deployment completed successfully"
 echo "🗑️ Previous slot ($CURRENT_SLOT) is still available for rollback"
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1335,6 +1345,7 @@ spec:
 
 ### Infrastructure as Code with Terraform
 ```hcl
+{% raw %}
 {% raw %}
 # infrastructure/main.tf
 terraform {
@@ -1528,6 +1539,7 @@ output "cloudfront_distribution_id" {
 output "domain_name" {
   value = var.domain_name
 }
+{% endraw %}
 {% endraw %}
 ```
 

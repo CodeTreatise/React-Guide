@@ -18,6 +18,7 @@
 
 ```jsx
 {% raw %}
+{% raw %}
 // Always start with semantic HTML
 const AccessibleButton = ({ children, variant = 'primary', ...props }) => {
   return (
@@ -71,6 +72,7 @@ const PageLayout = ({ children }) => {
     </>
   )
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -180,6 +182,7 @@ const AccessibleAlert = ({ type = 'info', children, ...props }) => {
 ### Essential ARIA Patterns
 
 ```jsx
+{% raw %}
 {% raw %}
 // Accessible disclosure/dropdown
 const DisclosurePattern = ({ trigger, children, id }) => {
@@ -369,11 +372,13 @@ const Tooltip = ({ children, content, id, placement = 'top' }) => {
   )
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### ARIA Live Regions
 
 ```jsx
+{% raw %}
 {% raw %}
 // Status announcements
 const StatusAnnouncer = () => {
@@ -480,6 +485,7 @@ const DynamicList = ({ items }) => {
     </ul>
   )
 }
+{% endraw %}
 {% endraw %}
 ```
 

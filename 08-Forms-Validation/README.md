@@ -572,6 +572,7 @@ function FormikExample() {
 
 ```jsx
 {% raw %}
+{% raw %}
 import React, { useState } from 'react';
 
 function FileUploadForm() {
@@ -729,11 +730,13 @@ function FileUploadForm() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## 🔄 Dynamic Forms
 
 ```jsx
+{% raw %}
 {% raw %}
 import React, { useState } from 'react';
 
@@ -982,6 +985,7 @@ function DynamicForm() {
     </div>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 

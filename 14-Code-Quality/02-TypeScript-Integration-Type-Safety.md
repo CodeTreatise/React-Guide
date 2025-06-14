@@ -139,6 +139,7 @@ npm install --save-dev @types/node @types/lodash
 
 ```typescript
 {% raw %}
+{% raw %}
 import React, { ReactNode, ReactElement } from 'react'
 
 // Basic function component
@@ -230,11 +231,13 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 
 Input.displayName = 'Input'
 {% endraw %}
+{% endraw %}
 ```
 
 ### Advanced Component Patterns
 
 ```typescript
+{% raw %}
 {% raw %}
 // Higher-Order Component typing
 function withLoading<P extends object>(
@@ -384,6 +387,7 @@ Tabs.Tab = Tab
 Tabs.Panels = TabPanels
 Tabs.Panel = TabPanel
 {% endraw %}
+{% endraw %}
 ```
 
 ## Hook Typing
@@ -391,6 +395,7 @@ Tabs.Panel = TabPanel
 ### Custom Hook Types
 
 ```typescript
+{% raw %}
 {% raw %}
 // Custom hook with return tuple
 function useToggle(initialValue = false): [boolean, () => void, () => void, () => void] {
@@ -477,6 +482,7 @@ function useLocalStorage<T>(
 
   return [storedValue, setValue]
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -635,6 +641,7 @@ const ContactForm: React.FC<FormProps> = ({ onSubmit }) => {
 
 ```typescript
 {% raw %}
+{% raw %}
 // Custom event interfaces
 interface CustomSelectOption {
   value: string
@@ -692,6 +699,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
     </div>
   )
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -769,6 +777,7 @@ const Alert: React.FC<AlertProps> = ({ variant, onClose }) => {
 ### API Response Types
 
 ```typescript
+{% raw %}
 {% raw %}
 // API response types
 interface ApiResponse<T> {
@@ -858,6 +867,7 @@ const loginValidation: FormValidation<LoginForm> = {
   },
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## Advanced Type Patterns
@@ -865,6 +875,7 @@ const loginValidation: FormValidation<LoginForm> = {
 ### Conditional Types
 
 ```typescript
+{% raw %}
 {% raw %}
 // Conditional types for component props
 type ConditionalProps<T> = T extends string
@@ -937,6 +948,7 @@ function Tree<T>({ nodes, renderNode, onNodeClick }: TreeProps<T>) {
     </ul>
   )
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1109,6 +1121,7 @@ describe('TestComponent', () => {
 
 ```typescript
 {% raw %}
+{% raw %}
 // Step 1: Add basic types
 // Before (JavaScript)
 const Button = ({ children, onClick, variant }) => {
@@ -1159,6 +1172,7 @@ const StrictButton = React.forwardRef<HTMLButtonElement, StrictButtonProps>(
     )
   }
 )
+{% endraw %}
 {% endraw %}
 ```
 

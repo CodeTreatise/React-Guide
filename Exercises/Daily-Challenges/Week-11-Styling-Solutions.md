@@ -65,6 +65,7 @@ This week focuses on mastering various CSS-in-JS solutions, styled-components, C
 **Practice Exercises**:
 ```javascript
 {% raw %}
+{% raw %}
 // Extend base button for specific use cases
 const IconButton = styled(BaseButton)`
   /* Add icon-specific styles */
@@ -75,6 +76,7 @@ const Card = styled.div`
   background: ${props => props.variant === 'outlined' ? 'transparent' : props.theme.colors.surface};
   border: ${props => props.variant === 'outlined' ? `1px solid ${props.theme.colors.border}` : 'none'};
 `;
+{% endraw %}
 {% endraw %}
 ```
 
@@ -155,6 +157,7 @@ const Card = styled.div`
 **Tailwind Examples**:
 ```jsx
 {% raw %}
+{% raw %}
 // Responsive card component
 const Card = ({ children, className = "" }) => (
   <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 ${className}`}>
@@ -183,6 +186,7 @@ const Button = ({ variant = "primary", size = "md", children, ...props }) => {
     </button>
   );
 };
+{% endraw %}
 {% endraw %}
 ```
 
@@ -218,6 +222,7 @@ const Button = ({ variant = "primary", size = "md", children, ...props }) => {
 **Emotion Examples**:
 ```jsx
 {% raw %}
+{% raw %}
 import { css, jsx } from '@emotion/react';
 import styled from '@emotion/styled';
 
@@ -241,6 +246,7 @@ const objectStyle = {
     color: 'white'
   }
 };
+{% endraw %}
 {% endraw %}
 ```
 

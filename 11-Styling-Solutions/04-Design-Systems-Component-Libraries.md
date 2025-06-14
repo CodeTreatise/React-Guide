@@ -159,6 +159,7 @@ const tokens = {
 
 ```jsx
 {% raw %}
+{% raw %}
 import React, { createContext, useContext, useMemo } from 'react'
 
 const ThemeContext = createContext()
@@ -216,6 +217,7 @@ export const CSSVariablesProvider = ({ children, theme }) => {
   return children
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ---
@@ -225,6 +227,7 @@ export const CSSVariablesProvider = ({ children, theme }) => {
 ### Base Component Architecture
 
 ```jsx
+{% raw %}
 {% raw %}
 // Base component with forwardRef
 import React, { forwardRef } from 'react'
@@ -360,11 +363,13 @@ export const Button = forwardRef(({
 
 Button.displayName = 'Button'
 {% endraw %}
+{% endraw %}
 ```
 
 ### Form Components
 
 ```jsx
+{% raw %}
 {% raw %}
 // Input component with comprehensive features
 export const Input = forwardRef(({
@@ -574,11 +579,13 @@ export const Input = forwardRef(({
 
 Input.displayName = 'Input'
 {% endraw %}
+{% endraw %}
 ```
 
 ### Layout Components
 
 ```jsx
+{% raw %}
 {% raw %}
 // Flexible layout components
 export const Stack = ({ 
@@ -688,6 +695,7 @@ export const Container = ({
   )
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ---
@@ -697,6 +705,7 @@ export const Container = ({
 ### Token Generation System
 
 ```javascript
+{% raw %}
 {% raw %}
 // Token transformer
 const transformTokens = (tokens, platform = 'web') => {
@@ -791,6 +800,7 @@ const generateTokenDocs = (tokens) => {
   
   return `# Design Tokens\n\n${generateMarkdown(tokens)}`
 }
+{% endraw %}
 {% endraw %}
 ```
 

@@ -1229,6 +1229,7 @@ module.exports = {
 ### Custom Loader Example
 ```javascript
 {% raw %}
+{% raw %}
 // loaders/svg-react-loader.js
 const { getOptions } = require('loader-utils');
 const { validate } = require('schema-utils');
@@ -1303,6 +1304,7 @@ module.exports = {
     ]
   }
 };
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1451,6 +1453,7 @@ module.exports = PWAPlugin;
 #### Memory Issues
 ```javascript
 {% raw %}
+{% raw %}
 // Increase Node.js memory limit
 // package.json
 {
@@ -1469,6 +1472,7 @@ compiler.hooks.done.tap('MemoryUsage', (stats) => {
   const memUsage = process.memoryUsage();
   console.log(`Memory usage: ${Math.round(memUsage.heapUsed / 1024 / 1024 * 100) / 100} MB`);
 });
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1564,6 +1568,7 @@ if (module.hot) {
 ### Performance Monitoring
 ```javascript
 {% raw %}
+{% raw %}
 // Build time monitoring
 const start = Date.now();
 
@@ -1588,6 +1593,7 @@ compiler.hooks.afterEmit.tap('FileSizeMonitor', (compilation) => {
     });
   }
 });
+{% endraw %}
 {% endraw %}
 ```
 

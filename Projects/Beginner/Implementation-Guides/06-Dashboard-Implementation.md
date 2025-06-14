@@ -192,6 +192,7 @@ personal-dashboard/
 ### 1. Dashboard Header Component
 ```jsx
 {% raw %}
+{% raw %}
 // src/components/Dashboard/DashboardHeader.jsx
 import React, { useState, useEffect } from 'react';
 import { Sun, Moon, Settings, User } from 'lucide-react';
@@ -241,10 +242,12 @@ const DashboardHeader = ({ user, onThemeToggle, isDarkMode }) => {
 
 export default DashboardHeader;
 {% endraw %}
+{% endraw %}
 ```
 
 ### 2. Quick Statistics Widget
 ```jsx
+{% raw %}
 {% raw %}
 // src/components/Dashboard/QuickStats.jsx
 import React from 'react';
@@ -302,6 +305,7 @@ const QuickStats = ({ stats }) => {
 };
 
 export default QuickStats;
+{% endraw %}
 {% endraw %}
 ```
 
@@ -486,6 +490,7 @@ export default WeatherWidget;
 
 ### 4. Todo Widget (Enhanced from Project 4)
 ```jsx
+{% raw %}
 {% raw %}
 // src/components/Widgets/TodoWidget.jsx
 import React, { useState, useEffect } from 'react';
@@ -680,6 +685,7 @@ const TodoWidget = ({ onStatsUpdate }) => {
 };
 
 export default TodoWidget;
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1236,6 +1242,7 @@ body {
 
 ```jsx
 {% raw %}
+{% raw %}
 // src/App.js - Complete Integration
 import React, { useState, useEffect } from 'react';
 import './App.css';
@@ -1300,6 +1307,7 @@ function App() {
 }
 
 export default App;
+{% endraw %}
 {% endraw %}
 ```
 

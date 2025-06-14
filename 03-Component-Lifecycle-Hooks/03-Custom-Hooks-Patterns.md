@@ -893,6 +893,7 @@ function Timer() {
 
 ```javascript
 {% raw %}
+{% raw %}
 function useFetch(url, options = {}) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -1014,6 +1015,7 @@ function useAdvancedFetch(url, options = {}) {
     invalidateCache
   };
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1172,6 +1174,7 @@ function deepEqual(a, b) {
 
 ```javascript
 {% raw %}
+{% raw %}
 function useVirtualization({ 
   items, 
   itemHeight, 
@@ -1256,6 +1259,7 @@ function VirtualizedList({ items }) {
     </div>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1524,6 +1528,7 @@ function Modal({ isOpen, onClose, children }) {
 
 ```javascript
 {% raw %}
+{% raw %}
 function useLocalStorage(key, initialValue) {
   // State to store our value
   const [storedValue, setStoredValue] = useState(() => {
@@ -1644,6 +1649,7 @@ function UserPreferences() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ---
@@ -1653,6 +1659,7 @@ function UserPreferences() {
 ### Animation Hook
 
 ```javascript
+{% raw %}
 {% raw %}
 function useAnimation(duration, easing = (t) => t) {
   const [progress, setProgress] = useState(0);
@@ -1769,6 +1776,7 @@ function AnimatedProgressBar() {
     </div>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 

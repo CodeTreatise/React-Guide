@@ -286,6 +286,7 @@ export const selectTodosByCategory = createSelector(
 
 ```tsx
 {% raw %}
+{% raw %}
 // features/api/apiSlice.ts
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { RootState } from '../../store';
@@ -330,11 +331,13 @@ export const apiSlice = createApi({
   endpoints: (builder) => ({})
 });
 {% endraw %}
+{% endraw %}
 ```
 
 ### Feature API Slices
 
 ```tsx
+{% raw %}
 {% raw %}
 // features/todos/todosAPI.ts
 import { apiSlice } from '../api/apiSlice';
@@ -497,6 +500,7 @@ export const {
   useLazyGetTodosQuery,
   usePrefetch
 } = todosApiSlice;
+{% endraw %}
 {% endraw %}
 ```
 
@@ -832,6 +836,7 @@ export const selectPostsByTag = createSelector(
 
 ```tsx
 {% raw %}
+{% raw %}
 // Logger middleware
 const loggerMiddleware: Middleware = (store) => (next) => (action) => {
   const prevState = store.getState();
@@ -895,11 +900,13 @@ const persistenceMiddleware: Middleware = (store) => (next) => (action) => {
   return result;
 };
 {% endraw %}
+{% endraw %}
 ```
 
 ### Performance Monitoring
 
 ```tsx
+{% raw %}
 {% raw %}
 // Performance monitoring middleware
 const performanceMiddleware: Middleware = (store) => (next) => (action) => {
@@ -941,6 +948,7 @@ const memoryMiddleware: Middleware = (store) => (next) => (action) => {
   
   return result;
 };
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1008,6 +1016,7 @@ function TodosByCategory({ category }) {
 ### Component Optimization
 
 ```tsx
+{% raw %}
 {% raw %}
 // Memoized component with specific selectors
 const TodoItem = React.memo(({ todoId }: { todoId: string }) => {
@@ -1085,6 +1094,7 @@ const TodoForm = React.memo(() => {
     </form>
   );
 });
+{% endraw %}
 {% endraw %}
 ```
 

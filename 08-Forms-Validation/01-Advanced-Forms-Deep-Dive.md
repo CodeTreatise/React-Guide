@@ -543,6 +543,7 @@ export function useAdvancedForm({
 
 ```jsx
 {% raw %}
+{% raw %}
 import * as yup from 'yup';
 
 // Custom validation schema with cross-field validation
@@ -680,6 +681,7 @@ function ComplexValidationForm() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Conditional Validation
@@ -792,6 +794,7 @@ function ConditionalForm() {
 ### Memoized Form Components
 
 ```jsx
+{% raw %}
 {% raw %}
 import React, { memo, useCallback, useMemo } from 'react';
 
@@ -906,11 +909,13 @@ function OptimizedForm() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## 📝 Multi-Step Form Implementation
 
 ```jsx
+{% raw %}
 {% raw %}
 import React, { useState, useMemo } from 'react';
 
@@ -1157,6 +1162,7 @@ function MultiStepRegistrationForm() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## 🔄 Form State Synchronization
@@ -1266,6 +1272,7 @@ function useFormWithPersistence(key, initialValues) {
 ### Chunked File Upload
 
 ```jsx
+{% raw %}
 {% raw %}
 function useChunkedFileUpload() {
   const [uploadProgress, setUploadProgress] = useState({});
@@ -1405,6 +1412,7 @@ function useChunkedFileUpload() {
   };
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## 🧪 Form Testing Strategies
@@ -1533,6 +1541,7 @@ describe('Advanced Form Component', () => {
 ### E-commerce Checkout Form
 
 ```jsx
+{% raw %}
 {% raw %}
 function EcommerceCheckoutForm({ cart, onSubmit }) {
   const [currentStep, setCurrentStep] = useState('shipping');
@@ -1674,6 +1683,7 @@ function EcommerceCheckoutForm({ cart, onSubmit }) {
     </div>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 

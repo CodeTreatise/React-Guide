@@ -392,6 +392,7 @@ weather-app-api/
 ### API Integration Hook
 ```jsx
 {% raw %}
+{% raw %}
 // src/hooks/useWeatherAPI.js
 import { useState, useEffect, useCallback } from 'react';
 import { weatherAPI } from '../services/weatherAPI';
@@ -460,6 +461,7 @@ export const useWeatherAPI = () => {
     refetch: () => fetchWeather(weather?.location, { useCache: false })
   };
 };
+{% endraw %}
 {% endraw %}
 ```
 
@@ -549,6 +551,7 @@ realtime-chat-app/
 ### WebSocket Simulation Hook
 ```jsx
 {% raw %}
+{% raw %}
 // src/hooks/useWebSocket.js
 import { useState, useEffect, useCallback, useRef } from 'react';
 
@@ -637,6 +640,7 @@ export const useWebSocket = (url) => {
     addMessageListener
   };
 };
+{% endraw %}
 {% endraw %}
 ```
 

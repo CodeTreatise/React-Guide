@@ -27,6 +27,7 @@ This module covers advanced state management concepts that go beyond basic Redux
 ### 1. Advanced Redux Patterns
 ```javascript
 {% raw %}
+{% raw %}
 // Redux Toolkit Query (RTK Query) for data fetching
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
@@ -64,6 +65,7 @@ export const api = createApi({
 })
 
 export const { useGetPostsQuery, useGetPostQuery, useAddPostMutation } = api
+{% endraw %}
 {% endraw %}
 ```
 
@@ -357,6 +359,7 @@ function App() {
 ### 6. State Machines with XState
 ```javascript
 {% raw %}
+{% raw %}
 import { createMachine, interpret } from 'xstate'
 
 // Complex state machine for user authentication flow
@@ -497,6 +500,7 @@ function useAuth() {
     retry: () => send('RETRY'),
   }
 }
+{% endraw %}
 {% endraw %}
 ```
 

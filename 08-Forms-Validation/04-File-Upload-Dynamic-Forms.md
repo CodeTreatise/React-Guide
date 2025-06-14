@@ -23,6 +23,7 @@ This comprehensive guide covers advanced file upload patterns, dynamic form gene
 
 ```jsx
 {% raw %}
+{% raw %}
 import { useForm, useController } from 'react-hook-form';
 import { useState } from 'react';
 
@@ -174,11 +175,13 @@ function BasicFileUploadForm() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Advanced File Upload with Progress
 
 ```jsx
+{% raw %}
 {% raw %}
 import { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
@@ -381,6 +384,7 @@ const formatFileSize = (bytes) => {
   return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
 };
 {% endraw %}
+{% endraw %}
 ```
 
 ## 🎯 Drag and Drop Implementation
@@ -388,6 +392,7 @@ const formatFileSize = (bytes) => {
 ### Advanced Drag and Drop File Upload
 
 ```jsx
+{% raw %}
 {% raw %}
 import { useState, useRef, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
@@ -602,11 +607,13 @@ function DragDropUploadForm() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Custom Drag and Drop Hook
 
 ```jsx
+{% raw %}
 {% raw %}
 import { useState, useRef, useCallback } from 'react';
 
@@ -725,6 +732,7 @@ function CustomDragDropComponent() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## 🔧 Dynamic Form Generation
@@ -732,6 +740,7 @@ function CustomDragDropComponent() {
 ### Schema-Based Dynamic Forms
 
 ```jsx
+{% raw %}
 {% raw %}
 import { useForm, useFieldArray } from 'react-hook-form';
 import { useState } from 'react';
@@ -1037,11 +1046,13 @@ function DynamicFormExample() {
   return <DynamicForm schema={formSchema} />;
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Form Builder with Visual Editor
 
 ```jsx
+{% raw %}
 {% raw %}
 import { useState, useCallback } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
@@ -1310,6 +1321,7 @@ const FormBuilder = () => {
   );
 };
 {% endraw %}
+{% endraw %}
 ```
 
 ## 📱 Progressive Enhancement
@@ -1317,6 +1329,7 @@ const FormBuilder = () => {
 ### Responsive Dynamic Forms
 
 ```jsx
+{% raw %}
 {% raw %}
 import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
@@ -1489,6 +1502,7 @@ const AutoSaveForm = ({ schema }) => {
     </div>
   );
 };
+{% endraw %}
 {% endraw %}
 ```
 

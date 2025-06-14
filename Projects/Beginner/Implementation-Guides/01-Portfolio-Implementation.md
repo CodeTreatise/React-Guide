@@ -206,6 +206,7 @@ export default SkillBadge;
 
 ```jsx
 {% raw %}
+{% raw %}
 // src/components/SocialLinks.js
 import React from 'react';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaGlobe } from 'react-icons/fa';
@@ -245,6 +246,7 @@ const SocialLinks = ({ socialData }) => {
 };
 
 export default SocialLinks;
+{% endraw %}
 {% endraw %}
 ```
 

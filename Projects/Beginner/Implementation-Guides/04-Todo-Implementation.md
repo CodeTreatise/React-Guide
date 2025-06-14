@@ -175,6 +175,7 @@ export const sortTodosByPriority = (todos) => {
 
 ```javascript
 {% raw %}
+{% raw %}
 // src/hooks/useLocalStorage.js
 import { useState, useEffect } from 'react';
 
@@ -204,6 +205,7 @@ export const useLocalStorage = (key, initialValue) => {
 
   return [storedValue, setValue];
 };
+{% endraw %}
 {% endraw %}
 ```
 
@@ -345,6 +347,7 @@ export default TodoApp;
 
 ```jsx
 {% raw %}
+{% raw %}
 // src/components/TodoForm.js
 import React, { useState } from 'react';
 import { FaPlus, FaCheckDouble } from 'react-icons/fa';
@@ -422,11 +425,13 @@ const TodoForm = ({ onAddTodo, hasActiveTodos, onToggleAll }) => {
 
 export default TodoForm;
 {% endraw %}
+{% endraw %}
 ```
 
 ### Step 6: Create the Todo Filters Component
 
 ```jsx
+{% raw %}
 {% raw %}
 // src/components/TodoFilters.js
 import React from 'react';
@@ -493,6 +498,7 @@ const TodoFilters = ({
 
 export default TodoFilters;
 {% endraw %}
+{% endraw %}
 ```
 
 ### Step 7: Create the Todo List Component
@@ -536,6 +542,7 @@ export default TodoList;
 ### Step 8: Create the Todo Item Component
 
 ```jsx
+{% raw %}
 {% raw %}
 // src/components/TodoItem.js
 import React, { useState, useRef, useEffect } from 'react';
@@ -704,11 +711,13 @@ const TodoItem = ({ todo, index, onToggle, onDelete, onEdit }) => {
 
 export default TodoItem;
 {% endraw %}
+{% endraw %}
 ```
 
 ### Step 9: Create the Todo Stats Component
 
 ```jsx
+{% raw %}
 {% raw %}
 // src/components/TodoStats.js
 import React from 'react';
@@ -782,6 +791,7 @@ const TodoStats = ({ stats }) => {
 };
 
 export default TodoStats;
+{% endraw %}
 {% endraw %}
 ```
 

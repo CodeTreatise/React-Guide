@@ -109,6 +109,7 @@ function Counter() {
 
 ```jsx
 {% raw %}
+{% raw %}
 // src/components/CounterApp.js
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
@@ -233,6 +234,7 @@ const CounterApp = () => {
 
 export default CounterApp;
 {% endraw %}
+{% endraw %}
 ```
 
 **Key Learning Points:**
@@ -244,6 +246,7 @@ export default CounterApp;
 ### Step 3: Create the Counter Display Component
 
 ```jsx
+{% raw %}
 {% raw %}
 // src/components/CounterDisplay.js
 import React from 'react';
@@ -319,6 +322,7 @@ const CounterDisplay = ({ count, min, max, isAtMin, isAtMax }) => {
 
 export default CounterDisplay;
 {% endraw %}
+{% endraw %}
 ```
 
 **Key Learning Points:**
@@ -329,6 +333,7 @@ export default CounterDisplay;
 ### Step 4: Create the Counter Controls Component
 
 ```jsx
+{% raw %}
 {% raw %}
 // src/components/CounterControls.js
 import React from 'react';
@@ -408,6 +413,7 @@ const CounterControls = ({
 
 export default CounterControls;
 {% endraw %}
+{% endraw %}
 ```
 
 **Key Learning Points:**
@@ -419,6 +425,7 @@ export default CounterControls;
 ### Step 5: Create the Settings Component
 
 ```jsx
+{% raw %}
 {% raw %}
 // src/components/CounterSettings.js
 import React, { useState } from 'react';
@@ -555,6 +562,7 @@ const CounterSettings = ({
 
 export default CounterSettings;
 {% endraw %}
+{% endraw %}
 ```
 
 **Key Learning Points:**
@@ -566,6 +574,7 @@ export default CounterSettings;
 ### Step 6: Create the History Component
 
 ```jsx
+{% raw %}
 {% raw %}
 // src/components/CounterHistory.js
 import React from 'react';
@@ -656,6 +665,7 @@ const CounterHistory = ({ history }) => {
 };
 
 export default CounterHistory;
+{% endraw %}
 {% endraw %}
 ```
 

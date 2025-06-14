@@ -19,6 +19,7 @@ The Context API provides a way to pass data through the component tree without h
 
 ```jsx
 {% raw %}
+{% raw %}
 // Basic Context Setup
 import React, { createContext, useContext, useState } from 'react';
 
@@ -72,6 +73,7 @@ function Header() {
     </header>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -294,6 +296,7 @@ Create reusable context factories:
 
 ```jsx
 {% raw %}
+{% raw %}
 // Generic Context Factory
 function createContext(name, defaultValue = null) {
   const Context = React.createContext(defaultValue);
@@ -326,6 +329,7 @@ function CounterApp() {
     </CounterProvider>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -564,6 +568,7 @@ Implement selectors to prevent unnecessary re-renders:
 
 ```jsx
 {% raw %}
+{% raw %}
 // Context with selector support
 function createContextWithSelector(name) {
   const Context = createContext();
@@ -619,6 +624,7 @@ function UserTheme() {
   const theme = useUserSelector(state => state.user.preferences.theme);
   return <div>Theme: {theme}</div>;
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -685,6 +691,7 @@ function App() {
 
 ```jsx
 {% raw %}
+{% raw %}
 // Generic Provider Factory
 function createProvider(name, useHook) {
   const Context = createContext();
@@ -744,6 +751,7 @@ function useAuthState({ initialUser = null } = {}) {
 // Create providers using factory
 const [AuthProvider, useAuth] = createProvider('Auth', useAuthState);
 const [ThemeProvider, useTheme] = createProvider('Theme', useThemeState);
+{% endraw %}
 {% endraw %}
 ```
 
@@ -865,6 +873,7 @@ export function useAuthActions() {
 
 ```tsx
 {% raw %}
+{% raw %}
 // Generic context factory with full type safety
 function createTypedContext<T>(name: string) {
   const Context = createContext<T | null>(null);
@@ -916,6 +925,7 @@ function CounterApp() {
     </CounterProvider>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1101,6 +1111,7 @@ describe('App Integration', () => {
 
 ```jsx
 {% raw %}
+{% raw %}
 // Complete shopping cart implementation
 const CartContext = createContext();
 
@@ -1246,6 +1257,7 @@ function CartItem({ item }) {
     </div>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1527,6 +1539,7 @@ function App() {
 
 ```jsx
 {% raw %}
+{% raw %}
 // Development-only context debugging
 function ContextDevTools({ children, name, value }) {
   useEffect(() => {
@@ -1550,6 +1563,7 @@ function AuthProvider({ children }) {
     </AuthContext.Provider>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 

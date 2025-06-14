@@ -216,6 +216,7 @@ return (
 ### 3. Complex Expressions
 ```jsx
 {% raw %}
+{% raw %}
 const items = ['apple', 'banana', 'orange'];
 const isLoggedIn = true;
 
@@ -234,6 +235,7 @@ return (
     <p>{`You have ${items.length} items`}</p>
   </div>
 );
+{% endraw %}
 {% endraw %}
 ```
 
@@ -546,6 +548,7 @@ function TableRow() {
 ### 1. Component Organization
 ```jsx
 {% raw %}
+{% raw %}
 // ✅ Good: Clean, readable component
 function UserCard({ user, onEdit, onDelete }) {
   const handleEdit = () => onEdit(user.id);
@@ -569,6 +572,7 @@ function UserCard({ user, onEdit, onDelete }) {
     </div>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -846,6 +850,7 @@ function App() {
 ### 3. Conditional Prop Spreading
 ```jsx
 {% raw %}
+{% raw %}
 function Button({ 
   variant = 'primary', 
   disabled = false, 
@@ -866,6 +871,7 @@ function Button({
     </button>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 

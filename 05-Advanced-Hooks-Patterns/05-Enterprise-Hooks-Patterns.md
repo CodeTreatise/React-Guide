@@ -18,6 +18,7 @@
 
 ```jsx
 {% raw %}
+{% raw %}
 // hooks/federation/useFederatedModule.js
 import { useEffect, useState, useRef } from 'react';
 
@@ -148,11 +149,13 @@ function ProductCatalogMicroFrontend() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Domain-Driven Hook Design
 
 ```jsx
+{% raw %}
 {% raw %}
 // domain/user/hooks/index.js
 // Organize hooks by business domain
@@ -323,6 +326,7 @@ class DomainEventBus {
 
 const DomainEvents = new DomainEventBus();
 {% endraw %}
+{% endraw %}
 ```
 
 ## Scalable Hook Libraries
@@ -330,6 +334,7 @@ const DomainEvents = new DomainEventBus();
 ### Hook Factory System
 
 ```jsx
+{% raw %}
 {% raw %}
 // hooks/factory/createResourceHook.js
 export function createResourceHook(config) {
@@ -475,6 +480,7 @@ const useProducts = createResourceHook({
   })
 });
 {% endraw %}
+{% endraw %}
 ```
 
 ### Hook Composition Framework
@@ -590,6 +596,7 @@ function useDashboardComposition(userId) {
 ### Hook Standardization Framework
 
 ```jsx
+{% raw %}
 {% raw %}
 // standards/hookStandards.js
 export class HookStandards {
@@ -731,11 +738,13 @@ const useStandardizedAPI = HookStandards.createStandardHook({
   }
 });
 {% endraw %}
+{% endraw %}
 ```
 
 ### Cross-Team Hook Registry
 
 ```jsx
+{% raw %}
 {% raw %}
 // registry/hookRegistry.js
 class HookRegistry {
@@ -870,6 +879,7 @@ registerTeamHooks('ecommerce', {
   }
 });
 {% endraw %}
+{% endraw %}
 ```
 
 ## Performance at Scale
@@ -877,6 +887,7 @@ registerTeamHooks('ecommerce', {
 ### Enterprise Performance Monitoring
 
 ```jsx
+{% raw %}
 {% raw %}
 // performance/usePerformanceMonitoring.js
 export function usePerformanceMonitoring(componentName, config = {}) {
@@ -1097,11 +1108,13 @@ function ProductList() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Memory Management Patterns
 
 ```jsx
+{% raw %}
 {% raw %}
 // hooks/useMemoryOptimization.js
 export function useMemoryOptimization(config = {}) {
@@ -1223,6 +1236,7 @@ export function useVirtualization(items, { itemHeight, containerHeight, overscan
   };
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## Monitoring and Analytics
@@ -1230,6 +1244,7 @@ export function useVirtualization(items, { itemHeight, containerHeight, overscan
 ### Hook Usage Analytics
 
 ```jsx
+{% raw %}
 {% raw %}
 // analytics/useHookAnalytics.js
 export function useHookAnalytics(hookName, config = {}) {
@@ -1464,6 +1479,7 @@ function HookAnalyticsDashboard() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## Security Patterns
@@ -1471,6 +1487,7 @@ function HookAnalyticsDashboard() {
 ### Secure Hook Patterns
 
 ```jsx
+{% raw %}
 {% raw %}
 // security/useSecureState.js
 export function useSecureState(initialValue, options = {}) {
@@ -1659,6 +1676,7 @@ function useSecureUserData() {
     return { userData, setUserData };
   }, 'user.data.read');
 }
+{% endraw %}
 {% endraw %}
 ```
 

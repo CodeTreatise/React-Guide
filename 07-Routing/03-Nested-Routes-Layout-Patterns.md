@@ -164,6 +164,7 @@ Pass data to child routes through Outlet context.
 
 ```jsx
 {% raw %}
+{% raw %}
 import { Outlet } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
@@ -243,12 +244,14 @@ function UserPosts() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Multiple Outlets
 Advanced layouts can use multiple outlets with different contexts.
 
 ```jsx
+{% raw %}
 {% raw %}
 function AdminLayout() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
@@ -291,12 +294,14 @@ function AdminLayout() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## Layout Component Patterns
 
 ### Responsive Layout Pattern
 ```jsx
+{% raw %}
 {% raw %}
 import { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
@@ -357,10 +362,12 @@ function ResponsiveLayout() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Tab Layout Pattern
 ```jsx
+{% raw %}
 {% raw %}
 function TabLayout() {
   const location = useLocation();
@@ -400,10 +407,12 @@ function TabLayout() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Master-Detail Layout
 ```jsx
+{% raw %}
 {% raw %}
 function MasterDetailLayout() {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -456,6 +465,7 @@ function ItemDetail() {
     </div>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -744,6 +754,7 @@ function Analytics() {
 ### Loader Pattern for Data Fetching
 ```jsx
 {% raw %}
+{% raw %}
 // hooks/useRouteData.js
 import { useState, useEffect } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
@@ -809,6 +820,7 @@ function UserLayout() {
     </div>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1011,6 +1023,7 @@ const LazyUserProfile = createLazyRoute(
 ### 1. Layout Component Organization
 ```jsx
 {% raw %}
+{% raw %}
 // layouts/
 //   ├── BaseLayout.jsx
 //   ├── PublicLayout.jsx
@@ -1046,6 +1059,7 @@ function DashboardLayout() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### 2. Route Component Composition
@@ -1078,6 +1092,7 @@ function RouteGuard({ children, requiresAuth = false, requiredRole = null }) {
 
 ### 3. Breadcrumb Integration
 ```jsx
+{% raw %}
 {% raw %}
 // hooks/useBreadcrumbs.js
 export function useBreadcrumbs() {
@@ -1134,6 +1149,7 @@ function Breadcrumbs() {
     </nav>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 

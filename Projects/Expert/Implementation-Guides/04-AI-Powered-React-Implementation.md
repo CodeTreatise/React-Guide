@@ -203,6 +203,7 @@ export interface ChatMessage {
 
 ```typescript
 {% raw %}
+{% raw %}
 // src/services/ai/base-ai.service.ts
 export abstract class BaseAIService {
   protected model: AIModel;
@@ -371,6 +372,7 @@ export class OpenAIService extends BaseAIService {
     this.cache.clear();
   }
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -607,6 +609,7 @@ interface SentimentResult {
 
 ```typescript
 {% raw %}
+{% raw %}
 // src/stores/ai-store.ts
 import { create } from 'zustand';
 import { subscribeWithSelector } from 'zustand/middleware';
@@ -768,6 +771,7 @@ useAIStore.subscribe(
   }
 );
 {% endraw %}
+{% endraw %}
 ```
 
 ## Advanced AI Features
@@ -775,6 +779,7 @@ useAIStore.subscribe(
 ### Intelligent Chat Interface
 
 ```typescript
+{% raw %}
 {% raw %}
 // src/components/ai/ChatInterface/ChatInterface.tsx
 import React, { useState, useRef, useEffect } from 'react';
@@ -1025,11 +1030,13 @@ const SmartSuggestions: React.FC<{ onSelect: (text: string) => void }> = ({ onSe
   );
 };
 {% endraw %}
+{% endraw %}
 ```
 
 ### Computer Vision Components
 
 ```typescript
+{% raw %}
 {% raw %}
 // src/components/ai/ImageAnalysis/ImageAnalysis.tsx
 import React, { useState, useRef, useCallback } from 'react';
@@ -1312,6 +1319,7 @@ export const ImageAnalysis: React.FC = () => {
     </div>
   );
 };
+{% endraw %}
 {% endraw %}
 ```
 

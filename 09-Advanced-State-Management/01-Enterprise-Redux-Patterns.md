@@ -101,6 +101,7 @@ export type AppDispatch = typeof store.dispatch;
 
 ```jsx
 {% raw %}
+{% raw %}
 // features/user/userSlice.js
 import { createSlice, createAsyncThunk, createSelector } from '@reduxjs/toolkit';
 import { createEntityAdapter } from '@reduxjs/toolkit';
@@ -353,6 +354,7 @@ export const selectUsersWithProjects = createSelector(
 
 export default userSlice.reducer;
 {% endraw %}
+{% endraw %}
 ```
 
 ## 🔌 RTK Query for Data Fetching
@@ -360,6 +362,7 @@ export default userSlice.reducer;
 ### Advanced API Slice Configuration
 
 ```jsx
+{% raw %}
 {% raw %}
 // api/apiSlice.js - Base API configuration
 import { createApi, fetchBaseQuery, retry } from '@reduxjs/toolkit/query/react';
@@ -436,11 +439,13 @@ export const apiSlice = createApi({
 
 export const { useGetHealthQuery } = apiSlice;
 {% endraw %}
+{% endraw %}
 ```
 
 ### Feature-Specific API Slices
 
 ```jsx
+{% raw %}
 {% raw %}
 // features/product/productApiSlice.js
 import { apiSlice } from '../../api/apiSlice';
@@ -685,6 +690,7 @@ export const {
   deleteProduct
 } = productApiSlice.endpoints;
 {% endraw %}
+{% endraw %}
 ```
 
 ## 🔧 Advanced Middleware Patterns
@@ -692,6 +698,7 @@ export const {
 ### Custom Middleware for Cross-Cutting Concerns
 
 ```jsx
+{% raw %}
 {% raw %}
 // middleware/index.js
 import { createListenerMiddleware, isAnyOf } from '@reduxjs/toolkit';
@@ -825,11 +832,13 @@ export const optimisticUpdateMiddleware = (store) => (next) => (action) => {
   return result;
 };
 {% endraw %}
+{% endraw %}
 ```
 
 ### State Synchronization Middleware
 
 ```jsx
+{% raw %}
 {% raw %}
 // middleware/syncMiddleware.js
 import { createListenerMiddleware } from '@reduxjs/toolkit';
@@ -922,6 +931,7 @@ syncMiddleware.startListening({
     }
   }
 });
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1136,6 +1146,7 @@ export const selectPostWithDetails = createSelector(
 
 ```jsx
 {% raw %}
+{% raw %}
 // selectors/index.js
 import { createSelector, createDraftSafeSelector } from '@reduxjs/toolkit';
 import { memoize } from 'lodash';
@@ -1314,6 +1325,7 @@ export const selectUserPermissions = createUserSelector(
   (user) => user.roles?.flatMap(role => role.permissions) || []
 );
 {% endraw %}
+{% endraw %}
 ```
 
 ## 🏢 Enterprise Architecture Patterns
@@ -1321,6 +1333,7 @@ export const selectUserPermissions = createUserSelector(
 ### Micro-Frontend State Management
 
 ```jsx
+{% raw %}
 {% raw %}
 // Shared state management for micro-frontends
 // shared/stateManager.js
@@ -1435,11 +1448,13 @@ export const useMicroFrontendState = (storeName) => {
   return [state, dispatch];
 };
 {% endraw %}
+{% endraw %}
 ```
 
 ### Domain-Driven Design with Redux
 
 ```jsx
+{% raw %}
 {% raw %}
 // Domain-driven architecture
 // domains/ecommerce/store.js
@@ -1563,6 +1578,7 @@ export const domainEventMiddleware = (store) => (next) => (action) => {
   
   return result;
 };
+{% endraw %}
 {% endraw %}
 ```
 

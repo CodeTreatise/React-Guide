@@ -120,6 +120,7 @@ interface PaginatedState<T> {
 
 ```typescript
 {% raw %}
+{% raw %}
 // Recursive types for tree structures
 interface TreeNode<T = any> {
   id: string
@@ -189,6 +190,7 @@ type EntityActions<T extends string> =
 type UserActions = EntityActions<'USER'>
 type PostActions = EntityActions<'POST'>
 {% endraw %}
+{% endraw %}
 ```
 
 ## Redux with TypeScript
@@ -196,6 +198,7 @@ type PostActions = EntityActions<'POST'>
 ### Action Types and Creators
 
 ```typescript
+{% raw %}
 {% raw %}
 // Action type definitions
 interface LoadUsersAction {
@@ -266,11 +269,13 @@ function createAsyncActions<T>(entityName: string) {
 
 const userActions = createAsyncActions<User>('LOAD_USERS')
 {% endraw %}
+{% endraw %}
 ```
 
 ### Reducer Types
 
 ```typescript
+{% raw %}
 {% raw %}
 // State interface
 interface UsersState {
@@ -401,6 +406,7 @@ function createEntityReducer<T extends { id: string }>(
     }
   }
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1158,6 +1164,7 @@ interface TypedUserState {
 
 ```typescript
 {% raw %}
+{% raw %}
 // Generate action types from entity names
 type EntityName = 'user' | 'post' | 'comment'
 type ActionType = 'create' | 'read' | 'update' | 'delete'
@@ -1201,11 +1208,13 @@ function createEntityActions<T extends EntityName>(entityName: T) {
 const userActions = createEntityActions('user')
 // userActions.create.request() has type { type: 'USER_CREATE_REQUEST' }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Recursive Types for Nested State
 
 ```typescript
+{% raw %}
 {% raw %}
 // Recursive type for nested state updates
 type DeepPartial<T> = {
@@ -1275,6 +1284,7 @@ const state: NestedState = {
 
 // Type-safe deep update
 const newState = setDeepState(state, 'user.profile.personal.name', 'Jane')
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1761,6 +1771,7 @@ const errorReducer = (state: ErrorState, action: ErrorAction): ErrorState => {
 
 ```typescript
 {% raw %}
+{% raw %}
 // Result type for operations that can fail
 type Result<T, E = Error> = 
   | { success: true; data: T }
@@ -1829,6 +1840,7 @@ const userAsyncReducer = (
       return state
   }
 }
+{% endraw %}
 {% endraw %}
 ```
 

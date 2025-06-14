@@ -347,6 +347,7 @@ export default WeatherDashboard;
 
 ```jsx
 {% raw %}
+{% raw %}
 // src/components/CitySelector.js
 import React from 'react';
 import { FaMapMarkerAlt } from 'react-icons/fa';
@@ -378,6 +379,7 @@ const CitySelector = ({ cities, selectedCityId, onCityChange }) => {
 };
 
 export default CitySelector;
+{% endraw %}
 {% endraw %}
 ```
 
@@ -533,6 +535,7 @@ export default TemperatureDisplay;
 
 ```jsx
 {% raw %}
+{% raw %}
 // src/components/WeatherDetails.js
 import React from 'react';
 import { 
@@ -637,6 +640,7 @@ const WeatherDetails = ({
 
 export default WeatherDetails;
 {% endraw %}
+{% endraw %}
 ```
 
 ### Step 9: Create the Weather Forecast Component
@@ -682,6 +686,7 @@ export default WeatherForecast;
 ### Step 10: Create the Forecast Item Component
 
 ```jsx
+{% raw %}
 {% raw %}
 // src/components/ForecastItem.js
 import React from 'react';
@@ -742,6 +747,7 @@ const ForecastItem = ({
 };
 
 export default ForecastItem;
+{% endraw %}
 {% endraw %}
 ```
 

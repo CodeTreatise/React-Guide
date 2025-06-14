@@ -236,6 +236,7 @@ promise
 
 ```javascript
 {% raw %}
+{% raw %}
 // ✅ Solving Callback Hell with Promises
 function fetchUser(userId) {
     return fetch(`/api/users/${userId}`)
@@ -277,11 +278,13 @@ fetchUser(123)
         console.error('Something went wrong:', error);
     });
 {% endraw %}
+{% endraw %}
 ```
 
 ### Promise Utility Methods
 
 ```javascript
+{% raw %}
 {% raw %}
 // Promise.all() - Wait for all promises to resolve
 const promise1 = fetch('/api/users');
@@ -322,6 +325,7 @@ Promise.race([fetch('/api/data'), timeout])
     .then(response => response.json())
     .then(data => console.log('Data received in time:', data))
     .catch(error => console.error('Request timed out or failed:', error));
+{% endraw %}
 {% endraw %}
 ```
 
@@ -407,6 +411,7 @@ async function fetchDataMixed() {
 
 ```javascript
 {% raw %}
+{% raw %}
 // Async loops
 async function processUsersSequentially(userIds) {
     const results = [];
@@ -463,6 +468,7 @@ async function fetchWithTimeout(url, timeoutMs = 5000) {
     }
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ---
@@ -472,6 +478,7 @@ async function fetchWithTimeout(url, timeoutMs = 5000) {
 ### Try-Catch with Async/Await
 
 ```javascript
+{% raw %}
 {% raw %}
 // Basic error handling
 async function fetchUserSafely(userId) {
@@ -524,6 +531,7 @@ async function complexAPICall() {
         }
     }
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -589,6 +597,7 @@ const UserProfile = ({ userId }) => {
 
 ```javascript
 {% raw %}
+{% raw %}
 // Basic data fetching
 const UserComponent = ({ userId }) => {
     const [user, setUser] = useState(null);
@@ -645,11 +654,13 @@ const UserComponent = ({ userId }) => {
     );
 };
 {% endraw %}
+{% endraw %}
 ```
 
 ### AbortController for Cleanup
 
 ```javascript
+{% raw %}
 {% raw %}
 const SearchComponent = () => {
     const [query, setQuery] = useState('');
@@ -716,11 +727,13 @@ const SearchComponent = () => {
     );
 };
 {% endraw %}
+{% endraw %}
 ```
 
 ### Custom Hooks for Async Operations
 
 ```javascript
+{% raw %}
 {% raw %}
 // Generic fetch hook
 function useFetch(url, options = {}) {
@@ -776,6 +789,7 @@ const UserProfile = ({ userId }) => {
     );
 };
 {% endraw %}
+{% endraw %}
 ```
 
 ---
@@ -785,6 +799,7 @@ const UserProfile = ({ userId }) => {
 ### Complete User Management Component
 
 ```javascript
+{% raw %}
 {% raw %}
 const UserManagement = () => {
     const [users, setUsers] = useState([]);
@@ -993,6 +1008,7 @@ const UserForm = ({ user, onSave, onCancel }) => {
         </form>
     );
 };
+{% endraw %}
 {% endraw %}
 ```
 

@@ -32,6 +32,7 @@ REACT_APP_GEOCODING_API_BASE_URL=https://api.openweathermap.org/geo/1.0
 ### Step 3: Basic API Service
 ```jsx
 {% raw %}
+{% raw %}
 // src/services/weatherAPI.js
 import axios from 'axios';
 
@@ -197,10 +198,12 @@ class WeatherAPI {
 
 export const weatherAPI = new WeatherAPI();
 {% endraw %}
+{% endraw %}
 ```
 
 ### Step 4: Weather Hook
 ```jsx
+{% raw %}
 {% raw %}
 // src/hooks/useWeather.js
 import { useState, useEffect, useCallback } from 'react';
@@ -269,6 +272,7 @@ export const useWeather = () => {
     refreshWeather
   };
 };
+{% endraw %}
 {% endraw %}
 ```
 
@@ -420,6 +424,7 @@ export const useGeolocation = () => {
 #### Cache Service Hook
 ```jsx
 {% raw %}
+{% raw %}
 // src/services/cacheService.js
 class CacheService {
   constructor() {
@@ -503,6 +508,7 @@ export const cacheService = new CacheService();
 setInterval(() => {
   cacheService.cleanup();
 }, 5 * 60 * 1000);
+{% endraw %}
 {% endraw %}
 ```
 
@@ -684,6 +690,7 @@ export default LocationSearch;
 #### Location Suggestions Component
 ```jsx
 {% raw %}
+{% raw %}
 // src/components/LocationSearch/LocationSuggestions.jsx
 import React, { forwardRef } from 'react';
 import './LocationSuggestions.css';
@@ -725,6 +732,7 @@ const LocationSuggestions = forwardRef(({ suggestions, onSelect, query }, ref) =
 LocationSuggestions.displayName = 'LocationSuggestions';
 
 export default LocationSuggestions;
+{% endraw %}
 {% endraw %}
 ```
 
@@ -833,6 +841,7 @@ export default CurrentWeather;
 
 #### Weather Forecast Component
 ```jsx
+{% raw %}
 {% raw %}
 // src/components/Weather/WeatherForecast.jsx
 import React, { useState } from 'react';
@@ -956,6 +965,7 @@ const WeatherForecast = ({ forecast }) => {
 };
 
 export default WeatherForecast;
+{% endraw %}
 {% endraw %}
 ```
 

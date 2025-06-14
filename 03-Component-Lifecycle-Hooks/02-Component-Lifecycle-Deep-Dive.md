@@ -54,6 +54,7 @@ class ComponentLifecycle extends React.Component {
 
 ```javascript
 {% raw %}
+{% raw %}
 // Example showing the importance of lifecycle methods
 class DataFetcher extends React.Component {
   constructor(props) {
@@ -108,6 +109,7 @@ class DataFetcher extends React.Component {
     return <div>{JSON.stringify(data)}</div>;
   }
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -390,6 +392,7 @@ The updating phase occurs when a component's props or state change.
 
 ```javascript
 {% raw %}
+{% raw %}
 class UpdatingExample extends React.Component {
   constructor(props) {
     super(props);
@@ -519,6 +522,7 @@ class UpdatingExample extends React.Component {
     });
   }
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -722,6 +726,7 @@ class DeprecatedMethods extends React.Component {
 
 ```javascript
 {% raw %}
+{% raw %}
 // OLD: Using deprecated componentWillReceiveProps
 class OldComponent extends React.Component {
   UNSAFE_componentWillReceiveProps(nextProps) {
@@ -766,6 +771,7 @@ class NewComponent extends React.Component {
     }
   }
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -983,6 +989,7 @@ function App() {
 
 ```javascript
 {% raw %}
+{% raw %}
 class DataFetchingPatterns extends React.Component {
   constructor(props) {
     super(props);
@@ -1071,11 +1078,13 @@ class DataFetchingPatterns extends React.Component {
   }
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Subscription Patterns
 
 ```javascript
+{% raw %}
 {% raw %}
 class SubscriptionPatterns extends React.Component {
   constructor(props) {
@@ -1179,6 +1188,7 @@ class SubscriptionPatterns extends React.Component {
     );
   }
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1333,6 +1343,7 @@ class PerformanceOptimized extends React.Component {
 
 ```javascript
 {% raw %}
+{% raw %}
 // BEFORE: Class component with lifecycle methods
 class ClassComponent extends React.Component {
   constructor(props) {
@@ -1442,6 +1453,7 @@ function HooksComponent({ userId }) {
     </div>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1604,6 +1616,7 @@ function useDebounce(value, delay) {
 
 ```javascript
 {% raw %}
+{% raw %}
 // HOC that adds lifecycle logging
 function withLifecycleLogging(WrappedComponent, componentName = 'Component') {
   return class extends React.Component {
@@ -1704,6 +1717,7 @@ const UserProfile = withDataFetching(
   }
 );
 {% endraw %}
+{% endraw %}
 ```
 
 ### Render Props with Lifecycle
@@ -1791,6 +1805,7 @@ function App() {
 
 ```javascript
 {% raw %}
+{% raw %}
 class LifecycleDebugger extends React.Component {
   constructor(props) {
     super(props);
@@ -1850,11 +1865,13 @@ class LifecycleDebugger extends React.Component {
   }
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Performance Profiling
 
 ```javascript
+{% raw %}
 {% raw %}
 class PerformanceProfiler extends React.Component {
   constructor(props) {
@@ -1924,6 +1941,7 @@ class PerformanceProfiler extends React.Component {
     );
   }
 }
+{% endraw %}
 {% endraw %}
 ```
 

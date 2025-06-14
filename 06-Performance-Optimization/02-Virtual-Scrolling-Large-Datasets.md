@@ -158,6 +158,7 @@ function useVirtualScrolling({
 
 ```jsx
 {% raw %}
+{% raw %}
 function VirtualList({
   items,
   itemHeight,
@@ -291,6 +292,7 @@ function VirtualList({
     </div>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -698,6 +700,7 @@ function useIntersectionInfiniteScroll({
 
 ```jsx
 {% raw %}
+{% raw %}
 function InfiniteVirtualList({
   items,
   hasMore,
@@ -770,6 +773,7 @@ function InfiniteVirtualList({
     </div>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1109,6 +1113,7 @@ function useOptimizedSearch(data, searchFields = ['name']) {
 
 ```jsx
 {% raw %}
+{% raw %}
 function useAdvancedPagination({
   totalItems,
   itemsPerPage = 20,
@@ -1188,11 +1193,13 @@ function useAdvancedPagination({
   };
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Virtual Pagination Component
 
 ```jsx
+{% raw %}
 {% raw %}
 function VirtualPaginatedList({
   totalItems,
@@ -1332,6 +1339,7 @@ function VirtualPaginatedList({
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## Performance Monitoring
@@ -1451,6 +1459,7 @@ function useMemoryMonitor() {
 ### Complete Virtual Table Example
 
 ```jsx
+{% raw %}
 {% raw %}
 function VirtualTable({
   data,
@@ -1640,11 +1649,13 @@ function VirtualTable({
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Usage Examples
 
 ```jsx
+{% raw %}
 {% raw %}
 // Example usage
 function App() {
@@ -1695,6 +1706,7 @@ function App() {
     </div>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 

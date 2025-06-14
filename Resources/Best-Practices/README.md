@@ -66,6 +66,7 @@ appConfig.ts
 ### Component File Structure
 ```tsx
 {% raw %}
+{% raw %}
 // 1. Imports - External libraries first, then internal
 import React, { useState, useEffect } from 'react';
 import { Button } from '@material-ui/core';
@@ -130,10 +131,12 @@ export const UserProfile: React.FC<UserProfileProps> = ({
 // 4. Default export (if needed)
 export default UserProfile;
 {% endraw %}
+{% endraw %}
 ```
 
 ### Component Composition Patterns
 ```tsx
+{% raw %}
 {% raw %}
 // ✅ Good - Small, focused components
 function UserCard({ user }) {
@@ -179,6 +182,7 @@ function Tab({ children, isActive, onClick }) {
   <Tab>Settings</Tab>
   <Tab>Activity</Tab>
 </Tabs>
+{% endraw %}
 {% endraw %}
 ```
 
@@ -243,6 +247,7 @@ const debounce = () => {};
 ### JSX Formatting
 ```tsx
 {% raw %}
+{% raw %}
 // ✅ Multi-line JSX with proper indentation
 const UserCard = ({ user, onEdit, onDelete }) => (
   <div className="user-card">
@@ -277,6 +282,7 @@ const UserCard = ({ user, onEdit, onDelete }) => (
 ) : (
   <EmptyState />
 )}
+{% endraw %}
 {% endraw %}
 ```
 

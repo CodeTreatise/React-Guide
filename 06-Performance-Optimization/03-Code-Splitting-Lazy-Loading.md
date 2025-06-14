@@ -85,6 +85,7 @@ function App() {
 
 ```jsx
 {% raw %}
+{% raw %}
 // Hook for analyzing bundle impact
 function useBundleAnalysis() {
   const [bundleStats, setBundleStats] = useState({
@@ -125,6 +126,7 @@ function useBundleAnalysis() {
   return bundleStats;
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## React Lazy Loading
@@ -149,6 +151,7 @@ function App() {
 ### Enhanced Lazy Loading with Error Boundaries
 
 ```jsx
+{% raw %}
 {% raw %}
 // Error boundary for lazy components
 class LazyErrorBoundary extends Component {
@@ -251,6 +254,7 @@ async function retryImport(importFunction, retryCount, retryDelay) {
   }
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Conditional Lazy Loading
@@ -303,6 +307,7 @@ function ConditionalComponent({ shouldLoad }) {
 ### Feature-Based Code Splitting
 
 ```jsx
+{% raw %}
 {% raw %}
 // Feature module structure
 const featureModules = {
@@ -393,11 +398,13 @@ function FeatureComponent({ featureName, componentName, fallback, ...props }) {
   return <Component {...props} />;
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Library Code Splitting
 
 ```jsx
+{% raw %}
 {% raw %}
 // Split third-party libraries
 const LibraryLoaders = {
@@ -495,6 +502,7 @@ function LazyChart({ data, type = 'line', ...options }) {
   return <ChartComponent data={data} type={type} {...options} />;
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## Dynamic Imports & Module Loading
@@ -502,6 +510,7 @@ function LazyChart({ data, type = 'line', ...options }) {
 ### Advanced Dynamic Import Patterns
 
 ```jsx
+{% raw %}
 {% raw %}
 // Dynamic import with caching
 class ModuleCache {
@@ -623,11 +632,13 @@ function useDynamicImport(modulePath, options = {}) {
   };
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Module Federation Pattern
 
 ```jsx
+{% raw %}
 {% raw %}
 // Micro-frontend module loader
 class ModuleFederationLoader {
@@ -712,6 +723,7 @@ function useRemoteModule(remoteName, moduleName) {
   
   return state;
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1038,6 +1050,7 @@ function ModalManager() {
 
 ```jsx
 {% raw %}
+{% raw %}
 // Lazy tab content
 function useLazyTabs(tabs) {
   const [activeTab, setActiveTab] = useState(tabs[0]?.id);
@@ -1138,6 +1151,7 @@ function LazyTabContainer({ tabs }) {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## Asset & Resource Optimization
@@ -1145,6 +1159,7 @@ function LazyTabContainer({ tabs }) {
 ### Image Lazy Loading
 
 ```jsx
+{% raw %}
 {% raw %}
 // Advanced image lazy loading
 function LazyImage({ 
@@ -1218,11 +1233,13 @@ function LazyImage({
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### CSS Lazy Loading
 
 ```jsx
+{% raw %}
 {% raw %}
 // Dynamic CSS loading
 function useLazyCSS() {
@@ -1293,6 +1310,7 @@ function ThemedComponent({ theme = 'default' }) {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## Preloading & Prefetching Strategies
@@ -1300,6 +1318,7 @@ function ThemedComponent({ theme = 'default' }) {
 ### Intelligent Preloading
 
 ```jsx
+{% raw %}
 {% raw %}
 // Preloading strategy based on user behavior
 function useIntelligentPreloading() {
@@ -1431,6 +1450,7 @@ async function preloadAsset(url) {
     document.head.appendChild(link);
   });
 }
+{% endraw %}
 {% endraw %}
 ```
 

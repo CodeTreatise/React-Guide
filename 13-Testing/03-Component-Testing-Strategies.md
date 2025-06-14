@@ -19,6 +19,7 @@ Basic tests that ensure components render without crashing.
 
 ```javascript
 {% raw %}
+{% raw %}
 // components/Button.jsx
 import React from 'react'
 
@@ -82,12 +83,14 @@ describe('Button Smoke Tests', () => {
   })
 })
 {% endraw %}
+{% endraw %}
 ```
 
 ### 2. Snapshot Tests
 Capture component output to detect unintended changes.
 
 ```javascript
+{% raw %}
 {% raw %}
 // __tests__/Button.snapshot.test.jsx
 import React from 'react'
@@ -116,6 +119,7 @@ describe('Button Snapshot Tests', () => {
     expect(container.firstChild).toMatchSnapshot()
   })
 })
+{% endraw %}
 {% endraw %}
 ```
 
@@ -516,6 +520,7 @@ describe('LoginForm', () => {
 
 ```javascript
 {% raw %}
+{% raw %}
 // components/Modal.jsx
 import React, { useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
@@ -853,6 +858,7 @@ describe('Modal', () => {
     })
   })
 })
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1345,6 +1351,7 @@ describe('ErrorBoundary', () => {
 
 ```javascript
 {% raw %}
+{% raw %}
 // __tests__/performance.test.jsx
 import React from 'react'
 import { render, screen } from '@testing-library/react'
@@ -1462,6 +1469,7 @@ describe('Performance Tests', () => {
     expect(renderCount).toBe(2)
   })
 })
+{% endraw %}
 {% endraw %}
 ```
 

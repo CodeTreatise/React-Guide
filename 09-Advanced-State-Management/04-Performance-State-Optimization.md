@@ -168,6 +168,7 @@ const { entities, result } = normalize(rawData, userSchema)
 
 ```javascript
 {% raw %}
+{% raw %}
 // Feature-based state slicing
 const createFeatureSlice = (name, initialState, reducers) => {
   const actionCreators = {}
@@ -261,6 +262,7 @@ const postsSlice = createFeatureSlice('posts', {
     }
   }
 })
+{% endraw %}
 {% endraw %}
 ```
 
@@ -521,6 +523,7 @@ function PostListContainer() {
 
 ```javascript
 {% raw %}
+{% raw %}
 // Memoized data fetching hook
 function useOptimizedPosts(filters, sortBy) {
   const selectFilteredPosts = useMemo(
@@ -586,6 +589,7 @@ function usePostStatistics() {
   return { stats, chartData, summaryText }
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## Bundle Size Optimization
@@ -593,6 +597,7 @@ function usePostStatistics() {
 ### Code Splitting for State Management
 
 ```javascript
+{% raw %}
 {% raw %}
 // Lazy-loaded state slices
 const createAsyncSlice = (sliceName, importFn) => {
@@ -650,6 +655,7 @@ function App() {
     </Router>
   )
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1156,6 +1162,7 @@ const createPersistenceMiddleware = (persistenceConfig) => {
 
 ```javascript
 {% raw %}
+{% raw %}
 // State migration system
 const migrations = {
   1: (state) => {
@@ -1216,6 +1223,7 @@ const loadStateWithMigration = () => {
   return migrateState(persistedState)
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## Monitoring and Profiling
@@ -1223,6 +1231,7 @@ const loadStateWithMigration = () => {
 ### Performance Monitoring
 
 ```javascript
+{% raw %}
 {% raw %}
 // Performance metrics collection
 class StatePerformanceMonitor {
@@ -1319,11 +1328,13 @@ const createMonitoredSelector = (name, selector) => {
   }
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### React DevTools Integration
 
 ```javascript
+{% raw %}
 {% raw %}
 // Enhanced Redux DevTools configuration
 const configureDevtools = () => {
@@ -1385,6 +1396,7 @@ function ProfiledComponent({ children }) {
     </Profiler>
   )
 }
+{% endraw %}
 {% endraw %}
 ```
 

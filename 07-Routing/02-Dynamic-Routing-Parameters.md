@@ -52,6 +52,7 @@ function App() {
 ### Accessing Parameters with useParams
 ```jsx
 {% raw %}
+{% raw %}
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
@@ -102,10 +103,12 @@ function UserProfile() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Multiple Parameters Example
 ```jsx
+{% raw %}
 {% raw %}
 function ProductDetail() {
   const { category, productId } = useParams();
@@ -145,6 +148,7 @@ function ProductDetail() {
     </div>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -249,6 +253,7 @@ function BlogPost() {
 
 ### Using useSearchParams Hook
 ```jsx
+{% raw %}
 {% raw %}
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -415,6 +420,7 @@ function ProductSearch() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Query Parameter Utilities
@@ -489,6 +495,7 @@ export function useQueryParams() {
 ### Optional Parameters
 ```jsx
 {% raw %}
+{% raw %}
 // Using optional segments with conditional logic
 function UserRoutes() {
   return (
@@ -553,10 +560,12 @@ function UserProfile() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Wildcard Routes
 ```jsx
+{% raw %}
 {% raw %}
 function FileExplorer() {
   return (
@@ -598,6 +607,7 @@ function FileBrowser() {
     </div>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -878,6 +888,7 @@ function generateRoutes(config, components) {
 ### Dynamic Link Generation
 ```jsx
 {% raw %}
+{% raw %}
 // utils/linkHelpers.js
 export function generatePath(template, params) {
   return template.replace(/:([^/]+)/g, (match, param) => {
@@ -935,6 +946,7 @@ function ProductCard({ product }) {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## Performance Optimization
@@ -972,6 +984,7 @@ function OptimizedComponent() {
 
 ### Route Preloading
 ```jsx
+{% raw %}
 {% raw %}
 // utils/routePreloader.js
 const routePreloadCache = new Map();
@@ -1019,6 +1032,7 @@ function PreloadLink({ to, params, children, ...props }) {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## Best Practices
@@ -1051,6 +1065,7 @@ function PreloadLink({ to, params, children, ...props }) {
 
 ### 3. Error Handling for Invalid Parameters
 ```jsx
+{% raw %}
 {% raw %}
 function RobustComponent() {
   const params = useParams();
@@ -1093,6 +1108,7 @@ function RobustComponent() {
 
   return <UserContent />;
 }
+{% endraw %}
 {% endraw %}
 ```
 

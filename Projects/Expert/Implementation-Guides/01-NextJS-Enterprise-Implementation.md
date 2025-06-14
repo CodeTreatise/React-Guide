@@ -266,6 +266,7 @@ model VerificationToken {
 #### 1.3 Middleware for Tenant Resolution
 ```typescript
 {% raw %}
+{% raw %}
 // middleware.ts
 import { NextRequest, NextResponse } from 'next/server';
 import { getToken } from 'next-auth/jwt';
@@ -338,12 +339,14 @@ export const config = {
   ],
 };
 {% endraw %}
+{% endraw %}
 ```
 
 ### Phase 2: Advanced Next.js Features
 
 #### 2.1 Server-Side Rendering with Data Fetching
 ```typescript
+{% raw %}
 {% raw %}
 // app/[tenant]/analytics/page.tsx
 import { Suspense } from 'react';
@@ -432,10 +435,12 @@ async function AnalyticsContent({
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 #### 2.2 Incremental Static Regeneration (ISR)
 ```typescript
+{% raw %}
 {% raw %}
 // app/[tenant]/reports/[reportId]/page.tsx
 import { Metadata } from 'next';
@@ -513,6 +518,7 @@ export default async function ReportPage({ params }: ReportPageProps) {
     </div>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -648,6 +654,7 @@ export async function POST(
 
 #### 3.1 Tenant Service Implementation
 ```typescript
+{% raw %}
 {% raw %}
 // lib/tenants/service.ts
 import { PrismaClient } from '@prisma/client';
@@ -786,6 +793,7 @@ export async function updateTenant(
   return tenant;
 }
 {% endraw %}
+{% endraw %}
 ```
 
 #### 3.2 Tenant Context Provider
@@ -902,6 +910,7 @@ function getPermissions(role: string, plan: string): string[] {
 
 #### 4.1 Real-time Analytics Service
 ```typescript
+{% raw %}
 {% raw %}
 // lib/analytics/service.ts
 import { PrismaClient } from '@prisma/client';
@@ -1194,10 +1203,12 @@ export const onAnalyticsEvent = (callback: (event: AnalyticsEvent) => void) => {
   };
 };
 {% endraw %}
+{% endraw %}
 ```
 
 #### 4.2 Analytics Dashboard Components
 ```typescript
+{% raw %}
 {% raw %}
 // components/analytics/AnalyticsDashboard.tsx
 'use client';
@@ -1310,12 +1321,14 @@ export function AnalyticsDashboard({ data, tenant }: AnalyticsDashboardProps) {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Phase 5: Billing Integration with Stripe
 
 #### 5.1 Stripe Integration Service
 ```typescript
+{% raw %}
 {% raw %}
 // lib/billing/stripe.ts
 import Stripe from 'stripe';
@@ -1582,6 +1595,7 @@ export class BillingService {
     }, {} as Record<string, { count: number; total: number }>);
   }
 }
+{% endraw %}
 {% endraw %}
 ```
 

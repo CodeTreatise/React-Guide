@@ -142,6 +142,7 @@ function BasicForm() {
 
 ```jsx
 {% raw %}
+{% raw %}
 import { useForm, useFieldArray } from 'react-hook-form';
 
 function DynamicForm() {
@@ -208,6 +209,7 @@ function DynamicForm() {
     </form>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -560,6 +562,7 @@ function CustomFieldForm() {
 
 ```jsx
 {% raw %}
+{% raw %}
 import { Formik, Form, Field, FieldArray, ErrorMessage } from 'formik';
 
 function DynamicFormikForm() {
@@ -636,6 +639,7 @@ function DynamicFormikForm() {
     </Formik>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -735,6 +739,7 @@ function ReactFinalFormBasic() {
 
 ```jsx
 {% raw %}
+{% raw %}
 import { Form, Field } from 'react-final-form';
 
 const required = value => (value ? undefined : 'Required');
@@ -783,11 +788,13 @@ function FieldLevelValidationForm() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 #### Array Fields
 
 ```jsx
+{% raw %}
 {% raw %}
 import { Form, Field } from 'react-final-form';
 import arrayMutators from 'final-form-arrays';
@@ -868,6 +875,7 @@ function ArrayFieldsForm() {
     />
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1371,6 +1379,7 @@ function ConditionalFields() {
 
 ```jsx
 {% raw %}
+{% raw %}
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
@@ -1540,6 +1549,7 @@ const MultiStepForm = () => {
     </div>
   );
 };
+{% endraw %}
 {% endraw %}
 ```
 

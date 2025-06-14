@@ -57,6 +57,7 @@ export interface InstallPromptEvent extends Event {
 ### PWA Service Setup
 ```typescript
 {% raw %}
+{% raw %}
 // services/PWAService.ts
 class PWAService {
   private config: PWAConfig;
@@ -374,6 +375,7 @@ class PWAService {
     }
   }
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -764,6 +766,7 @@ async function addPendingRequest(request) {
 ### Advanced Cache Manager
 ```typescript
 {% raw %}
+{% raw %}
 // utils/CacheManager.ts
 interface CacheConfig {
   name: string;
@@ -1033,12 +1036,14 @@ class HTTPCache {
 
 export const httpCache = HTTPCache.getInstance();
 {% endraw %}
+{% endraw %}
 ```
 
 ## Offline Functionality
 
 ### Offline Data Synchronization
 ```typescript
+{% raw %}
 {% raw %}
 // services/OfflineSync.ts
 interface SyncOperation {
@@ -1449,12 +1454,14 @@ class OfflineSync {
 
 export const offlineSync = new OfflineSync();
 {% endraw %}
+{% endraw %}
 ```
 
 ## Web App Manifest
 
 ### Dynamic Manifest Generation
 ```typescript
+{% raw %}
 {% raw %}
 // utils/ManifestGenerator.ts
 interface ManifestConfig {
@@ -1750,6 +1757,7 @@ const manifestConfig: ManifestConfig = {
 };
 
 export const manifestGenerator = new ManifestGenerator(manifestConfig);
+{% endraw %}
 {% endraw %}
 ```
 

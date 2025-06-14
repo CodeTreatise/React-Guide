@@ -60,6 +60,7 @@ const Button = styled.button`
 
 ```typescript
 {% raw %}
+{% raw %}
 // Benefits of CSS-in-JS
 interface CSSInJSBenefits {
   // 1. Component-scoped styles
@@ -166,6 +167,7 @@ const DynamicButton = styled.button<ButtonProps>`
   `}
 `;
 {% endraw %}
+{% endraw %}
 ```
 
 ## Styled Components Mastery
@@ -173,6 +175,7 @@ const DynamicButton = styled.button<ButtonProps>`
 ### Advanced Styled Components Patterns
 
 ```typescript
+{% raw %}
 {% raw %}
 // Installation and setup
 npm install styled-components
@@ -353,11 +356,13 @@ const AnimatedContainer = styled.div<{
   }}
 `;
 {% endraw %}
+{% endraw %}
 ```
 
 ### Styled Components Theming
 
 ```typescript
+{% raw %}
 {% raw %}
 // Theme definition
 interface Theme {
@@ -521,6 +526,7 @@ const App: React.FC = () => {
   );
 };
 {% endraw %}
+{% endraw %}
 ```
 
 ## Emotion.js Deep Dive
@@ -528,6 +534,7 @@ const App: React.FC = () => {
 ### Emotion Setup and Basic Usage
 
 ```typescript
+{% raw %}
 {% raw %}
 // Installation
 npm install @emotion/react @emotion/styled
@@ -629,11 +636,13 @@ const ObjectStylesExample: React.FC = () => (
   </div>
 );
 {% endraw %}
+{% endraw %}
 ```
 
 ### Advanced Emotion Patterns
 
 ```typescript
+{% raw %}
 {% raw %}
 // 1. Dynamic styles with theme
 import { Theme, useTheme } from '@emotion/react';
@@ -781,6 +790,7 @@ const App: React.FC = () => (
   </>
 );
 {% endraw %}
+{% endraw %}
 ```
 
 ## JSS (JavaScript Style Sheets)
@@ -788,6 +798,7 @@ const App: React.FC = () => (
 ### JSS Setup and Usage
 
 ```typescript
+{% raw %}
 {% raw %}
 // Installation
 npm install jss jss-preset-default react-jss
@@ -982,6 +993,7 @@ const App: React.FC = () => (
     <ThemedJSSComponent />
   </ThemeProvider>
 );
+{% endraw %}
 {% endraw %}
 ```
 

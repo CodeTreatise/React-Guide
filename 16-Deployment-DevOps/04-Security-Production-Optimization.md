@@ -18,6 +18,7 @@
 
 ```typescript
 {% raw %}
+{% raw %}
 // utils/security-headers.ts
 export const generateCSPHeader = (nonce?: string): string => {
   const directives = [
@@ -64,6 +65,7 @@ export const securityHeadersMiddleware = (req: any, res: any, next: any) => {
   res.locals.nonce = nonce;
   next();
 };
+{% endraw %}
 {% endraw %}
 ```
 
@@ -485,6 +487,7 @@ spec:
 
 ```yaml
 {% raw %}
+{% raw %}
 # .github/workflows/security-scan.yml
 name: Security Scan
 
@@ -554,6 +557,7 @@ jobs:
       with:
         api-key: ${{ secrets.FOSSA_API_KEY }}
 {% endraw %}
+{% endraw %}
 ```
 
 ## Performance Optimization
@@ -561,6 +565,7 @@ jobs:
 ### Advanced Bundle Optimization
 
 ```javascript
+{% raw %}
 {% raw %}
 // webpack.config.prod.js
 const path = require('path');
@@ -659,11 +664,13 @@ module.exports = {
   }
 };
 {% endraw %}
+{% endraw %}
 ```
 
 ### Tree Shaking & Dead Code Elimination
 
 ```typescript
+{% raw %}
 {% raw %}
 // utils/performance-optimization.ts
 
@@ -730,11 +737,13 @@ export const preloadCriticalResources = () => {
   });
 };
 {% endraw %}
+{% endraw %}
 ```
 
 ### React Performance Optimizations
 
 ```typescript
+{% raw %}
 {% raw %}
 // components/OptimizedComponent.tsx
 import React, { memo, useMemo, useCallback, startTransition } from 'react';
@@ -826,6 +835,7 @@ OptimizedList.displayName = 'OptimizedList';
 
 export default OptimizedList;
 {% endraw %}
+{% endraw %}
 ```
 
 ## Caching Strategies
@@ -833,6 +843,7 @@ export default OptimizedList;
 ### Multi-Level Caching Implementation
 
 ```typescript
+{% raw %}
 {% raw %}
 // utils/cache-manager.ts
 interface CacheEntry<T> {
@@ -1065,6 +1076,7 @@ class CacheManager {
 
 export const cacheManager = new CacheManager();
 {% endraw %}
+{% endraw %}
 ```
 
 ### Service Worker Caching
@@ -1224,6 +1236,7 @@ async function doBackgroundSync() {
 
 ```javascript
 {% raw %}
+{% raw %}
 // cloudflare-worker.js
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request));
@@ -1338,6 +1351,7 @@ function shouldRevalidate(response) {
   const age = response.headers.get('Age') || '0';
   return parseInt(age) > parseInt(maxAge[1]);
 }
+{% endraw %}
 {% endraw %}
 ```
 

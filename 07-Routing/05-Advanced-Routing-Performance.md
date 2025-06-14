@@ -28,6 +28,7 @@ By the end of this section, you will:
 ### Route Factories and Dynamic Configuration
 ```jsx
 {% raw %}
+{% raw %}
 // utils/routeFactory.js
 export class RouteFactory {
   constructor() {
@@ -113,10 +114,12 @@ function AppRoutes() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Multi-Tenant Routing
 ```jsx
+{% raw %}
 {% raw %}
 // hooks/useMultiTenantRouting.js
 import { useParams, useNavigate } from 'react-router-dom';
@@ -227,6 +230,7 @@ function TenantLayout() {
     </div>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -415,6 +419,7 @@ function ProgressiveLoader({ children, skeleton }) {
 ### Smart Route Prefetching
 ```jsx
 {% raw %}
+{% raw %}
 // hooks/useRoutePrefetch.js
 import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -522,6 +527,7 @@ function SmartLink({ to, prefetch = 'hover', children, ...props }) {
     </Link>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -641,6 +647,7 @@ export function useCachedRouteData(key, fetcher, options = {}) {
 ### Background Route Preloading
 ```jsx
 {% raw %}
+{% raw %}
 // hooks/useBackgroundPreloader.js
 import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -716,12 +723,14 @@ export function useBackgroundPreloader() {
   return null;
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## Route Animations & Transitions
 
 ### Page Transition System
 ```jsx
+{% raw %}
 {% raw %}
 // components/PageTransition.jsx
 import { useState, useEffect } from 'react';
@@ -785,10 +794,12 @@ const transitionStyles = `
 }
 `;
 {% endraw %}
+{% endraw %}
 ```
 
 ### Advanced Route Animations
 ```jsx
+{% raw %}
 {% raw %}
 // hooks/useRouteTransition.js
 import { useState, useEffect } from 'react';
@@ -877,12 +888,14 @@ function App() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## Complex Navigation Flows
 
 ### Multi-Step Wizard Navigation
 ```jsx
+{% raw %}
 {% raw %}
 // hooks/useWizardNavigation.js
 import { useState, useCallback } from 'react';
@@ -1032,6 +1045,7 @@ function Wizard({ steps, basePath = '/wizard' }) {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Conditional Navigation Flows
@@ -1119,6 +1133,7 @@ export function useConditionalNavigation() {
 
 ### Performance Metrics Collection
 ```jsx
+{% raw %}
 {% raw %}
 // utils/routePerformanceMonitor.js
 class RoutePerformanceMonitor {
@@ -1278,6 +1293,7 @@ function PerformanceMonitor() {
     </div>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 

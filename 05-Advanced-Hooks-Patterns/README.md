@@ -30,6 +30,7 @@ This module dives deep into advanced React hooks patterns that are essential for
 #### Hook Composition
 ```jsx
 {% raw %}
+{% raw %}
 // Combining multiple hooks for complex functionality
 function useAuthenticatedApi(url) {
   const { user, isAuthenticated } = useAuth();
@@ -50,6 +51,7 @@ function UserProfile() {
   
   return <ProfileCard profile={profile} />;
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -91,6 +93,7 @@ function useList<T>(initialItems: T[] = []) {
 
 #### Context-Based Compound Components
 ```jsx
+{% raw %}
 {% raw %}
 // Create context for compound component
 const TabsContext = createContext();
@@ -145,6 +148,7 @@ Tabs.List = TabList;
 Tabs.Tab = Tab;
 Tabs.Panels = TabPanels;
 Tabs.Panel = TabPanel;
+{% endraw %}
 {% endraw %}
 ```
 

@@ -16,6 +16,7 @@
 #### Understanding Profiler Metrics
 ```jsx
 {% raw %}
+{% raw %}
 import { Profiler } from 'react';
 
 function DetailedProfiler({ children, id }) {
@@ -59,10 +60,12 @@ function DetailedProfiler({ children, id }) {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 #### Custom Performance Hooks
 ```jsx
+{% raw %}
 {% raw %}
 // Hook for measuring component render times
 function useRenderTime(componentName) {
@@ -114,6 +117,7 @@ function useComponentLifecycle(componentName) {
   
   return { mountCount };
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -479,6 +483,7 @@ const utils = {
 ### 1. Memory Leak Detection
 ```jsx
 {% raw %}
+{% raw %}
 // Hook to detect memory leaks
 function useMemoryLeakDetection(componentName) {
   const mountTime = useRef(Date.now());
@@ -547,6 +552,7 @@ function ComponentWithCleanup() {
   
   return <div>Component with automatic cleanup</div>;
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -928,6 +934,7 @@ function useUser(userId) {
 ### 1. E-commerce Product List Optimization
 ```jsx
 {% raw %}
+{% raw %}
 // Optimized product list with advanced filtering
 function ProductList({ filters, sortBy, searchTerm }) {
   const [products, setProducts] = useState([]);
@@ -1029,6 +1036,7 @@ const ProductCard = React.memo(function ProductCard({ product, onAddToCart }) {
     </div>
   );
 });
+{% endraw %}
 {% endraw %}
 ```
 

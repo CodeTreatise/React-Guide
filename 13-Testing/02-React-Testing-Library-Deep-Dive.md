@@ -176,6 +176,7 @@ describe('Query Variants', () => {
 
 ```javascript
 {% raw %}
+{% raw %}
 // components/UserCard.jsx
 import React from 'react'
 
@@ -310,6 +311,7 @@ describe('UserCard', () => {
     expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent('John Doe')
   })
 })
+{% endraw %}
 {% endraw %}
 ```
 
@@ -595,6 +597,7 @@ describe('ContactForm', () => {
 
 ```javascript
 {% raw %}
+{% raw %}
 // components/UserList.jsx
 import React, { useState, useEffect } from 'react'
 
@@ -808,11 +811,13 @@ describe('UserList', () => {
   })
 })
 {% endraw %}
+{% endraw %}
 ```
 
 ## Testing Custom Hooks
 
 ```javascript
+{% raw %}
 {% raw %}
 // hooks/useLocalStorage.js
 import { useState, useEffect } from 'react'
@@ -1003,6 +1008,7 @@ describe('useLocalStorage', () => {
     expect(value.preferences).toEqual({ theme: 'dark', language: 'en' })
   })
 })
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1327,6 +1333,7 @@ export const waitForLoadingToFinish = () =>
 
 ```javascript
 {% raw %}
+{% raw %}
 // __tests__/performance.test.jsx
 import React from 'react'
 import { render } from '@testing-library/react'
@@ -1380,6 +1387,7 @@ describe('Performance Tests', () => {
     expect(renderCount).toBe(2) // Should re-render
   })
 })
+{% endraw %}
 {% endraw %}
 ```
 

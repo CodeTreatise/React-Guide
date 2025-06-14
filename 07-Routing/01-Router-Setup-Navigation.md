@@ -250,6 +250,7 @@ function Navigation() {
 ### Advanced NavLink Patterns
 ```jsx
 {% raw %}
+{% raw %}
 // Custom NavLink component
 function CustomNavLink({ to, children, ...props }) {
   return (
@@ -282,6 +283,7 @@ function IconNavLink({ to, icon, children }) {
     </NavLink>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -779,6 +781,7 @@ function SkipLinks() {
 ### Focus Management
 ```jsx
 {% raw %}
+{% raw %}
 import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -822,6 +825,7 @@ function FocusManager({ children }) {
     </div>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -882,6 +886,7 @@ function App() {
 ### Navigation Performance Monitoring
 ```jsx
 {% raw %}
+{% raw %}
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -919,6 +924,7 @@ function NavigationPerformanceMonitor() {
 
   return null;
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -976,6 +982,7 @@ export function AppRoutes() {
 ### 2. Navigation Patterns
 ```jsx
 {% raw %}
+{% raw %}
 // components/Navigation.jsx
 import { NavLink, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -1028,6 +1035,7 @@ export function Navigation() {
     </nav>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -1091,6 +1099,7 @@ function App() {
 ### 1. Breadcrumb Navigation
 ```jsx
 {% raw %}
+{% raw %}
 import { useLocation, Link } from 'react-router-dom';
 
 function Breadcrumbs() {
@@ -1122,6 +1131,7 @@ function Breadcrumbs() {
     </nav>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 

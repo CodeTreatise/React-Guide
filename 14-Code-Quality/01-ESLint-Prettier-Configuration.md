@@ -481,6 +481,7 @@ module.exports = {
 
 ```javascript
 {% raw %}
+{% raw %}
 // eslint-rules/prefer-named-exports.js
 module.exports = {
   meta: {
@@ -521,6 +522,7 @@ module.exports = {
     }
   },
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -731,6 +733,7 @@ echo "✅ Pre-commit checks passed!"
 
 ```yaml
 {% raw %}
+{% raw %}
 # .github/workflows/code-quality.yml
 name: Code Quality
 
@@ -774,6 +777,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_JAVASCRIPT_ES: true
           VALIDATE_TYPESCRIPT_ES: true
+{% endraw %}
 {% endraw %}
 ```
 

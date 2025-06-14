@@ -100,6 +100,7 @@ module.exports = {
 ### Dynamic Remote Loading
 ```typescript
 {% raw %}
+{% raw %}
 // types/module-federation.d.ts
 declare global {
   interface Window {
@@ -209,10 +210,12 @@ class RemoteLoader {
 
 export const remoteLoader = new RemoteLoader();
 {% endraw %}
+{% endraw %}
 ```
 
 ### Remote Component Wrapper
 ```typescript
+{% raw %}
 {% raw %}
 // components/RemoteComponent.tsx
 import React, { Suspense, lazy, ComponentType } from 'react';
@@ -294,6 +297,7 @@ export const DashboardPage = () => {
   );
 };
 {% endraw %}
+{% endraw %}
 ```
 
 ## Micro-frontend Architecture
@@ -367,6 +371,7 @@ export default App;
 
 ### Micro-frontend Base Configuration
 ```typescript
+{% raw %}
 {% raw %}
 // shared/src/types/microfrontend.ts
 export interface MicrofrontendConfig {
@@ -488,6 +493,7 @@ class MicrofrontendService {
 
 export const microfrontendService = new MicrofrontendService();
 {% endraw %}
+{% endraw %}
 ```
 
 ## Advanced Federation Patterns
@@ -565,6 +571,7 @@ module.exports = {
 
 ### Dynamic Remote Discovery
 ```typescript
+{% raw %}
 {% raw %}
 // services/RemoteDiscoveryService.ts
 interface RemoteManifest {
@@ -668,10 +675,12 @@ class RemoteDiscoveryService {
 
 export const remoteDiscoveryService = new RemoteDiscoveryService();
 {% endraw %}
+{% endraw %}
 ```
 
 ### Micro-frontend Orchestration
 ```typescript
+{% raw %}
 {% raw %}
 // orchestration/MicrofrontendOrchestrator.ts
 interface MicrofrontendInstance {
@@ -798,12 +807,14 @@ class MicrofrontendOrchestrator {
 
 export const microfrontendOrchestrator = new MicrofrontendOrchestrator();
 {% endraw %}
+{% endraw %}
 ```
 
 ## Runtime Integration
 
 ### Event Bus Communication
 ```typescript
+{% raw %}
 {% raw %}
 // shared/src/events/EventBus.ts
 type EventHandler<T = any> = (data: T) => void;
@@ -959,6 +970,7 @@ export class TypedEventBus {
 
 export const typedEventBus = new TypedEventBus();
 {% endraw %}
+{% endraw %}
 ```
 
 ### React Hook for Event Bus
@@ -1053,6 +1065,7 @@ export const UserProfile: React.FC = () => {
 
 ### Cross-Microfrontend State Synchronization
 ```typescript
+{% raw %}
 {% raw %}
 // state/CrossMicrofrontendState.ts
 interface StateChange<T = any> {
@@ -1181,6 +1194,7 @@ export function useCrossMicrofrontendState<T>(
   return [value, updateValue];
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ## Shared Dependencies
@@ -1270,6 +1284,7 @@ module.exports = { sharedConfig };
 
 ### Version Compatibility Manager
 ```typescript
+{% raw %}
 {% raw %}
 // shared/src/version/VersionManager.ts
 interface VersionRequirement {
@@ -1380,10 +1395,12 @@ class VersionManager {
 
 export const versionManager = new VersionManager();
 {% endraw %}
+{% endraw %}
 ```
 
 ### Shared Library Factory
 ```typescript
+{% raw %}
 {% raw %}
 // shared/src/factory/SharedLibraryFactory.ts
 interface SharedLibraryConfig {
@@ -1501,6 +1518,7 @@ sharedLibraryFactory.register({
   factory: () => import('react-router-dom'),
   dependencies: ['react']
 });
+{% endraw %}
 {% endraw %}
 ```
 

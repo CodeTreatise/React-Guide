@@ -211,6 +211,7 @@ Using children prop to create flexible, reusable components.
 
 ```jsx
 {% raw %}
+{% raw %}
 function Card({ header, children, footer, className = '' }) {
   return (
     <div className={`card ${className}`}>
@@ -239,6 +240,7 @@ function ProductCard({ product }) {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Compound Components
@@ -246,6 +248,7 @@ function ProductCard({ product }) {
 Components that work together to form a cohesive UI.
 
 ```jsx
+{% raw %}
 {% raw %}
 function Tabs({ children, defaultTab = 0 }) {
   const [activeTab, setActiveTab] = useState(defaultTab);
@@ -289,6 +292,7 @@ function App() {
     </Tabs>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -355,6 +359,7 @@ Use React Context to provide data to component trees.
 
 ```jsx
 {% raw %}
+{% raw %}
 // Create context
 const ThemeContext = createContext();
 
@@ -396,6 +401,7 @@ function Header() {
   );
 }
 {% endraw %}
+{% endraw %}
 ```
 
 ### Atomic Design Pattern
@@ -403,6 +409,7 @@ function Header() {
 Organize components into a hierarchy based on their complexity.
 
 ```jsx
+{% raw %}
 {% raw %}
 // Atoms - Basic building blocks
 function Button({ children, variant = 'primary', ...props }) {
@@ -457,6 +464,7 @@ function ProductGrid({ products, onSearch }) {
     </div>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 
@@ -678,6 +686,7 @@ Components should be open for extension but closed for modification.
 
 ```jsx
 {% raw %}
+{% raw %}
 // Base button component
 function Button({ variant = 'primary', size = 'medium', children, ...props }) {
   const classes = `btn btn-${variant} btn-${size}`;
@@ -698,6 +707,7 @@ function IconButton({ icon, children, ...props }) {
     </Button>
   );
 }
+{% endraw %}
 {% endraw %}
 ```
 

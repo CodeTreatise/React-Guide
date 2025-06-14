@@ -87,6 +87,7 @@ export const selectRealtimeTechnology = (requirements: {
 
 ```typescript
 {% raw %}
+{% raw %}
 // Event-driven architecture for real-time systems
 interface RealtimeEvent {
   id: string;
@@ -165,6 +166,7 @@ class RealtimeEventBus {
 }
 
 export const eventBus = new RealtimeEventBus();
+{% endraw %}
 {% endraw %}
 ```
 
@@ -446,6 +448,7 @@ export const useWebSocketSubscription = <T>(
 
 ```typescript
 {% raw %}
+{% raw %}
 // components/Chat/ChatRoom.tsx
 interface ChatMessage {
   id: string;
@@ -619,6 +622,7 @@ const ChatMessage: React.FC<{ message: ChatMessage }> = ({ message }) => {
     </div>
   );
 };
+{% endraw %}
 {% endraw %}
 ```
 
@@ -887,6 +891,7 @@ export const useLiveDataFeed = <T>(
 
 ```typescript
 {% raw %}
+{% raw %}
 // components/Dashboard/LiveDashboard.tsx
 interface DashboardMetric {
   id: string;
@@ -1021,6 +1026,7 @@ const MetricCard: React.FC<{ metric: DashboardMetric }> = ({ metric }) => {
     </div>
   );
 };
+{% endraw %}
 {% endraw %}
 ```
 
