@@ -1102,6 +1102,7 @@ MIT © [Your Organization](https://github.com/yourorg)
 ### Automated Release Process
 
 ```javascript
+{% raw %}
 // scripts/release.js
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -1248,11 +1249,13 @@ if (!validTypes.includes(type)) {
 
 const releaseManager = new ReleaseManager();
 releaseManager.release(type);
+{% endraw %}
 ```
 
 ### GitHub Actions CI/CD
 
 ```yaml
+{% raw %}
 # .github/workflows/ci.yml
 name: CI
 
@@ -1398,6 +1401,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./storybook-static
+{% endraw %}
 ```
 
 This comprehensive implementation guide provides a solid foundation for building a professional open-source React component library. The guide covers all essential aspects from development setup to production deployment, ensuring the library is accessible, well-tested, and ready for community adoption.

@@ -157,6 +157,7 @@ function useVirtualScrolling({
 ### Enhanced Virtual List Component
 
 ```jsx
+{% raw %}
 function VirtualList({
   items,
   itemHeight,
@@ -290,6 +291,7 @@ function VirtualList({
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### Variable Height Virtual Scrolling
@@ -695,6 +697,7 @@ function useIntersectionInfiniteScroll({
 ### Infinite Scroll with Virtual List
 
 ```jsx
+{% raw %}
 function InfiniteVirtualList({
   items,
   hasMore,
@@ -767,6 +770,7 @@ function InfiniteVirtualList({
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### Bidirectional Infinite Scroll
@@ -1104,6 +1108,7 @@ function useOptimizedSearch(data, searchFields = ['name']) {
 ### Advanced Pagination Hook
 
 ```jsx
+{% raw %}
 function useAdvancedPagination({
   totalItems,
   itemsPerPage = 20,
@@ -1182,11 +1187,13 @@ function useAdvancedPagination({
     getPageData: (page) => pageData.get(page) || []
   };
 }
+{% endraw %}
 ```
 
 ### Virtual Pagination Component
 
 ```jsx
+{% raw %}
 function VirtualPaginatedList({
   totalItems,
   itemsPerPage = 20,
@@ -1324,6 +1331,7 @@ function VirtualPaginatedList({
     </div>
   );
 }
+{% endraw %}
 ```
 
 ## Performance Monitoring
@@ -1443,6 +1451,7 @@ function useMemoryMonitor() {
 ### Complete Virtual Table Example
 
 ```jsx
+{% raw %}
 function VirtualTable({
   data,
   columns,
@@ -1630,11 +1639,13 @@ function VirtualTable({
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### Usage Examples
 
 ```jsx
+{% raw %}
 // Example usage
 function App() {
   const [tableData, setTableData] = useState([]);
@@ -1684,6 +1695,7 @@ function App() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ## Summary

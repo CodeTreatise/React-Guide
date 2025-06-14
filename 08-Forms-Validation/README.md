@@ -571,6 +571,7 @@ function FormikExample() {
 ## 📁 File Upload Handling
 
 ```jsx
+{% raw %}
 import React, { useState } from 'react';
 
 function FileUploadForm() {
@@ -727,11 +728,13 @@ function FileUploadForm() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ## 🔄 Dynamic Forms
 
 ```jsx
+{% raw %}
 import React, { useState } from 'react';
 
 function DynamicForm() {
@@ -979,6 +982,7 @@ function DynamicForm() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ## 🎨 Form Styling and UX

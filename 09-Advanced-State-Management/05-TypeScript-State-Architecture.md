@@ -119,6 +119,7 @@ interface PaginatedState<T> {
 ### Advanced State Modeling
 
 ```typescript
+{% raw %}
 // Recursive types for tree structures
 interface TreeNode<T = any> {
   id: string
@@ -187,6 +188,7 @@ type EntityActions<T extends string> =
 
 type UserActions = EntityActions<'USER'>
 type PostActions = EntityActions<'POST'>
+{% endraw %}
 ```
 
 ## Redux with TypeScript
@@ -194,6 +196,7 @@ type PostActions = EntityActions<'POST'>
 ### Action Types and Creators
 
 ```typescript
+{% raw %}
 // Action type definitions
 interface LoadUsersAction {
   type: 'LOAD_USERS_REQUEST'
@@ -262,11 +265,13 @@ function createAsyncActions<T>(entityName: string) {
 }
 
 const userActions = createAsyncActions<User>('LOAD_USERS')
+{% endraw %}
 ```
 
 ### Reducer Types
 
 ```typescript
+{% raw %}
 // State interface
 interface UsersState {
   entities: EntityState<User>
@@ -396,6 +401,7 @@ function createEntityReducer<T extends { id: string }>(
     }
   }
 }
+{% endraw %}
 ```
 
 ### Store Configuration
@@ -1151,6 +1157,7 @@ interface TypedUserState {
 ### Template Literal Types for Actions
 
 ```typescript
+{% raw %}
 // Generate action types from entity names
 type EntityName = 'user' | 'post' | 'comment'
 type ActionType = 'create' | 'read' | 'update' | 'delete'
@@ -1193,11 +1200,13 @@ function createEntityActions<T extends EntityName>(entityName: T) {
 
 const userActions = createEntityActions('user')
 // userActions.create.request() has type { type: 'USER_CREATE_REQUEST' }
+{% endraw %}
 ```
 
 ### Recursive Types for Nested State
 
 ```typescript
+{% raw %}
 // Recursive type for nested state updates
 type DeepPartial<T> = {
   [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P]
@@ -1266,6 +1275,7 @@ const state: NestedState = {
 
 // Type-safe deep update
 const newState = setDeepState(state, 'user.profile.personal.name', 'Jane')
+{% endraw %}
 ```
 
 ## Performance Optimization
@@ -1750,6 +1760,7 @@ const errorReducer = (state: ErrorState, action: ErrorAction): ErrorState => {
 ### Result Types for Error Handling
 
 ```typescript
+{% raw %}
 // Result type for operations that can fail
 type Result<T, E = Error> = 
   | { success: true; data: T }
@@ -1818,6 +1829,7 @@ const userAsyncReducer = (
       return state
   }
 }
+{% endraw %}
 ```
 
 ## Best Practices

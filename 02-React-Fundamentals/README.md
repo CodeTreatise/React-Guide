@@ -316,6 +316,7 @@ function DynamicContent() {
 ### Functional Components (Modern Approach)
 
 ```jsx
+{% raw %}
 // Simple functional component
 function Greeting() {
     return <h1>Hello, World!</h1>;
@@ -346,6 +347,7 @@ const Button = ({ children, variant = 'primary', onClick }) => (
         {children}
     </button>
 );
+{% endraw %}
 ```
 
 ### Component Composition
@@ -457,6 +459,7 @@ function UserProfile({ user, showEmail, onEdit }) {
 ### Props Destructuring and Default Values
 
 ```jsx
+{% raw %}
 // With destructuring and defaults
 function ProductCard({ 
     title, 
@@ -505,6 +508,7 @@ function Button({ variant = 'primary', size = 'medium', children, ...restProps }
 >
     Submit
 </Button>
+{% endraw %}
 ```
 
 ### PropTypes for Type Checking
@@ -672,6 +676,7 @@ function UserForm() {
 ### Object and Array State
 
 ```jsx
+{% raw %}
 function TodoApp() {
     const [todos, setTodos] = useState([]);
     const [inputValue, setInputValue] = useState('');
@@ -781,6 +786,7 @@ function TodoApp() {
         </div>
     );
 }
+{% endraw %}
 ```
 
 ---

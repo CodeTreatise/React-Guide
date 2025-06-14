@@ -542,6 +542,7 @@ export function useAdvancedForm({
 ### Cross-Field Validation
 
 ```jsx
+{% raw %}
 import * as yup from 'yup';
 
 // Custom validation schema with cross-field validation
@@ -678,6 +679,7 @@ function ComplexValidationForm() {
     </form>
   );
 }
+{% endraw %}
 ```
 
 ### Conditional Validation
@@ -790,6 +792,7 @@ function ConditionalForm() {
 ### Memoized Form Components
 
 ```jsx
+{% raw %}
 import React, { memo, useCallback, useMemo } from 'react';
 
 // Memoized field component
@@ -902,11 +905,13 @@ function OptimizedForm() {
     </form>
   );
 }
+{% endraw %}
 ```
 
 ## 📝 Multi-Step Form Implementation
 
 ```jsx
+{% raw %}
 import React, { useState, useMemo } from 'react';
 
 // Multi-step form hook
@@ -1151,6 +1156,7 @@ function MultiStepRegistrationForm() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ## 🔄 Form State Synchronization
@@ -1260,6 +1266,7 @@ function useFormWithPersistence(key, initialValues) {
 ### Chunked File Upload
 
 ```jsx
+{% raw %}
 function useChunkedFileUpload() {
   const [uploadProgress, setUploadProgress] = useState({});
   const [uploadErrors, setUploadErrors] = useState({});
@@ -1397,6 +1404,7 @@ function useChunkedFileUpload() {
     activeUploads: Array.from(activeUploads)
   };
 }
+{% endraw %}
 ```
 
 ## 🧪 Form Testing Strategies
@@ -1525,6 +1533,7 @@ describe('Advanced Form Component', () => {
 ### E-commerce Checkout Form
 
 ```jsx
+{% raw %}
 function EcommerceCheckoutForm({ cart, onSubmit }) {
   const [currentStep, setCurrentStep] = useState('shipping');
   const [paymentMethod, setPaymentMethod] = useState('card');
@@ -1665,6 +1674,7 @@ function EcommerceCheckoutForm({ cart, onSubmit }) {
     </div>
   );
 }
+{% endraw %}
 ```
 
 This comprehensive guide covers advanced form patterns that are essential for building production-ready React applications. The patterns shown here handle complex real-world scenarios while maintaining performance and user experience standards.

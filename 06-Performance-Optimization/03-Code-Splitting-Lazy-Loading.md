@@ -84,6 +84,7 @@ function App() {
 ### Bundle Analysis
 
 ```jsx
+{% raw %}
 // Hook for analyzing bundle impact
 function useBundleAnalysis() {
   const [bundleStats, setBundleStats] = useState({
@@ -123,6 +124,7 @@ function useBundleAnalysis() {
   
   return bundleStats;
 }
+{% endraw %}
 ```
 
 ## React Lazy Loading
@@ -147,6 +149,7 @@ function App() {
 ### Enhanced Lazy Loading with Error Boundaries
 
 ```jsx
+{% raw %}
 // Error boundary for lazy components
 class LazyErrorBoundary extends Component {
   constructor(props) {
@@ -247,6 +250,7 @@ async function retryImport(importFunction, retryCount, retryDelay) {
     }
   }
 }
+{% endraw %}
 ```
 
 ### Conditional Lazy Loading
@@ -299,6 +303,7 @@ function ConditionalComponent({ shouldLoad }) {
 ### Feature-Based Code Splitting
 
 ```jsx
+{% raw %}
 // Feature module structure
 const featureModules = {
   dashboard: () => import('./features/dashboard'),
@@ -387,11 +392,13 @@ function FeatureComponent({ featureName, componentName, fallback, ...props }) {
   
   return <Component {...props} />;
 }
+{% endraw %}
 ```
 
 ### Library Code Splitting
 
 ```jsx
+{% raw %}
 // Split third-party libraries
 const LibraryLoaders = {
   chart: () => import('chart.js'),
@@ -487,6 +494,7 @@ function LazyChart({ data, type = 'line', ...options }) {
   
   return <ChartComponent data={data} type={type} {...options} />;
 }
+{% endraw %}
 ```
 
 ## Dynamic Imports & Module Loading
@@ -494,6 +502,7 @@ function LazyChart({ data, type = 'line', ...options }) {
 ### Advanced Dynamic Import Patterns
 
 ```jsx
+{% raw %}
 // Dynamic import with caching
 class ModuleCache {
   constructor() {
@@ -613,11 +622,13 @@ function useDynamicImport(modulePath, options = {}) {
     clearCache: () => moduleCache.clear(modulePath)
   };
 }
+{% endraw %}
 ```
 
 ### Module Federation Pattern
 
 ```jsx
+{% raw %}
 // Micro-frontend module loader
 class ModuleFederationLoader {
   constructor() {
@@ -701,6 +712,7 @@ function useRemoteModule(remoteName, moduleName) {
   
   return state;
 }
+{% endraw %}
 ```
 
 ## Route-Based Code Splitting
@@ -1025,6 +1037,7 @@ function ModalManager() {
 ### Tab-Based Lazy Loading
 
 ```jsx
+{% raw %}
 // Lazy tab content
 function useLazyTabs(tabs) {
   const [activeTab, setActiveTab] = useState(tabs[0]?.id);
@@ -1124,6 +1137,7 @@ function LazyTabContainer({ tabs }) {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ## Asset & Resource Optimization
@@ -1131,6 +1145,7 @@ function LazyTabContainer({ tabs }) {
 ### Image Lazy Loading
 
 ```jsx
+{% raw %}
 // Advanced image lazy loading
 function LazyImage({ 
   src, 
@@ -1202,11 +1217,13 @@ function LazyImage({
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### CSS Lazy Loading
 
 ```jsx
+{% raw %}
 // Dynamic CSS loading
 function useLazyCSS() {
   const loadedStyles = useRef(new Set());
@@ -1275,6 +1292,7 @@ function ThemedComponent({ theme = 'default' }) {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ## Preloading & Prefetching Strategies
@@ -1282,6 +1300,7 @@ function ThemedComponent({ theme = 'default' }) {
 ### Intelligent Preloading
 
 ```jsx
+{% raw %}
 // Preloading strategy based on user behavior
 function useIntelligentPreloading() {
   const userBehavior = useRef({
@@ -1412,6 +1431,7 @@ async function preloadAsset(url) {
     document.head.appendChild(link);
   });
 }
+{% endraw %}
 ```
 
 ### Hover-Based Preloading

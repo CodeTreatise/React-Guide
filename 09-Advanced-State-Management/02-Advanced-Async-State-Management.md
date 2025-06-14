@@ -54,6 +54,7 @@ const ASYNC_ACTIONS = {
 ### Advanced Async Reducer Pattern
 
 ```javascript
+{% raw %}
 function createAsyncReducer(actionType) {
   const initialState = {
     data: null,
@@ -128,6 +129,7 @@ function createAsyncReducer(actionType) {
     }
   }
 }
+{% endraw %}
 ```
 
 ### Optimistic Updates Pattern
@@ -225,6 +227,7 @@ function PostEditor({ postId }) {
 ### Custom Async Middleware
 
 ```javascript
+{% raw %}
 // Advanced async middleware with cancellation and retries
 const asyncMiddleware = (store) => (next) => (action) => {
   if (!action.async) {
@@ -321,11 +324,13 @@ const fetchUserAction = (userId) => ({
   },
   payload: { userId }
 })
+{% endraw %}
 ```
 
 ### Request Deduplication Middleware
 
 ```javascript
+{% raw %}
 const deduplicationMiddleware = (store) => {
   const pendingRequests = new Map()
 
@@ -363,6 +368,7 @@ const fetchDataAction = (params) => ({
   },
   payload: params
 })
+{% endraw %}
 ```
 
 ## Saga Patterns
@@ -571,6 +577,7 @@ function createSSEChannel(url) {
 ### RxJS Integration with React
 
 ```javascript
+{% raw %}
 import { BehaviorSubject, combineLatest, fromEvent, merge } from 'rxjs'
 import { 
   map, 
@@ -751,6 +758,7 @@ function SearchComponent() {
     </div>
   )
 }
+{% endraw %}
 ```
 
 ## React Query & SWR Advanced
@@ -758,6 +766,7 @@ function SearchComponent() {
 ### Advanced React Query Patterns
 
 ```javascript
+{% raw %}
 import { 
   useQuery, 
   useMutation, 
@@ -905,11 +914,13 @@ function useBackgroundSync() {
     }
   }, [queryClient])
 }
+{% endraw %}
 ```
 
 ### Advanced SWR Patterns
 
 ```javascript
+{% raw %}
 import useSWR, { useSWRConfig } from 'swr'
 import useSWRMutation from 'swr/mutation'
 
@@ -1012,6 +1023,7 @@ function usePrefetch() {
 
   return { prefetch, warmCache }
 }
+{% endraw %}
 ```
 
 ## State Machines for Async Operations
@@ -1019,6 +1031,7 @@ function usePrefetch() {
 ### XState Integration
 
 ```javascript
+{% raw %}
 import { createMachine, assign, interpret } from 'xstate'
 import { useMachine } from '@xstate/react'
 
@@ -1157,6 +1170,7 @@ function DataFetcher({ url }) {
     </div>
   )
 }
+{% endraw %}
 ```
 
 ### Complex Form State Machine

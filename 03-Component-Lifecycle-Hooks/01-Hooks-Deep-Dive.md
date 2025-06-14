@@ -17,6 +17,7 @@
 Hooks are functions that let you "hook into" React features from function components. They allow you to use state and other React features without writing a class.
 
 ```jsx
+{% raw %}
 import React, { useState, useEffect } from 'react';
 
 function Example() {
@@ -37,6 +38,7 @@ function Example() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### Rules of Hooks (Essential!)
@@ -71,6 +73,7 @@ function GoodExample() {
 #### Rule 2: Only Call Hooks from React Functions
 
 ```jsx
+{% raw %}
 // ❌ Don't call Hooks from regular JavaScript functions
 function formatName(user) {
   const [formattedName, setFormattedName] = useState(''); // 🔴 Wrong!
@@ -98,6 +101,7 @@ function useFormattedName(user) {
   
   return formattedName;
 }
+{% endraw %}
 ```
 
 ## useState Patterns
@@ -310,6 +314,7 @@ function DataFetcher() {
 #### 3. Effect with Dependencies
 
 ```jsx
+{% raw %}
 function SearchResults({ query }) {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -349,6 +354,7 @@ function SearchResults({ query }) {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### Cleanup Functions
@@ -430,6 +436,7 @@ function SearchInput() {
 #### Conditional Effects
 
 ```jsx
+{% raw %}
 function ConditionalEffect({ shouldFetch, userId }) {
   const [userData, setUserData] = useState(null);
   
@@ -447,6 +454,7 @@ function ConditionalEffect({ shouldFetch, userId }) {
   
   return <div>{userData?.name || 'No user data'}</div>;
 }
+{% endraw %}
 ```
 
 ## Performance Hooks
@@ -546,6 +554,7 @@ function Parent() {
 ### useReducer for Complex State
 
 ```jsx
+{% raw %}
 const initialState = {
   users: [],
   loading: false,
@@ -654,6 +663,7 @@ function UserManager() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### useRef Patterns
@@ -675,6 +685,7 @@ function AutoFocusInput() {
 #### Storing Mutable Values
 
 ```jsx
+{% raw %}
 function TrackingComponent() {
   const [count, setCount] = useState(0);
   const countRef = useRef(count);
@@ -701,6 +712,7 @@ function TrackingComponent() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 #### Previous Value Tracking
@@ -787,6 +799,7 @@ function ToggleExample() {
 ### Example: useAsync
 
 ```jsx
+{% raw %}
 function useAsync(asyncFunction, dependencies = []) {
   const [state, setState] = useState({
     data: null,
@@ -837,6 +850,7 @@ function UserProfile({ userId }) {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ## Hook Testing
@@ -875,6 +889,7 @@ describe('useToggle', () => {
 ### Testing Effects
 
 ```jsx
+{% raw %}
 import { renderHook } from '@testing-library/react';
 import { useEffect, useState } from 'react';
 
@@ -899,6 +914,7 @@ test('should update document title', () => {
   
   expect(document.title).toBe('Count: 10');
 });
+{% endraw %}
 ```
 
 ## Common Pitfalls

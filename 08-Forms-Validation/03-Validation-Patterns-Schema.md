@@ -254,6 +254,7 @@ const advancedUserSchemaZod = z.object({
 ### Custom Validation Hooks
 
 ```jsx
+{% raw %}
 import { useState, useCallback } from 'react';
 
 // Custom validation hook
@@ -473,6 +474,7 @@ function CustomValidationForm() {
     </form>
   );
 }
+{% endraw %}
 ```
 
 ## ⚡ Async Validation
@@ -749,6 +751,7 @@ function ServerValidationForm() {
 ### Password Confirmation Example
 
 ```jsx
+{% raw %}
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -883,6 +886,7 @@ function PasswordStrengthIndicator({ password }) {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### Date Range Validation
@@ -1292,6 +1296,7 @@ function ConditionalValidationForm() {
 ### Live Validation with Visual Feedback
 
 ```jsx
+{% raw %}
 import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 
@@ -1530,6 +1535,7 @@ const styles = `
   transition: width 0.3s ease;
 }
 `;
+{% endraw %}
 ```
 
 ## 🌍 Internationalization
@@ -1537,6 +1543,7 @@ const styles = `
 ### Multi-Language Validation Messages
 
 ```jsx
+{% raw %}
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -1725,6 +1732,7 @@ function LocalizedFormApp() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ## 🚀 Performance Optimization

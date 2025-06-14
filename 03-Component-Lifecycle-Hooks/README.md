@@ -39,6 +39,7 @@ React components go through three main phases:
 ### 2. Class Component Lifecycle Methods
 
 ```jsx
+{% raw %}
 class LifecycleExample extends React.Component {
   constructor(props) {
     super(props);
@@ -79,6 +80,7 @@ class LifecycleExample extends React.Component {
     );
   }
 }
+{% endraw %}
 ```
 
 ### 3. Introduction to React Hooks
@@ -174,6 +176,7 @@ function Counter() {
 Performs side effects in functional components (replaces lifecycle methods).
 
 ```jsx
+{% raw %}
 import React, { useState, useEffect } from 'react';
 
 function DataFetcher() {
@@ -235,6 +238,7 @@ function DataFetcher() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 #### **useContext Hook**
@@ -295,6 +299,7 @@ function App() {
 Manages complex state logic with reducer function.
 
 ```jsx
+{% raw %}
 import React, { useReducer } from 'react';
 
 // Reducer function
@@ -334,6 +339,7 @@ function Counter() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### 5. Additional Built-in Hooks
@@ -426,6 +432,7 @@ function Parent() {
 Creates mutable refs and accesses DOM elements.
 
 ```jsx
+{% raw %}
 import React, { useRef, useEffect, useState } from 'react';
 
 function RefExample() {
@@ -468,6 +475,7 @@ function RefExample() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### 6. Custom Hooks
@@ -475,6 +483,7 @@ function RefExample() {
 Create reusable stateful logic.
 
 ```jsx
+{% raw %}
 // Custom hook for local storage
 function useLocalStorage(key, initialValue) {
   const [storedValue, setStoredValue] = useState(() => {
@@ -599,6 +608,7 @@ function CustomHookExamples() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ## 🎯 Practical Exercises

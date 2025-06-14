@@ -17,6 +17,7 @@
 ### Semantic HTML Foundation
 
 ```jsx
+{% raw %}
 // Always start with semantic HTML
 const AccessibleButton = ({ children, variant = 'primary', ...props }) => {
   return (
@@ -70,6 +71,7 @@ const PageLayout = ({ children }) => {
     </>
   )
 }
+{% endraw %}
 ```
 
 ### Color Contrast and Visual Accessibility
@@ -178,6 +180,7 @@ const AccessibleAlert = ({ type = 'info', children, ...props }) => {
 ### Essential ARIA Patterns
 
 ```jsx
+{% raw %}
 // Accessible disclosure/dropdown
 const DisclosurePattern = ({ trigger, children, id }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -365,11 +368,13 @@ const Tooltip = ({ children, content, id, placement = 'top' }) => {
     </>
   )
 }
+{% endraw %}
 ```
 
 ### ARIA Live Regions
 
 ```jsx
+{% raw %}
 // Status announcements
 const StatusAnnouncer = () => {
   const [message, setMessage] = useState('')
@@ -475,6 +480,7 @@ const DynamicList = ({ items }) => {
     </ul>
   )
 }
+{% endraw %}
 ```
 
 ---

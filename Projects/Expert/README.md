@@ -668,6 +668,7 @@ type Mutation {
 ```
 
 ```jsx
+{% raw %}
 // client/src/apollo/optimisticUpdates.js
 export const optimisticUpdateHandlers = {
   applyOperation: {
@@ -813,6 +814,7 @@ export const useCollaboration = (documentId) => {
     isCollaborating: localOperationsRef.current.length > 0
   };
 };
+{% endraw %}
 ```
 
 ### Assessment Criteria
@@ -918,6 +920,7 @@ ai-powered-react-app/
 
 ### AI Integration Implementation
 ```jsx
+{% raw %}
 // src/services/aiService.js
 import * as tf from '@tensorflow/tfjs';
 import { loadLayersModel } from '@tensorflow/tfjs-layers';
@@ -1219,6 +1222,7 @@ export const SmartSearch = ({ onResults, data }) => {
     </div>
   );
 };
+{% endraw %}
 ```
 
 ### Assessment Criteria

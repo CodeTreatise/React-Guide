@@ -576,6 +576,7 @@ function TodoItem({ todoId }) {
 ### Jotai with Async
 
 ```jsx
+{% raw %}
 // Async atoms
 export const userIdAtom = atom(1);
 
@@ -619,6 +620,7 @@ function App() {
     </Suspense>
   );
 }
+{% endraw %}
 ```
 
 ## Valtio - Proxy-based State
@@ -628,6 +630,7 @@ Valtio creates a proxy-based state that automatically tracks mutations.
 ### Basic Usage
 
 ```jsx
+{% raw %}
 // store/appState.js
 import { proxy, useSnapshot } from 'valtio';
 
@@ -731,11 +734,13 @@ function TodoList() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### Advanced Valtio Patterns
 
 ```jsx
+{% raw %}
 // Computed values with derive
 import { derive } from 'valtio/utils';
 
@@ -778,6 +783,7 @@ const withLogging = (target) => {
 };
 
 export const loggedState = withLogging(state);
+{% endraw %}
 ```
 
 ## React Query/TanStack Query
@@ -1080,6 +1086,7 @@ SWR is a lightweight data fetching library with a focus on user experience.
 ### Basic Usage
 
 ```jsx
+{% raw %}
 // hooks/useSWR.js
 import useSWR from 'swr';
 
@@ -1152,6 +1159,7 @@ function TodoList() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### SWR with Global Configuration
@@ -1395,6 +1403,7 @@ const performanceComparison = {
 ### Hybrid Approach
 
 ```jsx
+{% raw %}
 // Combining multiple solutions
 // Client state with Zustand
 export const useClientStore = create((set) => ({
@@ -1444,6 +1453,7 @@ function TodoApp() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### State Boundaries

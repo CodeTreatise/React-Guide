@@ -86,6 +86,7 @@ export const selectRealtimeTechnology = (requirements: {
 ### Real-time Architecture Patterns
 
 ```typescript
+{% raw %}
 // Event-driven architecture for real-time systems
 interface RealtimeEvent {
   id: string;
@@ -164,6 +165,7 @@ class RealtimeEventBus {
 }
 
 export const eventBus = new RealtimeEventBus();
+{% endraw %}
 ```
 
 ## WebSocket Integration
@@ -443,6 +445,7 @@ export const useWebSocketSubscription = <T>(
 ### Real-time Chat Implementation
 
 ```typescript
+{% raw %}
 // components/Chat/ChatRoom.tsx
 interface ChatMessage {
   id: string;
@@ -616,6 +619,7 @@ const ChatMessage: React.FC<{ message: ChatMessage }> = ({ message }) => {
     </div>
   );
 };
+{% endraw %}
 ```
 
 ## Server-Sent Events (SSE)
@@ -882,6 +886,7 @@ export const useLiveDataFeed = <T>(
 ### Live Dashboard Implementation
 
 ```typescript
+{% raw %}
 // components/Dashboard/LiveDashboard.tsx
 interface DashboardMetric {
   id: string;
@@ -1016,6 +1021,7 @@ const MetricCard: React.FC<{ metric: DashboardMetric }> = ({ metric }) => {
     </div>
   );
 };
+{% endraw %}
 ```
 
 ## Connection Management

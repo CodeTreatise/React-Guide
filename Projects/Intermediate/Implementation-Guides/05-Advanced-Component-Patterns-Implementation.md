@@ -124,6 +124,7 @@ export default DataFetcher;
 
 ### Step 4: Compound Components Pattern
 ```jsx
+{% raw %}
 // src/components/Compound/Accordion.jsx
 import React, { createContext, useContext, useState } from 'react';
 import './Accordion.css';
@@ -202,6 +203,7 @@ Accordion.Header = AccordionHeader;
 Accordion.Content = AccordionContent;
 
 export default Accordion;
+{% endraw %}
 ```
 
 ---
@@ -277,6 +279,7 @@ export default withErrorBoundary;
 ```
 
 ```jsx
+{% raw %}
 // src/hocs/withTracking.js
 import React, { useEffect } from 'react';
 
@@ -299,6 +302,7 @@ const withTracking = (eventName) => (WrappedComponent) => {
 };
 
 export default withTracking;
+{% endraw %}
 ```
 
 ```jsx
@@ -542,6 +546,7 @@ export default Modal;
 
 #### Tab System Component
 ```jsx
+{% raw %}
 // src/components/Compound/Tabs.jsx
 import React, { createContext, useContext, useState } from 'react';
 import './Tabs.css';
@@ -615,6 +620,7 @@ Tabs.Panels = TabPanels;
 Tabs.Panel = TabPanel;
 
 export default Tabs;
+{% endraw %}
 ```
 
 ### 4. Custom Hook Patterns
@@ -865,6 +871,7 @@ export const useComponentPatterns = () => {
 
 #### Pattern Examples Dashboard
 ```jsx
+{% raw %}
 // src/components/PatternsDashboard.jsx
 import React, { useState } from 'react';
 import withAuth from '../hocs/withAuth';
@@ -1119,6 +1126,7 @@ export default compose(
   withLoading,
   withErrorBoundary
 )(PatternsDashboard);
+{% endraw %}
 ```
 
 ### 7. Styling

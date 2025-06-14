@@ -17,6 +17,7 @@
 ### React Performance Monitoring Setup
 
 ```typescript
+{% raw %}
 // utils/performance-monitor.ts
 interface PerformanceMetrics {
   fcp: number; // First Contentful Paint
@@ -149,6 +150,7 @@ class PerformanceMonitor {
 }
 
 export const performanceMonitor = new PerformanceMonitor();
+{% endraw %}
 ```
 
 ### React Component Performance Profiler
@@ -269,6 +271,7 @@ export const usePageVisibility = () => {
 ### Google Analytics 4 Integration
 
 ```typescript
+{% raw %}
 // utils/analytics.ts
 declare global {
   interface Window {
@@ -347,11 +350,13 @@ class GoogleAnalytics {
 }
 
 export const googleAnalytics = new GoogleAnalytics();
+{% endraw %}
 ```
 
 ### Custom RUM Implementation
 
 ```typescript
+{% raw %}
 // utils/rum-collector.ts
 interface RUMData {
   sessionId: string;
@@ -565,6 +570,7 @@ export const rumCollector = new RUMCollector();
 window.addEventListener('beforeunload', () => {
   rumCollector.destroy();
 });
+{% endraw %}
 ```
 
 ## Synthetic Monitoring
@@ -716,6 +722,7 @@ module.exports = {
 ### WebPageTest Integration
 
 ```javascript
+{% raw %}
 // scripts/webpagetest-monitor.js
 const WebPageTest = require('webpagetest');
 const wpt = new WebPageTest('www.webpagetest.org', process.env.WPT_API_KEY);
@@ -778,6 +785,7 @@ async function runPerformanceTest() {
 }
 
 runPerformanceTest();
+{% endraw %}
 ```
 
 ## Error Tracking & Alerting
@@ -850,6 +858,7 @@ export const SentryErrorBoundary = Sentry.withErrorBoundary(
 ### Custom Error Monitoring
 
 ```typescript
+{% raw %}
 // utils/custom-error-monitor.ts
 interface ErrorReport {
   message: string;
@@ -1006,6 +1015,7 @@ class ErrorMonitor {
 }
 
 export const errorMonitor = new ErrorMonitor();
+{% endraw %}
 ```
 
 ## Log Management & Analysis
@@ -1013,6 +1023,7 @@ export const errorMonitor = new ErrorMonitor();
 ### Structured Logging Setup
 
 ```typescript
+{% raw %}
 // utils/logger.ts
 enum LogLevel {
   DEBUG = 0,
@@ -1147,11 +1158,13 @@ class Logger {
 export const logger = new Logger(
   process.env.NODE_ENV === 'development' ? LogLevel.DEBUG : LogLevel.INFO
 );
+{% endraw %}
 ```
 
 ### ELK Stack Integration
 
 ```typescript
+{% raw %}
 // utils/elasticsearch-logger.ts
 interface ElasticsearchConfig {
   endpoint: string;
@@ -1221,6 +1234,7 @@ const esConfig = process.env.REACT_APP_ELASTICSEARCH_ENDPOINT ? {
 } : null;
 
 export const elasticsearchLogger = esConfig ? new ElasticsearchLogger(esConfig) : null;
+{% endraw %}
 ```
 
 ## Infrastructure Monitoring
@@ -1379,6 +1393,7 @@ data:
 ### Custom Analytics Dashboard
 
 ```typescript
+{% raw %}
 // components/AnalyticsDashboard.tsx
 import React, { useEffect, useState } from 'react';
 import { Line, Bar, Pie } from 'react-chartjs-2';
@@ -1493,6 +1508,7 @@ const AnalyticsDashboard: React.FC = () => {
 };
 
 export default AnalyticsDashboard;
+{% endraw %}
 ```
 
 ### Advanced Event Tracking

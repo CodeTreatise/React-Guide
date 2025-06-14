@@ -151,6 +151,7 @@ export default defineConfig({
 
 ### Advanced Vite Configuration
 ```javascript
+{% raw %}
 // vite.config.advanced.js
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
@@ -414,6 +415,7 @@ export default defineConfig(({ command, mode }) => {
     }
   };
 });
+{% endraw %}
 ```
 
 ## Modern Build Tools Comparison
@@ -596,6 +598,7 @@ const runBenchmarks = async () => {
 
 ### Standalone ESBuild Configuration
 ```javascript
+{% raw %}
 // esbuild.config.js
 const esbuild = require('esbuild');
 const { sassPlugin } = require('esbuild-sass-plugin');
@@ -716,10 +719,12 @@ if (require.main === module) {
 }
 
 module.exports = { buildOptions, build };
+{% endraw %}
 ```
 
 ### ESBuild with React Fast Refresh
 ```javascript
+{% raw %}
 // esbuild-dev-server.js
 const esbuild = require('esbuild');
 const { createServer } = require('http');
@@ -846,6 +851,7 @@ process.on('SIGINT', async () => {
   await devServer.stop();
   process.exit(0);
 });
+{% endraw %}
 ```
 
 ## Parcel Configuration
@@ -895,6 +901,7 @@ process.on('SIGINT', async () => {
 
 ### Advanced Parcel Setup
 ```javascript
+{% raw %}
 // parcel.config.js (if using programmatic API)
 const { Parcel } = require('@parcel/core');
 const path = require('path');
@@ -963,6 +970,7 @@ const runBuild = async () => {
 };
 
 module.exports = { runDev, runBuild };
+{% endraw %}
 ```
 
 ## Rollup for Libraries
@@ -1314,6 +1322,7 @@ const runAnalysis = async () => {
 
 ### Cache Optimization Strategies
 ```javascript
+{% raw %}
 // cache-optimization.js
 const path = require('path');
 
@@ -1375,12 +1384,14 @@ const typescriptCacheConfig = {
     tsBuildInfoFile: path.resolve(__dirname, 'node_modules/.cache/typescript/tsbuildinfo')
   }
 };
+{% endraw %}
 ```
 
 ## Migration Strategies
 
 ### Webpack to Vite Migration
 ```javascript
+{% raw %}
 // migration-webpack-to-vite.js
 const fs = require('fs');
 const path = require('path');
@@ -1582,6 +1593,7 @@ console.log('Generated Vite Config:');
 console.log(viteConfig);
 console.log('\nMigration Report:');
 console.log(JSON.stringify(report, null, 2));
+{% endraw %}
 ```
 
 ### Create React App to Vite Migration

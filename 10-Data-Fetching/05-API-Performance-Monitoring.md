@@ -589,6 +589,7 @@ export const useAPICallMonitoring = () => {
 ### Performance Dashboard Component
 
 ```typescript
+{% raw %}
 // components/Performance/PerformanceDashboard.tsx
 import React, { useEffect, useState } from 'react';
 import { usePerformanceMonitoring } from '../../hooks/usePerformanceMonitoring';
@@ -881,6 +882,7 @@ const AlertItem: React.FC<{ alert: { type: string; entry: PerformanceEntry; time
 };
 
 export default PerformanceDashboard;
+{% endraw %}
 ```
 
 ## Advanced Performance Analysis
@@ -1327,6 +1329,7 @@ export const useRUM = (config: {
 ### Load Testing Utilities
 
 ```typescript
+{% raw %}
 // utils/loadTesting.ts
 export interface LoadTestConfig {
   url: string;
@@ -1592,6 +1595,7 @@ export const LoadTestRunner: React.FC = () => {
     </div>
   );
 };
+{% endraw %}
 ```
 
 This comprehensive guide covers API performance monitoring and optimization in React applications, providing tools and techniques for measuring, analyzing, and improving API performance in production environments.

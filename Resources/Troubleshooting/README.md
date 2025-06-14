@@ -53,6 +53,7 @@ function UserProfile({ user, loading }) {
 
 ### "Each child in a list should have a unique key prop"
 ```jsx
+{% raw %}
 // ❌ Problem
 {items.map(item => (
   <div>{item.name}</div> // Missing key
@@ -77,6 +78,7 @@ function UserProfile({ user, loading }) {
     ))}
   </div>
 ))}
+{% endraw %}
 ```
 
 ### "Cannot update a component while rendering a different component"
@@ -232,6 +234,7 @@ function Counter() {
 
 ### Expensive Calculations in Render
 ```jsx
+{% raw %}
 // ❌ Problem - Expensive calculation on every render
 function Component({ items }) {
   const total = items.reduce((sum, item) => sum + item.price, 0); // Runs every render
@@ -247,6 +250,7 @@ function Component({ items }) {
   
   return <div>Total: ${total}</div>;
 }
+{% endraw %}
 ```
 
 ### Function Recreation in JSX
@@ -730,6 +734,7 @@ $ReactDebugCurrentFrame
 
 ### Console Debugging
 ```jsx
+{% raw %}
 function Component(props) {
   // Debug props
   console.log('Component props:', props);
@@ -748,6 +753,7 @@ function Component(props) {
   
   return <div>Component content</div>;
 }
+{% endraw %}
 ```
 
 ### Performance Debugging

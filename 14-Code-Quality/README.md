@@ -392,6 +392,7 @@ export type RequireAtLeastOne<T> = {
 
 #### **Component Type Patterns**
 ```typescript
+{% raw %}
 // src/components/Button/Button.tsx
 import React, { forwardRef } from 'react';
 
@@ -453,6 +454,7 @@ Button.displayName = 'Button';
 
 export type { ButtonProps };
 export default Button;
+{% endraw %}
 ```
 
 #### **Hook Type Patterns**
@@ -636,6 +638,7 @@ sonar.qualitygate.wait=true
 
 #### **Performance Monitoring**
 ```javascript
+{% raw %}
 // src/utils/performance.ts
 interface PerformanceMetric {
   name: string;
@@ -691,6 +694,7 @@ class PerformanceMonitor {
 }
 
 export const performanceMonitor = new PerformanceMonitor();
+{% endraw %}
 ```
 
 ### 6. Accessibility Linting
@@ -876,6 +880,7 @@ function DataTable<T extends Record<string, any>>({
 
 #### **API Documentation**
 ```typescript
+{% raw %}
 // src/api/users.ts
 /**
  * User API client
@@ -927,6 +932,7 @@ export async function getUsers(
   
   return response.json();
 }
+{% endraw %}
 ```
 
 ### 8. Team Coding Standards

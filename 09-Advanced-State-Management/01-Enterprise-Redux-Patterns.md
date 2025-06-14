@@ -100,6 +100,7 @@ export type AppDispatch = typeof store.dispatch;
 ### Advanced Slice Patterns
 
 ```jsx
+{% raw %}
 // features/user/userSlice.js
 import { createSlice, createAsyncThunk, createSelector } from '@reduxjs/toolkit';
 import { createEntityAdapter } from '@reduxjs/toolkit';
@@ -351,6 +352,7 @@ export const selectUsersWithProjects = createSelector(
 );
 
 export default userSlice.reducer;
+{% endraw %}
 ```
 
 ## 🔌 RTK Query for Data Fetching
@@ -358,6 +360,7 @@ export default userSlice.reducer;
 ### Advanced API Slice Configuration
 
 ```jsx
+{% raw %}
 // api/apiSlice.js - Base API configuration
 import { createApi, fetchBaseQuery, retry } from '@reduxjs/toolkit/query/react';
 import { RootState } from '../store';
@@ -432,11 +435,13 @@ export const apiSlice = createApi({
 });
 
 export const { useGetHealthQuery } = apiSlice;
+{% endraw %}
 ```
 
 ### Feature-Specific API Slices
 
 ```jsx
+{% raw %}
 // features/product/productApiSlice.js
 import { apiSlice } from '../../api/apiSlice';
 
@@ -679,6 +684,7 @@ export const {
   updateProduct,
   deleteProduct
 } = productApiSlice.endpoints;
+{% endraw %}
 ```
 
 ## 🔧 Advanced Middleware Patterns
@@ -686,6 +692,7 @@ export const {
 ### Custom Middleware for Cross-Cutting Concerns
 
 ```jsx
+{% raw %}
 // middleware/index.js
 import { createListenerMiddleware, isAnyOf } from '@reduxjs/toolkit';
 import { authSlice } from '../features/auth/authSlice';
@@ -817,11 +824,13 @@ export const optimisticUpdateMiddleware = (store) => (next) => (action) => {
   
   return result;
 };
+{% endraw %}
 ```
 
 ### State Synchronization Middleware
 
 ```jsx
+{% raw %}
 // middleware/syncMiddleware.js
 import { createListenerMiddleware } from '@reduxjs/toolkit';
 
@@ -913,6 +922,7 @@ syncMiddleware.startListening({
     }
   }
 });
+{% endraw %}
 ```
 
 ## 📊 Normalized State Management
@@ -1125,6 +1135,7 @@ export const selectPostWithDetails = createSelector(
 ### Performance-Optimized Selectors
 
 ```jsx
+{% raw %}
 // selectors/index.js
 import { createSelector, createDraftSafeSelector } from '@reduxjs/toolkit';
 import { memoize } from 'lodash';
@@ -1302,6 +1313,7 @@ export const selectUserDisplayName = createUserSelector(
 export const selectUserPermissions = createUserSelector(
   (user) => user.roles?.flatMap(role => role.permissions) || []
 );
+{% endraw %}
 ```
 
 ## 🏢 Enterprise Architecture Patterns
@@ -1309,6 +1321,7 @@ export const selectUserPermissions = createUserSelector(
 ### Micro-Frontend State Management
 
 ```jsx
+{% raw %}
 // Shared state management for micro-frontends
 // shared/stateManager.js
 class MicroFrontendStateManager {
@@ -1421,11 +1434,13 @@ export const useMicroFrontendState = (storeName) => {
   
   return [state, dispatch];
 };
+{% endraw %}
 ```
 
 ### Domain-Driven Design with Redux
 
 ```jsx
+{% raw %}
 // Domain-driven architecture
 // domains/ecommerce/store.js
 export const createEcommerceStore = () => {
@@ -1548,6 +1563,7 @@ export const domainEventMiddleware = (store) => (next) => (action) => {
   
   return result;
 };
+{% endraw %}
 ```
 
 This comprehensive guide covers enterprise-level Redux patterns that enable scalable, maintainable state management for complex React applications. The patterns shown here provide the foundation for building robust production applications with advanced state management requirements.

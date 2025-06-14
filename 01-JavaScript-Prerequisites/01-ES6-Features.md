@@ -179,6 +179,7 @@ const TodoList = ({ todos }) => (
 ### Basic Syntax
 
 ```javascript
+{% raw %}
 // Old way (concatenation)
 const name = 'John';
 const age = 30;
@@ -188,11 +189,13 @@ const message = 'Hello, my name is ' + name + ' and I am ' + age + ' years old.'
 {% raw %}
 const message = `Hello, my name is ${name} and I am ${age} years old.`;
 {% endraw %}
+{% endraw %}
 ```
 
 ### Advanced Features
 
 ```javascript
+{% raw %}
 // Multi-line strings
 {% raw %}
 const html = `
@@ -220,11 +223,13 @@ const userList = `
 const formatDate = (date) => date.toLocaleDateString();
 const message = `Today is ${formatDate(new Date())}`;
 {% endraw %}
+{% endraw %}
 ```
 
 ### React Usage Examples
 
 ```javascript
+{% raw %}
 // Dynamic class names
 {% raw %}
 const Button = ({ variant, disabled }) => (
@@ -238,9 +243,9 @@ const Button = ({ variant, disabled }) => (
 // Dynamic styles
 const Progress = ({ percentage }) => (
     <div 
-        style={{{% raw %}
+        style={{
             width: `${percentage}%`,
-            background: `hsl(${percentage * 1.2}, 70%, 50%)`{% endraw %}
+            background: `hsl(${percentage * 1.2}, 70%, 50%)`
         }}
     />
 );
@@ -313,6 +318,7 @@ let a = 1, b = 2;
 ### React Usage Examples
 
 ```javascript
+{% raw %}
 // Props destructuring
 const UserCard = ({ name, email, avatar, isOnline = false }) => (
     <div className={`user-card ${isOnline ? 'online' : 'offline'}`}>
@@ -346,6 +352,7 @@ const fetchUserData = async () => {
     setUser(user);
     setPosts(posts);
 };
+{% endraw %}
 ```
 
 ---
@@ -403,6 +410,7 @@ const { name, age, ...otherProps } = {
 ### React Usage Examples
 
 ```javascript
+{% raw %}
 // Immutable state updates
 const [todos, setTodos] = useState([]);
 
@@ -438,6 +446,7 @@ const [localTodos, setLocalTodos] = useState([]);
 const [remoteTodos, setRemoteTodos] = useState([]);
 
 const allTodos = [...localTodos, ...remoteTodos];
+{% endraw %}
 ```
 
 ---
@@ -447,6 +456,7 @@ const allTodos = [...localTodos, ...remoteTodos];
 ### Basic Default Parameters
 
 ```javascript
+{% raw %}
 // Old way
 function greet(name) {
     name = name || 'Guest';
@@ -465,11 +475,13 @@ const greet = (name = 'Guest') => `Hello ${name}`;
 const createUser = (name = 'Anonymous', age = 0, role = 'user') => ({
     name, age, role, createdAt: new Date()
 });
+{% endraw %}
 ```
 
 ### Advanced Default Parameters
 
 ```javascript
+{% raw %}
 // Using other parameters in defaults
 const greetUser = (firstName, lastName, fullName = `${firstName} ${lastName}`) => {
     return `Hello ${fullName}`;
@@ -490,11 +502,13 @@ const apiCall = (url, options = {}) => {
     };
     return fetch(url, config);
 };
+{% endraw %}
 ```
 
 ### React Usage Examples
 
 ```javascript
+{% raw %}
 // Component props with defaults
 const Button = ({ 
     children, 
@@ -528,6 +542,7 @@ const fetchUsers = async (page = 1, limit = 10, sortBy = 'name') => {
     const response = await fetch(`/api/users?page=${page}&limit=${limit}&sort=${sortBy}`);
     return response.json();
 };
+{% endraw %}
 ```
 
 ---
@@ -584,6 +599,7 @@ const calculator = {
 ### Computed Property Names
 
 ```javascript
+{% raw %}
 // Dynamic property names
 const propertyName = 'dynamicKey';
 const obj = {
@@ -597,6 +613,7 @@ const actions = {
     [createActionType('user')]: 'SET_USER',
     [createActionType('loading')]: 'SET_LOADING'
 };
+{% endraw %}
 ```
 
 ### React Usage Examples
@@ -660,6 +677,7 @@ const FormComponent = () => {
 ### Class Syntax
 
 ```javascript
+{% raw %}
 // ES5 Constructor Function
 function Person(name, age) {
     this.name = name;
@@ -696,11 +714,13 @@ class Person {
         return new Person('Anonymous', 0);
     }
 }
+{% endraw %}
 ```
 
 ### Class Inheritance
 
 ```javascript
+{% raw %}
 class Student extends Person {
     constructor(name, age, grade) {
         super(name, age); // Call parent constructor
@@ -718,6 +738,7 @@ class Student extends Person {
 
 const student = new Student('Alice', 16, 11);
 console.log(student.greet()); // "Hello, I'm Alice and I'm in grade 11"
+{% endraw %}
 ```
 
 ### React Class Components (Legacy)
@@ -871,6 +892,7 @@ const MathUtils = await import('./math-utils');
 ### React Module Patterns
 
 ```javascript
+{% raw %}
 // Component exports
 // Button.jsx
 import React from 'react';
@@ -952,6 +974,7 @@ const App = () => {
 };
 
 export default App;
+{% endraw %}
 ```
 
 ---
@@ -1016,6 +1039,7 @@ const uniqueIds = Array.from(new Set([1, 2, 2, 3, 3, 4])); // [1, 2, 3, 4]
 ### React Array Method Examples
 
 ```javascript
+{% raw %}
 // Rendering lists
 const TodoList = ({ todos }) => (
     <ul>
@@ -1093,6 +1117,7 @@ const UserDashboard = ({ users }) => {
         </div>
     );
 };
+{% endraw %}
 ```
 
 ---

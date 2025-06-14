@@ -210,6 +210,7 @@ function ConfirmDialog({ onConfirm, onCancel }) {
 Using children prop to create flexible, reusable components.
 
 ```jsx
+{% raw %}
 function Card({ header, children, footer, className = '' }) {
   return (
     <div className={`card ${className}`}>
@@ -237,6 +238,7 @@ function ProductCard({ product }) {
     </Card>
   );
 }
+{% endraw %}
 ```
 
 ### Compound Components
@@ -244,6 +246,7 @@ function ProductCard({ product }) {
 Components that work together to form a cohesive UI.
 
 ```jsx
+{% raw %}
 function Tabs({ children, defaultTab = 0 }) {
   const [activeTab, setActiveTab] = useState(defaultTab);
   
@@ -286,6 +289,7 @@ function App() {
     </Tabs>
   );
 }
+{% endraw %}
 ```
 
 ---
@@ -350,6 +354,7 @@ function UserListContainer() {
 Use React Context to provide data to component trees.
 
 ```jsx
+{% raw %}
 // Create context
 const ThemeContext = createContext();
 
@@ -390,6 +395,7 @@ function Header() {
     </header>
   );
 }
+{% endraw %}
 ```
 
 ### Atomic Design Pattern
@@ -397,6 +403,7 @@ function Header() {
 Organize components into a hierarchy based on their complexity.
 
 ```jsx
+{% raw %}
 // Atoms - Basic building blocks
 function Button({ children, variant = 'primary', ...props }) {
   return (
@@ -450,6 +457,7 @@ function ProductGrid({ products, onSearch }) {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ---
@@ -669,6 +677,7 @@ function UserDashboard({ userId }) {
 Components should be open for extension but closed for modification.
 
 ```jsx
+{% raw %}
 // Base button component
 function Button({ variant = 'primary', size = 'medium', children, ...props }) {
   const classes = `btn btn-${variant} btn-${size}`;
@@ -689,6 +698,7 @@ function IconButton({ icon, children, ...props }) {
     </Button>
   );
 }
+{% endraw %}
 ```
 
 ### Dependency Inversion

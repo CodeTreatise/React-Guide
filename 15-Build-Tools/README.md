@@ -474,6 +474,7 @@ export default defineConfig(({ command, mode }) => {
 
 #### **Vite Plugin Development**
 ```typescript
+{% raw %}
 // plugins/vite-plugin-react-inspector.ts
 import { Plugin } from 'vite';
 
@@ -520,6 +521,7 @@ export function reactInspector(options: ReactInspectorOptions = {}): Plugin {
     }
   };
 }
+{% endraw %}
 ```
 
 ### 4. Code Splitting and Lazy Loading
@@ -620,6 +622,7 @@ const DataVisualization = () => (
 
 #### **Dynamic Import Utilities**
 ```typescript
+{% raw %}
 // src/utils/dynamicImport.ts
 interface ImportOptions {
   timeout?: number;
@@ -691,6 +694,7 @@ export const addResourceHint = (href: string, rel: 'preload' | 'prefetch') => {
   link.as = 'script';
   document.head.appendChild(link);
 };
+{% endraw %}
 ```
 
 ### 5. Bundle Optimization
@@ -753,6 +757,7 @@ module.exports = {
 
 #### **Bundle Analysis and Monitoring**
 ```typescript
+{% raw %}
 // src/utils/bundleAnalysis.ts
 interface BundleMetrics {
   totalSize: number;
@@ -840,6 +845,7 @@ ${this.generateRecommendations()}
     return recommendations.join('\n');
   }
 }
+{% endraw %}
 ```
 
 ### 6. Module Federation
@@ -915,6 +921,7 @@ module.exports = {
 
 #### **Dynamic Module Loading**
 ```typescript
+{% raw %}
 // src/utils/moduleLoader.ts
 interface RemoteModule {
   name: string;
@@ -1013,6 +1020,7 @@ export const RemoteComponent: React.FC<RemoteComponentProps> = ({
   
   return <Component {...props} />;
 };
+{% endraw %}
 ```
 
 ### 7. Progressive Web App (PWA) Features
@@ -1186,6 +1194,7 @@ module.exports = {
 
 #### **Smart Image Component**
 ```typescript
+{% raw %}
 // src/components/OptimizedImage.tsx
 import React, { useState, useRef, useEffect } from 'react';
 
@@ -1289,6 +1298,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 };
 
 export default OptimizedImage;
+{% endraw %}
 ```
 
 ## 🎯 Practical Exercises

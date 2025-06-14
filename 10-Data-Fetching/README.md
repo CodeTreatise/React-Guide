@@ -26,6 +26,7 @@ This module covers comprehensive data fetching strategies for modern React appli
 
 ### 1. Modern Data Fetching with React Query / TanStack Query
 ```javascript
+{% raw %}
 // Advanced React Query setup
 import { QueryClient, QueryClientProvider, useQuery, useMutation, useInfiniteQuery } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
@@ -137,10 +138,12 @@ function useInfiniteUsers(filters = {}) {
     },
   })
 }
+{% endraw %}
 ```
 
 ### 2. Advanced SWR Patterns
 ```javascript
+{% raw %}
 import useSWR, { useSWRConfig, SWRConfig } from 'swr'
 import useSWRInfinite from 'swr/infinite'
 import useSWRMutation from 'swr/mutation'
@@ -281,10 +284,12 @@ function useInfiniteUserList(filters = {}) {
     refresh: () => mutate(),
   }
 }
+{% endraw %}
 ```
 
 ### 3. Real-time Data with WebSockets
 ```javascript
+{% raw %}
 // WebSocket hook with automatic reconnection
 function useWebSocket(url, options = {}) {
   const [socket, setSocket] = useState(null)
@@ -431,10 +436,12 @@ function useRealTimeData(endpoint, initialData = null) {
     sendMessage,
   }
 }
+{% endraw %}
 ```
 
 ### 4. Server-Sent Events (SSE)
 ```javascript
+{% raw %}
 // Server-Sent Events hook
 function useServerSentEvents(url, options = {}) {
   const [data, setData] = useState(null)
@@ -541,10 +548,12 @@ function useNotifications() {
     markAsRead,
   }
 }
+{% endraw %}
 ```
 
 ### 5. Offline-First Data Strategies
 ```javascript
+{% raw %}
 // Service Worker registration and management
 function useServiceWorker() {
   const [isOnline, setIsOnline] = useState(navigator.onLine)
@@ -775,6 +784,7 @@ function useOfflineFetch() {
     isReady,
   }
 }
+{% endraw %}
 ```
 
 ### 6. Advanced Error Handling and Retry Logic

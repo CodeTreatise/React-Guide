@@ -58,6 +58,7 @@ type Subscription {
 ### Benefits of GraphQL
 
 ```typescript
+{% raw %}
 // REST vs GraphQL comparison
 // REST - Multiple requests needed
 const fetchUserWithPosts = async (userId: string) => {
@@ -90,6 +91,7 @@ const USER_WITH_POSTS = gql`
     }
   }
 `;
+{% endraw %}
 ```
 
 ## Apollo Client Setup
@@ -101,6 +103,7 @@ npm install @apollo/client graphql
 ```
 
 ```typescript
+{% raw %}
 // apollo-client.ts
 import { ApolloClient, InMemoryCache, createHttpLink, from } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
@@ -203,6 +206,7 @@ function App() {
     </ApolloProvider>
   );
 }
+{% endraw %}
 ```
 
 ### Apollo Client DevTools Integration
@@ -340,6 +344,7 @@ const UserList: React.FC = () => {
 ### Query with Variables and Fragments
 
 ```typescript
+{% raw %}
 // fragments/user.ts
 import { gql } from '@apollo/client';
 
@@ -455,6 +460,7 @@ const PostList: React.FC = () => {
     </div>
   );
 };
+{% endraw %}
 ```
 
 ### Lazy Queries
@@ -524,6 +530,7 @@ const UserSearch: React.FC = () => {
 ### Basic Mutations
 
 ```typescript
+{% raw %}
 // mutations/user.ts
 import { gql } from '@apollo/client';
 import { USER_FRAGMENT } from '../fragments/user';
@@ -616,6 +623,7 @@ export const useUserMutations = () => {
     loading: creating || updating || deleting
   };
 };
+{% endraw %}
 ```
 
 ### Optimistic Updates
@@ -762,6 +770,7 @@ const FileUpload: React.FC = () => {
 ### Real-time Updates
 
 ```typescript
+{% raw %}
 // subscriptions/post.ts
 import { gql } from '@apollo/client';
 import { POST_FRAGMENT } from '../fragments/user';
@@ -854,11 +863,13 @@ const RealtimePostList: React.FC = () => {
     </div>
   );
 };
+{% endraw %}
 ```
 
 ### WebSocket Setup
 
 ```typescript
+{% raw %}
 // apollo-client.ts (with subscriptions)
 import { ApolloClient, InMemoryCache, split, HttpLink } from '@apollo/client';
 import { getMainDefinition } from '@apollo/client/utilities';
@@ -900,6 +911,7 @@ export const client = new ApolloClient({
   link: splitLink,
   cache: new InMemoryCache()
 });
+{% endraw %}
 ```
 
 ## Cache Management
@@ -1065,6 +1077,7 @@ export const useCacheUpdates = () => {
 ### GraphQL Error Management
 
 ```typescript
+{% raw %}
 // utils/errorUtils.ts
 import { ApolloError, GraphQLError } from '@apollo/client';
 
@@ -1184,6 +1197,7 @@ const DefaultErrorFallback: React.FC<{ error: Error; retry: () => void }> = ({
     <button onClick={retry}>Try again</button>
   </div>
 );
+{% endraw %}
 ```
 
 ## Code Generation
@@ -1486,6 +1500,7 @@ describe('User Management Flow', () => {
 ### Query Optimization
 
 ```typescript
+{% raw %}
 // hooks/useOptimizedQueries.ts
 import { useQuery, useMemo } from '@apollo/client';
 
@@ -1583,6 +1598,7 @@ export const useInfiniteScroll = <T>(
     hasMore
   };
 };
+{% endraw %}
 ```
 
 ### Cache Optimization

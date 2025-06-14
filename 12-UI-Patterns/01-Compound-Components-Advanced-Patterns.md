@@ -17,6 +17,7 @@
 ### Basic Compound Component Implementation
 
 ```jsx
+{% raw %}
 import React, { createContext, useContext, useState, Children, cloneElement } from 'react'
 
 // Context for sharing state between compound components
@@ -173,11 +174,13 @@ const AccordionExample = () => {
     </Accordion>
   )
 }
+{% endraw %}
 ```
 
 ### Advanced Compound Component with Flexible API
 
 ```jsx
+{% raw %}
 // Flexible Tab component with multiple API patterns
 const TabsContext = createContext()
 
@@ -361,6 +364,7 @@ const TabsExample = () => {
     </div>
   )
 }
+{% endraw %}
 ```
 
 ---
@@ -370,6 +374,7 @@ const TabsExample = () => {
 ### Provider Pattern with Multiple Contexts
 
 ```jsx
+{% raw %}
 // Multi-level context for complex component hierarchies
 const FormContext = createContext()
 const FieldContext = createContext()
@@ -631,6 +636,7 @@ const FormExample = () => {
     </Form>
   )
 }
+{% endraw %}
 ```
 
 This comprehensive guide covers advanced compound components and composition patterns essential for building scalable React applications.

@@ -138,6 +138,7 @@ npm install --save-dev @types/node @types/lodash
 ### Function Components
 
 ```typescript
+{% raw %}
 import React, { ReactNode, ReactElement } from 'react'
 
 // Basic function component
@@ -228,11 +229,13 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 )
 
 Input.displayName = 'Input'
+{% endraw %}
 ```
 
 ### Advanced Component Patterns
 
 ```typescript
+{% raw %}
 // Higher-Order Component typing
 function withLoading<P extends object>(
   Component: React.ComponentType<P>
@@ -380,6 +383,7 @@ Tabs.List = TabList
 Tabs.Tab = Tab
 Tabs.Panels = TabPanels
 Tabs.Panel = TabPanel
+{% endraw %}
 ```
 
 ## Hook Typing
@@ -387,6 +391,7 @@ Tabs.Panel = TabPanel
 ### Custom Hook Types
 
 ```typescript
+{% raw %}
 // Custom hook with return tuple
 function useToggle(initialValue = false): [boolean, () => void, () => void, () => void] {
   const [value, setValue] = React.useState(initialValue)
@@ -472,6 +477,7 @@ function useLocalStorage<T>(
 
   return [storedValue, setValue]
 }
+{% endraw %}
 ```
 
 ### Complex Hook Patterns
@@ -628,6 +634,7 @@ const ContactForm: React.FC<FormProps> = ({ onSubmit }) => {
 ### Custom Event Types
 
 ```typescript
+{% raw %}
 // Custom event interfaces
 interface CustomSelectOption {
   value: string
@@ -685,6 +692,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
     </div>
   )
 }
+{% endraw %}
 ```
 
 ## Type Definitions
@@ -761,6 +769,7 @@ const Alert: React.FC<AlertProps> = ({ variant, onClose }) => {
 ### API Response Types
 
 ```typescript
+{% raw %}
 // API response types
 interface ApiResponse<T> {
   data: T
@@ -848,6 +857,7 @@ const loginValidation: FormValidation<LoginForm> = {
     ],
   },
 }
+{% endraw %}
 ```
 
 ## Advanced Type Patterns
@@ -855,6 +865,7 @@ const loginValidation: FormValidation<LoginForm> = {
 ### Conditional Types
 
 ```typescript
+{% raw %}
 // Conditional types for component props
 type ConditionalProps<T> = T extends string
   ? { stringProp: string }
@@ -926,6 +937,7 @@ function Tree<T>({ nodes, renderNode, onNodeClick }: TreeProps<T>) {
     </ul>
   )
 }
+{% endraw %}
 ```
 
 ### Type Guards and Assertions
@@ -1096,6 +1108,7 @@ describe('TestComponent', () => {
 ### Gradual TypeScript Adoption
 
 ```typescript
+{% raw %}
 // Step 1: Add basic types
 // Before (JavaScript)
 const Button = ({ children, onClick, variant }) => {
@@ -1146,6 +1159,7 @@ const StrictButton = React.forwardRef<HTMLButtonElement, StrictButtonProps>(
     )
   }
 )
+{% endraw %}
 ```
 
 ### Legacy Code Integration

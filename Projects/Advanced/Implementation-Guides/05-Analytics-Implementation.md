@@ -139,6 +139,7 @@ src/
 
 ### Real-time Data Hook
 ```typescript
+{% raw %}
 // src/hooks/useRealTimeData.ts
 import { useState, useEffect, useRef } from 'react';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
@@ -270,6 +271,7 @@ export const useRealTimeData = <T>({
     refetch: query.refetch
   };
 };
+{% endraw %}
 ```
 
 ### Interactive Line Chart Component
@@ -532,6 +534,7 @@ export const InteractiveLineChart: React.FC<InteractiveLineChartProps> = ({
 
 ### Dashboard Grid Component
 ```typescript
+{% raw %}
 // src/components/dashboard/DashboardGrid.tsx
 import React, { useState, useCallback } from 'react';
 import { motion, Reorder } from 'framer-motion';
@@ -746,10 +749,12 @@ export const DashboardGrid: React.FC<DashboardGridProps> = ({
     </div>
   );
 };
+{% endraw %}
 ```
 
 ### Performance-Optimized Data Table
 ```typescript
+{% raw %}
 // src/components/tables/VirtualizedTable.tsx
 import React, { useMemo, useState } from 'react';
 import {
@@ -999,11 +1004,13 @@ export const useAnalyticsTableColumns = (): ColumnDef<any>[] => {
     },
   ], []);
 };
+{% endraw %}
 ```
 
 ## 🗄️ Database Schema & Mock Data
 
 ```typescript
+{% raw %}
 // src/services/mockData.ts
 export const generateMockAnalyticsData = (days: number = 30) => {
   const data = [];
@@ -1053,6 +1060,7 @@ export const generateRealtimeEvents = () => {
     }
   };
 };
+{% endraw %}
 ```
 
 ## 🚀 Deployment Options
@@ -1109,6 +1117,7 @@ CMD ["nginx", "-g", "daemon off;"]
 
 ### Monitoring Performance
 ```typescript
+{% raw %}
 // src/utils/performanceMonitor.ts
 class PerformanceMonitor {
   private metrics: Map<string, number[]> = new Map();
@@ -1156,6 +1165,7 @@ class PerformanceMonitor {
 }
 
 export const performanceMonitor = new PerformanceMonitor();
+{% endraw %}
 ```
 
 ## ✅ Success Criteria

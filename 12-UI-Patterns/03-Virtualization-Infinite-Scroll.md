@@ -14,6 +14,7 @@ Virtualization is a technique for efficiently rendering large datasets by only r
 ## Basic Virtual Scrolling Implementation
 
 ```jsx
+{% raw %}
 import React, { useState, useEffect, useRef, useMemo } from 'react'
 
 const VirtualList = ({
@@ -95,6 +96,7 @@ const BasicVirtualListExample = () => {
     />
   )
 }
+{% endraw %}
 ```
 
 ## Advanced Virtual Scrolling with Dynamic Heights
@@ -220,6 +222,7 @@ const DynamicVirtualList = ({
 ## Infinite Scroll Implementation
 
 ```jsx
+{% raw %}
 import React, { useState, useEffect, useCallback, useRef } from 'react'
 
 const useInfiniteScroll = ({
@@ -347,11 +350,13 @@ const InfiniteScrollExample = () => {
     />
   )
 }
+{% endraw %}
 ```
 
 ## Virtualized Grid Implementation
 
 ```jsx
+{% raw %}
 const VirtualGrid = ({
   items,
   columns,
@@ -476,11 +481,13 @@ const VirtualGridExample = () => {
     />
   )
 }
+{% endraw %}
 ```
 
 ## Horizontal Virtual Scrolling
 
 ```jsx
+{% raw %}
 const HorizontalVirtualList = ({
   items,
   itemWidth,
@@ -544,6 +551,7 @@ const HorizontalVirtualList = ({
     </div>
   )
 }
+{% endraw %}
 ```
 
 ## Bidirectional Infinite Scroll
@@ -770,6 +778,7 @@ const useIntersectionObserver = (callback, options = {}) => {
 ## Testing Virtualization
 
 ```jsx
+{% raw %}
 import { render, screen, fireEvent } from '@testing-library/react'
 import { act } from '@testing-library/react-hooks'
 
@@ -839,11 +848,13 @@ describe('InfiniteScroll', () => {
     expect(mockFetchItems).toHaveBeenCalledTimes(2)
   })
 })
+{% endraw %}
 ```
 
 ## Accessibility Considerations
 
 ```jsx
+{% raw %}
 const AccessibleVirtualList = ({
   items,
   itemHeight,
@@ -910,6 +921,7 @@ const AccessibleVirtualList = ({
     </div>
   )
 }
+{% endraw %}
 ```
 
 ## Conclusion

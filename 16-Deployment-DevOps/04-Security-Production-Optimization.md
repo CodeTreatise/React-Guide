@@ -17,6 +17,7 @@
 ### Content Security Policy (CSP)
 
 ```typescript
+{% raw %}
 // utils/security-headers.ts
 export const generateCSPHeader = (nonce?: string): string => {
   const directives = [
@@ -63,6 +64,7 @@ export const securityHeadersMiddleware = (req: any, res: any, next: any) => {
   res.locals.nonce = nonce;
   next();
 };
+{% endraw %}
 ```
 
 ### Input Validation & Sanitization
@@ -482,6 +484,7 @@ spec:
 ### Security Scanning
 
 ```yaml
+{% raw %}
 # .github/workflows/security-scan.yml
 name: Security Scan
 
@@ -550,6 +553,7 @@ jobs:
       uses: fossa-contrib/fossa-action@v1
       with:
         api-key: ${{ secrets.FOSSA_API_KEY }}
+{% endraw %}
 ```
 
 ## Performance Optimization
@@ -557,6 +561,7 @@ jobs:
 ### Advanced Bundle Optimization
 
 ```javascript
+{% raw %}
 // webpack.config.prod.js
 const path = require('path');
 const webpack = require('webpack');
@@ -653,11 +658,13 @@ module.exports = {
     }
   }
 };
+{% endraw %}
 ```
 
 ### Tree Shaking & Dead Code Elimination
 
 ```typescript
+{% raw %}
 // utils/performance-optimization.ts
 
 // Selective imports to enable tree shaking
@@ -722,11 +729,13 @@ export const preloadCriticalResources = () => {
     document.head.appendChild(link);
   });
 };
+{% endraw %}
 ```
 
 ### React Performance Optimizations
 
 ```typescript
+{% raw %}
 // components/OptimizedComponent.tsx
 import React, { memo, useMemo, useCallback, startTransition } from 'react';
 import { useVirtualizer } from '@tanstack/react-virtual';
@@ -816,6 +825,7 @@ const OptimizedList = memo<OptimizedListProps>(({ items, onItemClick, filterText
 OptimizedList.displayName = 'OptimizedList';
 
 export default OptimizedList;
+{% endraw %}
 ```
 
 ## Caching Strategies
@@ -823,6 +833,7 @@ export default OptimizedList;
 ### Multi-Level Caching Implementation
 
 ```typescript
+{% raw %}
 // utils/cache-manager.ts
 interface CacheEntry<T> {
   data: T;
@@ -1053,6 +1064,7 @@ class CacheManager {
 }
 
 export const cacheManager = new CacheManager();
+{% endraw %}
 ```
 
 ### Service Worker Caching
@@ -1211,6 +1223,7 @@ async function doBackgroundSync() {
 ### CloudFlare Configuration
 
 ```javascript
+{% raw %}
 // cloudflare-worker.js
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request));
@@ -1325,6 +1338,7 @@ function shouldRevalidate(response) {
   const age = response.headers.get('Age') || '0';
   return parseInt(age) > parseInt(maxAge[1]);
 }
+{% endraw %}
 ```
 
 ### AWS CloudFront Configuration

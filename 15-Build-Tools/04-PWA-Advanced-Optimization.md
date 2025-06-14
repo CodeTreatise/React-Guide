@@ -56,6 +56,7 @@ export interface InstallPromptEvent extends Event {
 
 ### PWA Service Setup
 ```typescript
+{% raw %}
 // services/PWAService.ts
 class PWAService {
   private config: PWAConfig;
@@ -373,6 +374,7 @@ class PWAService {
     }
   }
 }
+{% endraw %}
 ```
 
 ## Service Worker Implementation
@@ -761,6 +763,7 @@ async function addPendingRequest(request) {
 
 ### Advanced Cache Manager
 ```typescript
+{% raw %}
 // utils/CacheManager.ts
 interface CacheConfig {
   name: string;
@@ -1029,12 +1032,14 @@ class HTTPCache {
 }
 
 export const httpCache = HTTPCache.getInstance();
+{% endraw %}
 ```
 
 ## Offline Functionality
 
 ### Offline Data Synchronization
 ```typescript
+{% raw %}
 // services/OfflineSync.ts
 interface SyncOperation {
   id: string;
@@ -1443,12 +1448,14 @@ class OfflineSync {
 }
 
 export const offlineSync = new OfflineSync();
+{% endraw %}
 ```
 
 ## Web App Manifest
 
 ### Dynamic Manifest Generation
 ```typescript
+{% raw %}
 // utils/ManifestGenerator.ts
 interface ManifestConfig {
   name: string;
@@ -1743,6 +1750,7 @@ const manifestConfig: ManifestConfig = {
 };
 
 export const manifestGenerator = new ManifestGenerator(manifestConfig);
+{% endraw %}
 ```
 
 This comprehensive guide covers PWA implementation, advanced service worker patterns, sophisticated caching strategies, offline functionality, and performance optimization techniques. The implementations provide production-ready code for building high-performance Progressive Web Apps with React.

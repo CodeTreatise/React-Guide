@@ -121,6 +121,7 @@
 ### React CSS Animation Integration
 
 ```jsx
+{% raw %}
 import React, { useState, useEffect } from 'react'
 import './animations.css'
 
@@ -196,6 +197,7 @@ const DynamicAnimationComponent = ({ color, duration, delay }) => {
     </div>
   )
 }
+{% endraw %}
 ```
 
 ---
@@ -385,6 +387,7 @@ const ComplexAnimationSequence = () => {
 ### React Spring Animations
 
 ```jsx
+{% raw %}
 import { useSpring, animated, useTransition, useChain, useSpringRef } from '@react-spring/web'
 import { useState } from 'react'
 
@@ -482,6 +485,7 @@ const PhysicsAnimation = () => {
     </animated.div>
   )
 }
+{% endraw %}
 ```
 
 ---
@@ -536,6 +540,7 @@ const PhysicsAnimation = () => {
 ### React Responsive Hooks
 
 ```jsx
+{% raw %}
 import { useState, useEffect } from 'react'
 
 // Custom responsive hooks
@@ -695,6 +700,7 @@ const ResponsiveImage = ({ src, alt, sizes }) => {
     />
   )
 }
+{% endraw %}
 ```
 
 ---
@@ -767,6 +773,7 @@ const ResponsiveImage = ({ src, alt, sizes }) => {
 ### Touch-Friendly Interactions
 
 ```jsx
+{% raw %}
 import React, { useState, useRef } from 'react'
 
 // Touch gesture handler
@@ -938,6 +945,7 @@ const MobileModal = ({ isOpen, onClose, children }) => {
     </div>
   )
 }
+{% endraw %}
 ```
 
 ---
@@ -1077,6 +1085,7 @@ const MotionAwareComponent = ({ children }) => {
 ### Shared Element Transitions
 
 ```jsx
+{% raw %}
 import { motion, AnimateSharedLayout } from 'framer-motion'
 
 const SharedElementExample = () => {
@@ -1137,6 +1146,7 @@ const SharedElementExample = () => {
     </div>
   )
 }
+{% endraw %}
 ```
 
 ### Morphing Animations
@@ -1318,6 +1328,7 @@ const AccessibleLoader = ({ isLoading, children }) => {
 ### E-commerce Product Gallery
 
 ```jsx
+{% raw %}
 const ProductGallery = ({ products }) => {
   const [selectedProduct, setSelectedProduct] = useState(null)
   const [filter, setFilter] = useState('all')
@@ -1404,11 +1415,13 @@ const ProductGallery = ({ products }) => {
     </div>
   )
 }
+{% endraw %}
 ```
 
 ### Dashboard with Animated Charts
 
 ```jsx
+{% raw %}
 const AnimatedDashboard = ({ data }) => {
   const [selectedMetric, setSelectedMetric] = useState('revenue')
   
@@ -1478,6 +1491,7 @@ const AnimatedChart = ({ data }) => {
     </div>
   )
 }
+{% endraw %}
 ```
 
 This comprehensive guide covers animation and responsive design patterns for React applications, providing practical techniques for creating engaging, accessible, and performant user interfaces across all device types.

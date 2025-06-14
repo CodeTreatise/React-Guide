@@ -51,6 +51,7 @@ function App() {
 
 ### Accessing Parameters with useParams
 ```jsx
+{% raw %}
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
@@ -100,10 +101,12 @@ function UserProfile() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### Multiple Parameters Example
 ```jsx
+{% raw %}
 function ProductDetail() {
   const { category, productId } = useParams();
   const [product, setProduct] = useState(null);
@@ -142,6 +145,7 @@ function ProductDetail() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ## Route Patterns & Matching
@@ -245,6 +249,7 @@ function BlogPost() {
 
 ### Using useSearchParams Hook
 ```jsx
+{% raw %}
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
@@ -409,6 +414,7 @@ function ProductSearch() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### Query Parameter Utilities
@@ -482,6 +488,7 @@ export function useQueryParams() {
 
 ### Optional Parameters
 ```jsx
+{% raw %}
 // Using optional segments with conditional logic
 function UserRoutes() {
   return (
@@ -545,10 +552,12 @@ function UserProfile() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### Wildcard Routes
 ```jsx
+{% raw %}
 function FileExplorer() {
   return (
     <Routes>
@@ -589,6 +598,7 @@ function FileBrowser() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### Splat Routes (*)
@@ -867,6 +877,7 @@ function generateRoutes(config, components) {
 
 ### Dynamic Link Generation
 ```jsx
+{% raw %}
 // utils/linkHelpers.js
 export function generatePath(template, params) {
   return template.replace(/:([^/]+)/g, (match, param) => {
@@ -923,6 +934,7 @@ function ProductCard({ product }) {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ## Performance Optimization
@@ -960,6 +972,7 @@ function OptimizedComponent() {
 
 ### Route Preloading
 ```jsx
+{% raw %}
 // utils/routePreloader.js
 const routePreloadCache = new Map();
 
@@ -1005,6 +1018,7 @@ function PreloadLink({ to, params, children, ...props }) {
     </Link>
   );
 }
+{% endraw %}
 ```
 
 ## Best Practices
@@ -1037,6 +1051,7 @@ function PreloadLink({ to, params, children, ...props }) {
 
 ### 3. Error Handling for Invalid Parameters
 ```jsx
+{% raw %}
 function RobustComponent() {
   const params = useParams();
   const navigate = useNavigate();
@@ -1078,6 +1093,7 @@ function RobustComponent() {
 
   return <UserContent />;
 }
+{% endraw %}
 ```
 
 This comprehensive guide covers dynamic routing and parameters in React Router v6. The next sections will explore nested routes, layout patterns, and protected route implementations.

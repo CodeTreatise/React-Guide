@@ -26,6 +26,7 @@ This module covers comprehensive styling strategies for modern React application
 
 ### 1. CSS-in-JS with Styled Components
 ```javascript
+{% raw %}
 import styled, { css, createGlobalStyle, ThemeProvider } from 'styled-components'
 
 // Global styles
@@ -261,10 +262,12 @@ const Card = styled.div`
     box-shadow: none;
   `}
 `
+{% endraw %}
 ```
 
 ### 2. Emotion CSS-in-JS
 ```javascript
+{% raw %}
 /** @jsxImportSource @emotion/react */
 import { css, Global, ThemeProvider } from '@emotion/react'
 import styled from '@emotion/styled'
@@ -396,6 +399,7 @@ const DynamicButton = styled.button`
     }
   }}
 `
+{% endraw %}
 ```
 
 ### 3. CSS Modules with Advanced Features
@@ -696,6 +700,7 @@ function useDarkMode() {
 
 ### 5. Design System Implementation
 ```javascript
+{% raw %}
 // Design tokens
 export const tokens = {
   colors: {
@@ -883,6 +888,7 @@ function useStyleSystem() {
     getFontSize,
   }
 }
+{% endraw %}
 ```
 
 ### 6. Animation and Transitions
@@ -1042,6 +1048,7 @@ function AnimatedModal({ isOpen, onClose, children }) {
 
 ### 7. Performance Optimization
 ```javascript
+{% raw %}
 // CSS-in-JS performance optimization
 import { memo, useMemo } from 'react'
 import { css, cx } from '@emotion/css'
@@ -1111,6 +1118,7 @@ const injectStyles = (css) => {
   document.head.appendChild(style)
   return () => document.head.removeChild(style)
 }
+{% endraw %}
 ```
 
 ---

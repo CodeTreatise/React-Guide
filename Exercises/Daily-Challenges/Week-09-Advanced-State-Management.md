@@ -18,6 +18,7 @@ This week focuses on advanced state management patterns including Redux Toolkit,
 Build a sophisticated Redux store with RTK Query for a complex application.
 
 ```javascript
+{% raw %}
 // Expected store structure
 const store = configureStore({
   reducer: {
@@ -97,6 +98,7 @@ const apiSlice = createApi({
     }),
   }),
 });
+{% endraw %}
 ```
 
 **Your Task:**
@@ -550,6 +552,7 @@ const useCrossMicroFrontendState = (key) => {
 Optimize state management for large-scale applications.
 
 ```javascript
+{% raw %}
 // Optimized state slice with normalization
 const createOptimizedSlice = (name, options) => {
   const { initialState, reducers, extraReducers } = options;
@@ -680,6 +683,7 @@ const performanceMiddleware = (store) => (next) => (action) => {
   
   return result;
 };
+{% endraw %}
 ```
 
 **Your Task:**

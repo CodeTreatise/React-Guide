@@ -480,6 +480,7 @@ module.exports = {
 ### Creating Custom Rules
 
 ```javascript
+{% raw %}
 // eslint-rules/prefer-named-exports.js
 module.exports = {
   meta: {
@@ -520,6 +521,7 @@ module.exports = {
     }
   },
 }
+{% endraw %}
 ```
 
 ### Component-Specific Rules
@@ -728,6 +730,7 @@ echo "✅ Pre-commit checks passed!"
 ### GitHub Actions ESLint Workflow
 
 ```yaml
+{% raw %}
 # .github/workflows/code-quality.yml
 name: Code Quality
 
@@ -771,6 +774,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_JAVASCRIPT_ES: true
           VALIDATE_TYPESCRIPT_ES: true
+{% endraw %}
 ```
 
 ## Performance Optimization

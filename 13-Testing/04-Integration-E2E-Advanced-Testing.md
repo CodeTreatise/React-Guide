@@ -362,6 +362,7 @@ describe('User Journey E2E Tests', () => {
 ### Advanced Cypress Patterns
 
 ```javascript
+{% raw %}
 // Custom commands
 // cypress/support/commands.js
 Cypress.Commands.add('login', (email, password) => {
@@ -422,6 +423,7 @@ describe('User Management E2E', () => {
       .should('contain', 'Admin');
   });
 });
+{% endraw %}
 ```
 
 ### Testing Complex User Interactions
@@ -643,6 +645,7 @@ test('should match dark theme', async ({ page }) => {
 ### Visual Testing with Storybook
 
 ```javascript
+{% raw %}
 // .storybook/test-runner.js
 const { getStoryContext } = require('@storybook/test-runner');
 
@@ -663,6 +666,7 @@ module.exports = {
     });
   }
 };
+{% endraw %}
 ```
 
 ---
@@ -1043,6 +1047,7 @@ describe('Error Monitoring', () => {
 ### GitHub Actions Testing Workflow
 
 ```yaml
+{% raw %}
 # .github/workflows/test.yml
 name: Test Suite
 
@@ -1112,6 +1117,7 @@ jobs:
       with:
         name: playwright-report
         path: playwright-report/
+{% endraw %}
 ```
 
 ### Parallel Testing Strategy

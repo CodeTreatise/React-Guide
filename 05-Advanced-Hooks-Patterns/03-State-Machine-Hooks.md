@@ -19,6 +19,7 @@ State machines are powerful patterns for managing complex state transitions and 
 ### Basic State Machine Hook
 
 ```jsx
+{% raw %}
 // hooks/useStateMachine.js
 import { useReducer, useCallback, useMemo } from 'react';
 
@@ -186,6 +187,7 @@ function TrafficLightComponent() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ## Custom State Machine Hooks
@@ -193,6 +195,7 @@ function TrafficLightComponent() {
 ### User Authentication State Machine
 
 ```jsx
+{% raw %}
 // hooks/useAuthStateMachine.js
 export function useAuthStateMachine() {
   const config = {
@@ -411,6 +414,7 @@ function App() {
     />
   );
 }
+{% endraw %}
 ```
 
 ## Workflow Management Patterns
@@ -418,6 +422,7 @@ function App() {
 ### Multi-Step Process State Machine
 
 ```jsx
+{% raw %}
 // hooks/useWorkflowStateMachine.js
 export function useWorkflowStateMachine(workflowConfig) {
   const createWorkflowMachine = (config) => ({
@@ -706,6 +711,7 @@ function OnboardingWizard() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ## Complex Form State Machines
@@ -1081,6 +1087,7 @@ function ContactForm() {
 ### Data Fetching State Machine
 
 ```jsx
+{% raw %}
 // hooks/useAsyncStateMachine.js
 export function useAsyncStateMachine(asyncConfig) {
   const config = {
@@ -1368,6 +1375,7 @@ function UserProfileCard({ userId }) {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ## Testing State Machines
@@ -1375,6 +1383,7 @@ function UserProfileCard({ userId }) {
 ### State Machine Testing Utilities
 
 ```jsx
+{% raw %}
 // test-utils/stateMachineTestUtils.js
 import { renderHook, act } from '@testing-library/react';
 
@@ -1515,6 +1524,7 @@ describe('AuthFlow Integration', () => {
     expect(screen.getByRole('button', { name: /logout/i })).toBeInTheDocument();
   });
 });
+{% endraw %}
 ```
 
 ## Performance Considerations

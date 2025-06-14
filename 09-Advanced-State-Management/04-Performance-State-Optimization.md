@@ -167,6 +167,7 @@ const { entities, result } = normalize(rawData, userSchema)
 ### State Slicing
 
 ```javascript
+{% raw %}
 // Feature-based state slicing
 const createFeatureSlice = (name, initialState, reducers) => {
   const actionCreators = {}
@@ -260,6 +261,7 @@ const postsSlice = createFeatureSlice('posts', {
     }
   }
 })
+{% endraw %}
 ```
 
 ## Selector Performance
@@ -518,6 +520,7 @@ function PostListContainer() {
 ### Hook Memoization
 
 ```javascript
+{% raw %}
 // Memoized data fetching hook
 function useOptimizedPosts(filters, sortBy) {
   const selectFilteredPosts = useMemo(
@@ -582,6 +585,7 @@ function usePostStatistics() {
 
   return { stats, chartData, summaryText }
 }
+{% endraw %}
 ```
 
 ## Bundle Size Optimization
@@ -589,6 +593,7 @@ function usePostStatistics() {
 ### Code Splitting for State Management
 
 ```javascript
+{% raw %}
 // Lazy-loaded state slices
 const createAsyncSlice = (sliceName, importFn) => {
   return {
@@ -645,6 +650,7 @@ function App() {
     </Router>
   )
 }
+{% endraw %}
 ```
 
 ### Tree Shaking Optimization
@@ -1149,6 +1155,7 @@ const createPersistenceMiddleware = (persistenceConfig) => {
 ### Version Management
 
 ```javascript
+{% raw %}
 // State migration system
 const migrations = {
   1: (state) => {
@@ -1208,6 +1215,7 @@ const loadStateWithMigration = () => {
 
   return migrateState(persistedState)
 }
+{% endraw %}
 ```
 
 ## Monitoring and Profiling
@@ -1215,6 +1223,7 @@ const loadStateWithMigration = () => {
 ### Performance Monitoring
 
 ```javascript
+{% raw %}
 // Performance metrics collection
 class StatePerformanceMonitor {
   constructor() {
@@ -1309,11 +1318,13 @@ const createMonitoredSelector = (name, selector) => {
     return selector(...args)
   }
 }
+{% endraw %}
 ```
 
 ### React DevTools Integration
 
 ```javascript
+{% raw %}
 // Enhanced Redux DevTools configuration
 const configureDevtools = () => {
   if (process.env.NODE_ENV === 'development' && window.__REDUX_DEVTOOLS_EXTENSION__) {
@@ -1374,6 +1385,7 @@ function ProfiledComponent({ children }) {
     </Profiler>
   )
 }
+{% endraw %}
 ```
 
 ## Best Practices

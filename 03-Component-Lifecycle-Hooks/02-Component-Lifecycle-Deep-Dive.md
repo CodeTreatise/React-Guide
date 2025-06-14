@@ -53,6 +53,7 @@ class ComponentLifecycle extends React.Component {
 ### Why Lifecycle Methods Matter
 
 ```javascript
+{% raw %}
 // Example showing the importance of lifecycle methods
 class DataFetcher extends React.Component {
   constructor(props) {
@@ -107,6 +108,7 @@ class DataFetcher extends React.Component {
     return <div>{JSON.stringify(data)}</div>;
   }
 }
+{% endraw %}
 ```
 
 ---
@@ -387,6 +389,7 @@ class MountingExample extends React.Component {
 The updating phase occurs when a component's props or state change.
 
 ```javascript
+{% raw %}
 class UpdatingExample extends React.Component {
   constructor(props) {
     super(props);
@@ -516,6 +519,7 @@ class UpdatingExample extends React.Component {
     });
   }
 }
+{% endraw %}
 ```
 
 ### 3. Unmounting Phase
@@ -717,6 +721,7 @@ class DeprecatedMethods extends React.Component {
 ### Migration Patterns
 
 ```javascript
+{% raw %}
 // OLD: Using deprecated componentWillReceiveProps
 class OldComponent extends React.Component {
   UNSAFE_componentWillReceiveProps(nextProps) {
@@ -761,6 +766,7 @@ class NewComponent extends React.Component {
     }
   }
 }
+{% endraw %}
 ```
 
 ```javascript
@@ -976,6 +982,7 @@ function App() {
 ### Data Fetching Patterns
 
 ```javascript
+{% raw %}
 class DataFetchingPatterns extends React.Component {
   constructor(props) {
     super(props);
@@ -1063,11 +1070,13 @@ class DataFetchingPatterns extends React.Component {
     return <DataDisplay data={data} />;
   }
 }
+{% endraw %}
 ```
 
 ### Subscription Patterns
 
 ```javascript
+{% raw %}
 class SubscriptionPatterns extends React.Component {
   constructor(props) {
     super(props);
@@ -1170,6 +1179,7 @@ class SubscriptionPatterns extends React.Component {
     );
   }
 }
+{% endraw %}
 ```
 
 ---
@@ -1322,6 +1332,7 @@ class PerformanceOptimized extends React.Component {
 ### Comprehensive Migration Guide
 
 ```javascript
+{% raw %}
 // BEFORE: Class component with lifecycle methods
 class ClassComponent extends React.Component {
   constructor(props) {
@@ -1431,6 +1442,7 @@ function HooksComponent({ userId }) {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### Complex Migration Examples
@@ -1591,6 +1603,7 @@ function useDebounce(value, delay) {
 ### Higher-Order Component Lifecycle
 
 ```javascript
+{% raw %}
 // HOC that adds lifecycle logging
 function withLifecycleLogging(WrappedComponent, componentName = 'Component') {
   return class extends React.Component {
@@ -1690,6 +1703,7 @@ const UserProfile = withDataFetching(
     refetchOn: ['userId']
   }
 );
+{% endraw %}
 ```
 
 ### Render Props with Lifecycle
@@ -1776,6 +1790,7 @@ function App() {
 ### Lifecycle Debugging Tools
 
 ```javascript
+{% raw %}
 class LifecycleDebugger extends React.Component {
   constructor(props) {
     super(props);
@@ -1834,11 +1849,13 @@ class LifecycleDebugger extends React.Component {
     );
   }
 }
+{% endraw %}
 ```
 
 ### Performance Profiling
 
 ```javascript
+{% raw %}
 class PerformanceProfiler extends React.Component {
   constructor(props) {
     super(props);
@@ -1907,6 +1924,7 @@ class PerformanceProfiler extends React.Component {
     );
   }
 }
+{% endraw %}
 ```
 
 ### Common Lifecycle Issues and Solutions

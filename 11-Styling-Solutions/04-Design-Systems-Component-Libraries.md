@@ -158,6 +158,7 @@ const tokens = {
 ### Theme Provider Implementation
 
 ```jsx
+{% raw %}
 import React, { createContext, useContext, useMemo } from 'react'
 
 const ThemeContext = createContext()
@@ -214,6 +215,7 @@ export const CSSVariablesProvider = ({ children, theme }) => {
   
   return children
 }
+{% endraw %}
 ```
 
 ---
@@ -223,6 +225,7 @@ export const CSSVariablesProvider = ({ children, theme }) => {
 ### Base Component Architecture
 
 ```jsx
+{% raw %}
 // Base component with forwardRef
 import React, { forwardRef } from 'react'
 import { useTheme } from '../theme'
@@ -356,11 +359,13 @@ export const Button = forwardRef(({
 })
 
 Button.displayName = 'Button'
+{% endraw %}
 ```
 
 ### Form Components
 
 ```jsx
+{% raw %}
 // Input component with comprehensive features
 export const Input = forwardRef(({
   label,
@@ -568,11 +573,13 @@ export const Input = forwardRef(({
 })
 
 Input.displayName = 'Input'
+{% endraw %}
 ```
 
 ### Layout Components
 
 ```jsx
+{% raw %}
 // Flexible layout components
 export const Stack = ({ 
   direction = 'column',
@@ -680,6 +687,7 @@ export const Container = ({
     </div>
   )
 }
+{% endraw %}
 ```
 
 ---
@@ -689,6 +697,7 @@ export const Container = ({
 ### Token Generation System
 
 ```javascript
+{% raw %}
 // Token transformer
 const transformTokens = (tokens, platform = 'web') => {
   const transforms = {
@@ -782,6 +791,7 @@ const generateTokenDocs = (tokens) => {
   
   return `# Design Tokens\n\n${generateMarkdown(tokens)}`
 }
+{% endraw %}
 ```
 
 ### CSS Custom Properties Integration

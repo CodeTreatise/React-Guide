@@ -191,6 +191,7 @@ personal-dashboard/
 
 ### 1. Dashboard Header Component
 ```jsx
+{% raw %}
 // src/components/Dashboard/DashboardHeader.jsx
 import React, { useState, useEffect } from 'react';
 import { Sun, Moon, Settings, User } from 'lucide-react';
@@ -239,10 +240,12 @@ const DashboardHeader = ({ user, onThemeToggle, isDarkMode }) => {
 };
 
 export default DashboardHeader;
+{% endraw %}
 ```
 
 ### 2. Quick Statistics Widget
 ```jsx
+{% raw %}
 // src/components/Dashboard/QuickStats.jsx
 import React from 'react';
 import { CheckCircle, Briefcase, MessageCircle, TrendingUp } from 'lucide-react';
@@ -299,6 +302,7 @@ const QuickStats = ({ stats }) => {
 };
 
 export default QuickStats;
+{% endraw %}
 ```
 
 ### 3. Weather Widget (Enhanced from Project 3)
@@ -482,6 +486,7 @@ export default WeatherWidget;
 
 ### 4. Todo Widget (Enhanced from Project 4)
 ```jsx
+{% raw %}
 // src/components/Widgets/TodoWidget.jsx
 import React, { useState, useEffect } from 'react';
 import { Plus, Check, Trash2, Edit3, Filter } from 'lucide-react';
@@ -675,6 +680,7 @@ const TodoWidget = ({ onStatsUpdate }) => {
 };
 
 export default TodoWidget;
+{% endraw %}
 ```
 
 ### 5. Complete Dashboard Styling
@@ -1229,6 +1235,7 @@ body {
 ## 📱 Complete App Integration
 
 ```jsx
+{% raw %}
 // src/App.js - Complete Integration
 import React, { useState, useEffect } from 'react';
 import './App.css';
@@ -1293,6 +1300,7 @@ function App() {
 }
 
 export default App;
+{% endraw %}
 ```
 
 ---

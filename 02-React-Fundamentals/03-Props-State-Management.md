@@ -26,6 +26,7 @@ function Greeting({ name, age }) {
 ### Prop Types and Validation
 
 ```jsx
+{% raw %}
 import PropTypes from 'prop-types';
 
 function UserCard({ user, isOnline, onClick }) {
@@ -52,11 +53,13 @@ UserCard.propTypes = {
 UserCard.defaultProps = {
   isOnline: false
 };
+{% endraw %}
 ```
 
 ### Default Props
 
 ```jsx
+{% raw %}
 // Method 1: defaultProps
 function Button({ text, variant, size }) {
   return (
@@ -79,6 +82,7 @@ function Button({ text, variant = 'primary', size = 'medium' }) {
     </button>
   );
 }
+{% endraw %}
 ```
 
 ### Children Prop
@@ -346,6 +350,7 @@ function Navigation({ children }) {
 ### Compound Components Pattern
 
 ```jsx
+{% raw %}
 function Tabs({ children, defaultTab = 0 }) {
   const [activeTab, setActiveTab] = useState(defaultTab);
   
@@ -394,6 +399,7 @@ function TabPanel({ children, index, activeTab }) {
   <TabPanel>Content for Tab 2</TabPanel>
   <TabPanel>Content for Tab 3</TabPanel>
 </Tabs>
+{% endraw %}
 ```
 
 ### Higher-Order Components (HOCs)
@@ -591,6 +597,7 @@ const badUpdate = () => {
 ### 4. Component Design
 
 ```jsx
+{% raw %}
 // Good: Single responsibility
 function UserAvatar({ src, alt, size = 'medium' }) {
   return (
@@ -622,6 +629,7 @@ function UserCard({ user, onEdit }) {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### 5. Error Boundaries for Props

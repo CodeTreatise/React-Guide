@@ -205,6 +205,7 @@ export default SkillBadge;
 ### Step 4: Create the Social Links Component
 
 ```jsx
+{% raw %}
 // src/components/SocialLinks.js
 import React from 'react';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaGlobe } from 'react-icons/fa';
@@ -244,6 +245,7 @@ const SocialLinks = ({ socialData }) => {
 };
 
 export default SocialLinks;
+{% endraw %}
 ```
 
 **Key Learning Points:**

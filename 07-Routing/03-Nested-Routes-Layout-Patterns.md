@@ -163,6 +163,7 @@ function ParentLayout() {
 Pass data to child routes through Outlet context.
 
 ```jsx
+{% raw %}
 import { Outlet } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
@@ -241,12 +242,14 @@ function UserPosts() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### Multiple Outlets
 Advanced layouts can use multiple outlets with different contexts.
 
 ```jsx
+{% raw %}
 function AdminLayout() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [notifications, setNotifications] = useState([]);
@@ -287,12 +290,14 @@ function AdminLayout() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ## Layout Component Patterns
 
 ### Responsive Layout Pattern
 ```jsx
+{% raw %}
 import { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 
@@ -351,10 +356,12 @@ function ResponsiveLayout() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### Tab Layout Pattern
 ```jsx
+{% raw %}
 function TabLayout() {
   const location = useLocation();
   const { userId } = useParams();
@@ -392,10 +399,12 @@ function TabLayout() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### Master-Detail Layout
 ```jsx
+{% raw %}
 function MasterDetailLayout() {
   const [selectedItem, setSelectedItem] = useState(null);
   const [items, setItems] = useState([]);
@@ -447,6 +456,7 @@ function ItemDetail() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ## Route Hierarchy Design
@@ -733,6 +743,7 @@ function Analytics() {
 
 ### Loader Pattern for Data Fetching
 ```jsx
+{% raw %}
 // hooks/useRouteData.js
 import { useState, useEffect } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
@@ -798,6 +809,7 @@ function UserLayout() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ## Advanced Layout Patterns
@@ -998,6 +1010,7 @@ const LazyUserProfile = createLazyRoute(
 
 ### 1. Layout Component Organization
 ```jsx
+{% raw %}
 // layouts/
 //   ├── BaseLayout.jsx
 //   ├── PublicLayout.jsx
@@ -1032,6 +1045,7 @@ function DashboardLayout() {
     </BaseLayout>
   );
 }
+{% endraw %}
 ```
 
 ### 2. Route Component Composition
@@ -1064,6 +1078,7 @@ function RouteGuard({ children, requiresAuth = false, requiredRole = null }) {
 
 ### 3. Breadcrumb Integration
 ```jsx
+{% raw %}
 // hooks/useBreadcrumbs.js
 export function useBreadcrumbs() {
   const location = useLocation();
@@ -1119,6 +1134,7 @@ function Breadcrumbs() {
     </nav>
   );
 }
+{% endraw %}
 ```
 
 ## Real-World Examples

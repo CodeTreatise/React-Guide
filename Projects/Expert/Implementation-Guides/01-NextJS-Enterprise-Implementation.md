@@ -265,6 +265,7 @@ model VerificationToken {
 
 #### 1.3 Middleware for Tenant Resolution
 ```typescript
+{% raw %}
 // middleware.ts
 import { NextRequest, NextResponse } from 'next/server';
 import { getToken } from 'next-auth/jwt';
@@ -336,12 +337,14 @@ export const config = {
     '/((?!_next/static|_next/image|favicon.ico|public/).*)',
   ],
 };
+{% endraw %}
 ```
 
 ### Phase 2: Advanced Next.js Features
 
 #### 2.1 Server-Side Rendering with Data Fetching
 ```typescript
+{% raw %}
 // app/[tenant]/analytics/page.tsx
 import { Suspense } from 'react';
 import { Metadata } from 'next';
@@ -428,10 +431,12 @@ async function AnalyticsContent({
     </div>
   );
 }
+{% endraw %}
 ```
 
 #### 2.2 Incremental Static Regeneration (ISR)
 ```typescript
+{% raw %}
 // app/[tenant]/reports/[reportId]/page.tsx
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -508,6 +513,7 @@ export default async function ReportPage({ params }: ReportPageProps) {
     </div>
   );
 }
+{% endraw %}
 ```
 
 #### 2.3 Advanced API Routes with Middleware
@@ -642,6 +648,7 @@ export async function POST(
 
 #### 3.1 Tenant Service Implementation
 ```typescript
+{% raw %}
 // lib/tenants/service.ts
 import { PrismaClient } from '@prisma/client';
 import { cache } from 'react';
@@ -778,6 +785,7 @@ export async function updateTenant(
 
   return tenant;
 }
+{% endraw %}
 ```
 
 #### 3.2 Tenant Context Provider
@@ -894,6 +902,7 @@ function getPermissions(role: string, plan: string): string[] {
 
 #### 4.1 Real-time Analytics Service
 ```typescript
+{% raw %}
 // lib/analytics/service.ts
 import { PrismaClient } from '@prisma/client';
 import { redis } from '@/lib/cache/redis';
@@ -1184,10 +1193,12 @@ export const onAnalyticsEvent = (callback: (event: AnalyticsEvent) => void) => {
     analyticsEmitter.off('new-event', callback);
   };
 };
+{% endraw %}
 ```
 
 #### 4.2 Analytics Dashboard Components
 ```typescript
+{% raw %}
 // components/analytics/AnalyticsDashboard.tsx
 'use client';
 
@@ -1298,12 +1309,14 @@ export function AnalyticsDashboard({ data, tenant }: AnalyticsDashboardProps) {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### Phase 5: Billing Integration with Stripe
 
 #### 5.1 Stripe Integration Service
 ```typescript
+{% raw %}
 // lib/billing/stripe.ts
 import Stripe from 'stripe';
 import { PrismaClient } from '@prisma/client';
@@ -1569,6 +1582,7 @@ export class BillingService {
     }, {} as Record<string, { count: number; total: number }>);
   }
 }
+{% endraw %}
 ```
 
 #### 5.2 Billing API Routes

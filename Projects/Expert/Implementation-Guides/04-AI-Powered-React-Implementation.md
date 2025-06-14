@@ -202,6 +202,7 @@ export interface ChatMessage {
 ### AI Service Layer
 
 ```typescript
+{% raw %}
 // src/services/ai/base-ai.service.ts
 export abstract class BaseAIService {
   protected model: AIModel;
@@ -370,6 +371,7 @@ export class OpenAIService extends BaseAIService {
     this.cache.clear();
   }
 }
+{% endraw %}
 ```
 
 ### TensorFlow.js Integration
@@ -604,6 +606,7 @@ interface SentimentResult {
 ### AI State Management
 
 ```typescript
+{% raw %}
 // src/stores/ai-store.ts
 import { create } from 'zustand';
 import { subscribeWithSelector } from 'zustand/middleware';
@@ -764,6 +767,7 @@ useAIStore.subscribe(
     }
   }
 );
+{% endraw %}
 ```
 
 ## Advanced AI Features
@@ -771,6 +775,7 @@ useAIStore.subscribe(
 ### Intelligent Chat Interface
 
 ```typescript
+{% raw %}
 // src/components/ai/ChatInterface/ChatInterface.tsx
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -1019,11 +1024,13 @@ const SmartSuggestions: React.FC<{ onSelect: (text: string) => void }> = ({ onSe
     </div>
   );
 };
+{% endraw %}
 ```
 
 ### Computer Vision Components
 
 ```typescript
+{% raw %}
 // src/components/ai/ImageAnalysis/ImageAnalysis.tsx
 import React, { useState, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
@@ -1305,6 +1312,7 @@ export const ImageAnalysis: React.FC = () => {
     </div>
   );
 };
+{% endraw %}
 ```
 
 ## Advanced Patterns & Production Best Practices

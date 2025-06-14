@@ -378,6 +378,7 @@ const mediaPlayerMachine = createMachine({
 ### Concurrent State Management
 
 ```javascript
+{% raw %}
 // Machine with parallel regions
 const appMachine = createMachine({
   id: 'app',
@@ -489,6 +490,7 @@ const appMachine = createMachine({
     isAuthenticated: (context, event) => event.data.authenticated
   }
 })
+{% endraw %}
 ```
 
 ## State Machine Services
@@ -496,6 +498,7 @@ const appMachine = createMachine({
 ### Invoking Services
 
 ```javascript
+{% raw %}
 // Data fetching machine with services
 const dataFetchMachine = createMachine({
   id: 'dataFetch',
@@ -588,6 +591,7 @@ const dataFetchMachine = createMachine({
     shouldRetry: (context) => context.retryCount < 3
   }
 })
+{% endraw %}
 ```
 
 ### Actor Communication
@@ -695,6 +699,7 @@ const roomMachine = createMachine({
 ### Using XState with React
 
 ```javascript
+{% raw %}
 import { useMachine, useActor } from '@xstate/react'
 
 // Basic machine usage in React
@@ -825,6 +830,7 @@ function DataList({ url }) {
 
   return <div>No data</div>
 }
+{% endraw %}
 ```
 
 ### Custom Hooks with State Machines
@@ -972,6 +978,7 @@ function usePaginatedData(fetchFn, pageSize = 10) {
 ### State Machine Composition
 
 ```javascript
+{% raw %}
 // Composable machines
 const createCRUDMachine = (entityName, apiService) => {
   return createMachine({
@@ -1095,6 +1102,7 @@ const createCRUDMachine = (entityName, apiService) => {
 // Usage
 const userCRUDMachine = createCRUDMachine('user', userApiService)
 const postCRUDMachine = createCRUDMachine('post', postApiService)
+{% endraw %}
 ```
 
 ### State Chart Patterns

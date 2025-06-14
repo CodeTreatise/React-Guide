@@ -27,6 +27,7 @@ By the end of this section, you will:
 
 ### Route Factories and Dynamic Configuration
 ```jsx
+{% raw %}
 // utils/routeFactory.js
 export class RouteFactory {
   constructor() {
@@ -111,10 +112,12 @@ function AppRoutes() {
     </Routes>
   );
 }
+{% endraw %}
 ```
 
 ### Multi-Tenant Routing
 ```jsx
+{% raw %}
 // hooks/useMultiTenantRouting.js
 import { useParams, useNavigate } from 'react-router-dom';
 import { createContext, useContext, useEffect, useState } from 'react';
@@ -224,6 +227,7 @@ function TenantLayout() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### Feature Flag Routing
@@ -410,6 +414,7 @@ function ProgressiveLoader({ children, skeleton }) {
 
 ### Smart Route Prefetching
 ```jsx
+{% raw %}
 // hooks/useRoutePrefetch.js
 import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -517,6 +522,7 @@ function SmartLink({ to, prefetch = 'hover', children, ...props }) {
     </Link>
   );
 }
+{% endraw %}
 ```
 
 ## Route Caching & Preloading
@@ -634,6 +640,7 @@ export function useCachedRouteData(key, fetcher, options = {}) {
 
 ### Background Route Preloading
 ```jsx
+{% raw %}
 // hooks/useBackgroundPreloader.js
 import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -708,12 +715,14 @@ export function useBackgroundPreloader() {
 
   return null;
 }
+{% endraw %}
 ```
 
 ## Route Animations & Transitions
 
 ### Page Transition System
 ```jsx
+{% raw %}
 // components/PageTransition.jsx
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -775,10 +784,12 @@ const transitionStyles = `
   transition: opacity 300ms, transform 300ms;
 }
 `;
+{% endraw %}
 ```
 
 ### Advanced Route Animations
 ```jsx
+{% raw %}
 // hooks/useRouteTransition.js
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigationType } from 'react-router-dom';
@@ -865,12 +876,14 @@ function App() {
     </Routes>
   );
 }
+{% endraw %}
 ```
 
 ## Complex Navigation Flows
 
 ### Multi-Step Wizard Navigation
 ```jsx
+{% raw %}
 // hooks/useWizardNavigation.js
 import { useState, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -1018,6 +1031,7 @@ function Wizard({ steps, basePath = '/wizard' }) {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### Conditional Navigation Flows
@@ -1105,6 +1119,7 @@ export function useConditionalNavigation() {
 
 ### Performance Metrics Collection
 ```jsx
+{% raw %}
 // utils/routePerformanceMonitor.js
 class RoutePerformanceMonitor {
   constructor() {
@@ -1263,6 +1278,7 @@ function PerformanceMonitor() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ## Error Recovery Patterns

@@ -235,6 +235,7 @@ promise
 ### Chaining Promises
 
 ```javascript
+{% raw %}
 // ✅ Solving Callback Hell with Promises
 function fetchUser(userId) {
     return fetch(`/api/users/${userId}`)
@@ -275,11 +276,13 @@ fetchUser(123)
     .catch(error => {
         console.error('Something went wrong:', error);
     });
+{% endraw %}
 ```
 
 ### Promise Utility Methods
 
 ```javascript
+{% raw %}
 // Promise.all() - Wait for all promises to resolve
 const promise1 = fetch('/api/users');
 const promise2 = fetch('/api/posts');
@@ -319,6 +322,7 @@ Promise.race([fetch('/api/data'), timeout])
     .then(response => response.json())
     .then(data => console.log('Data received in time:', data))
     .catch(error => console.error('Request timed out or failed:', error));
+{% endraw %}
 ```
 
 ---
@@ -402,6 +406,7 @@ async function fetchDataMixed() {
 ### Advanced Async Patterns
 
 ```javascript
+{% raw %}
 // Async loops
 async function processUsersSequentially(userIds) {
     const results = [];
@@ -457,6 +462,7 @@ async function fetchWithTimeout(url, timeoutMs = 5000) {
         clearTimeout(timeoutId);
     }
 }
+{% endraw %}
 ```
 
 ---
@@ -466,6 +472,7 @@ async function fetchWithTimeout(url, timeoutMs = 5000) {
 ### Try-Catch with Async/Await
 
 ```javascript
+{% raw %}
 // Basic error handling
 async function fetchUserSafely(userId) {
     try {
@@ -517,6 +524,7 @@ async function complexAPICall() {
         }
     }
 }
+{% endraw %}
 ```
 
 ### Error Boundaries for Async Operations
@@ -580,6 +588,7 @@ const UserProfile = ({ userId }) => {
 ### Data Fetching with useEffect
 
 ```javascript
+{% raw %}
 // Basic data fetching
 const UserComponent = ({ userId }) => {
     const [user, setUser] = useState(null);
@@ -635,11 +644,13 @@ const UserComponent = ({ userId }) => {
         </div>
     );
 };
+{% endraw %}
 ```
 
 ### AbortController for Cleanup
 
 ```javascript
+{% raw %}
 const SearchComponent = () => {
     const [query, setQuery] = useState('');
     const [results, setResults] = useState([]);
@@ -704,11 +715,13 @@ const SearchComponent = () => {
         </div>
     );
 };
+{% endraw %}
 ```
 
 ### Custom Hooks for Async Operations
 
 ```javascript
+{% raw %}
 // Generic fetch hook
 function useFetch(url, options = {}) {
     const [data, setData] = useState(null);
@@ -762,6 +775,7 @@ const UserProfile = ({ userId }) => {
         </div>
     );
 };
+{% endraw %}
 ```
 
 ---
@@ -771,6 +785,7 @@ const UserProfile = ({ userId }) => {
 ### Complete User Management Component
 
 ```javascript
+{% raw %}
 const UserManagement = () => {
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -978,6 +993,7 @@ const UserForm = ({ user, onSave, onCancel }) => {
         </form>
     );
 };
+{% endraw %}
 ```
 
 ### Advanced Error Handling with Context

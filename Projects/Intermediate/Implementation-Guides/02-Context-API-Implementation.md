@@ -19,6 +19,7 @@ npm start
 
 ### Step 2: Basic Context Structure
 ```jsx
+{% raw %}
 // src/contexts/AuthContext.js
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 
@@ -93,6 +94,7 @@ export const useAuth = () => {
   }
   return context;
 };
+{% endraw %}
 ```
 
 ### Step 3: Chat Context
@@ -218,6 +220,7 @@ export const useChat = () => {
 
 #### Theme Context
 ```jsx
+{% raw %}
 // src/contexts/ThemeContext.js
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 
@@ -336,6 +339,7 @@ export const useTheme = () => {
   }
   return context;
 };
+{% endraw %}
 ```
 
 #### Notification Context
@@ -475,6 +479,7 @@ export default AppProviders;
 
 ### 3. Enhanced Chat Context with Advanced Features
 ```jsx
+{% raw %}
 // src/contexts/ChatContext.js (Enhanced version)
 import React, { createContext, useContext, useReducer, useCallback, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
@@ -908,6 +913,7 @@ export const useChat = () => {
   }
   return context;
 };
+{% endraw %}
 ```
 
 ### 4. Main Application Components
@@ -1053,6 +1059,7 @@ export default LoginForm;
 
 #### Chat Interface Component
 ```jsx
+{% raw %}
 // src/components/Chat/ChatInterface.jsx
 import React, { useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
@@ -1141,6 +1148,7 @@ const ChatInterface = () => {
 };
 
 export default ChatInterface;
+{% endraw %}
 ```
 
 ### 5. Styling
@@ -1476,6 +1484,7 @@ export default ChatInterface;
 
 ### Context Performance Testing
 ```jsx
+{% raw %}
 // Test context re-render optimization
 const ContextProfiler = ({ children, name }) => {
   return (
@@ -1496,6 +1505,7 @@ const ContextProfiler = ({ children, name }) => {
     {children}
   </ChatProvider>
 </ContextProfiler>
+{% endraw %}
 ```
 
 ---

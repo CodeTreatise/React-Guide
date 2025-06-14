@@ -322,6 +322,7 @@ const useModal = () => {
 
 **Portal Implementation Examples**:
 ```jsx
+{% raw %}
 // Modal Portal
 const Modal = ({ isOpen, onClose, children }) => {
   const modalRoot = document.getElementById('modal-root');
@@ -380,6 +381,7 @@ const Tooltip = ({ children, content, position = 'top' }) => {
     </>
   );
 };
+{% endraw %}
 ```
 
 **Deliverables**:
@@ -413,6 +415,7 @@ const Tooltip = ({ children, content, position = 'top' }) => {
 
 **Virtualization Examples**:
 ```jsx
+{% raw %}
 // Virtual List Implementation
 const VirtualList = ({ items, itemHeight, containerHeight }) => {
   const [scrollTop, setScrollTop] = useState(0);
@@ -467,6 +470,7 @@ const usePerformanceTimer = (label) => {
     };
   });
 };
+{% endraw %}
 ```
 
 **Deliverables**:

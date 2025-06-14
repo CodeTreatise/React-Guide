@@ -162,6 +162,7 @@ export default UserProfile
 ### Component Design Patterns
 
 ```typescript
+{% raw %}
 // ✅ Good: Single Responsibility Principle
 const UserAvatar: React.FC<{ user: User; size?: 'sm' | 'md' | 'lg' }> = ({ 
   user, 
@@ -224,6 +225,7 @@ const Layout = ({ user, setUser }: { user: User | null; setUser: (user: User) =>
 const Header = ({ user, setUser }: { user: User | null; setUser: (user: User) => void }) => {
   return <UserMenu user={user} setUser={setUser} />
 }
+{% endraw %}
 ```
 
 ### State Management Patterns
@@ -402,6 +404,7 @@ const GoodList: React.FC<{ items: Item[] }> = ({ items }) => {
 ### Anti-Patterns to Watch For
 
 ```typescript
+{% raw %}
 // ❌ Anti-Pattern: Mutating props
 const BadComponent: React.FC<{ user: User }> = ({ user }) => {
   // Never mutate props directly
@@ -501,11 +504,13 @@ const ExpensiveComputation: React.FC<{ items: Item[] }> = ({ items }) => {
 
   return <div>Total: {expensiveValue}</div>
 }
+{% endraw %}
 ```
 
 ### Security Review Points
 
 ```typescript
+{% raw %}
 // ✅ Good: Proper input validation and sanitization
 const UserForm: React.FC<{ onSubmit: (data: UserData) => void }> = ({ onSubmit }) => {
   const [formData, setFormData] = useState({
@@ -607,6 +612,7 @@ const SecureApiComponent: React.FC = () => {
 
   return <div>User Profile</div>
 }
+{% endraw %}
 ```
 
 ## Review Feedback Guidelines
@@ -694,6 +700,7 @@ const filteredItems = useMemo(() =>
 ### GitHub Actions for Automated Review
 
 ```yaml
+{% raw %}
 # .github/workflows/pr-review.yml
 name: PR Review Automation
 
@@ -745,6 +752,7 @@ jobs:
               repo: context.repo.repo,
               body: '❌ Automated checks failed. Please review the errors and fix them before merging.'
             })
+{% endraw %}
 ```
 
 ### Code Quality Metrics

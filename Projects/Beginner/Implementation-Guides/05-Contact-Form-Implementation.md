@@ -99,6 +99,7 @@ const [value, setValue] = useState('');
 ### Step 2: Create Form Validation Utilities
 
 ```javascript
+{% raw %}
 // src/utils/validators.js
 export const validators = {
   required: (value) => {
@@ -180,6 +181,7 @@ export const validateForm = (formData, validationRules) => {
 
   return { errors, isValid };
 };
+{% endraw %}
 ```
 
 ### Step 3: Create Custom Form Validation Hook
@@ -335,6 +337,7 @@ export const useFormSubmission = () => {
 ### Step 5: Create Reusable Form Field Component
 
 ```javascript
+{% raw %}
 // src/components/FormField.js
 import React from 'react';
 import './FormField.css';
@@ -441,11 +444,13 @@ const FormField = ({
 };
 
 export default FormField;
+{% endraw %}
 ```
 
 ### Step 6: Create Validation Message Component
 
 ```javascript
+{% raw %}
 // src/components/ValidationMessage.js
 import React from 'react';
 import { FaCheckCircle, FaExclamationTriangle, FaInfoCircle } from 'react-icons/fa';
@@ -476,11 +481,13 @@ const ValidationMessage = ({ type = 'error', message, className = '' }) => {
 };
 
 export default ValidationMessage;
+{% endraw %}
 ```
 
 ### Step 7: Create Form Progress Component
 
 ```javascript
+{% raw %}
 // src/components/FormProgress.js
 import React from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
@@ -533,11 +540,13 @@ const FormProgress = ({ formData, validationRules }) => {
 };
 
 export default FormProgress;
+{% endraw %}
 ```
 
 ### Step 8: Create Submission Status Component
 
 ```javascript
+{% raw %}
 // src/components/SubmissionStatus.js
 import React from 'react';
 import { FaCheckCircle, FaExclamationCircle, FaSpinner, FaRedo } from 'react-icons/fa';
@@ -603,11 +612,13 @@ const SubmissionStatus = ({
 };
 
 export default SubmissionStatus;
+{% endraw %}
 ```
 
 ### Step 9: Create the Main Contact Form Component
 
 ```javascript
+{% raw %}
 // src/components/ContactForm.js
 import React from 'react';
 import { 
@@ -932,6 +943,7 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+{% endraw %}
 ```
 
 ### Step 10: Add Comprehensive Styling

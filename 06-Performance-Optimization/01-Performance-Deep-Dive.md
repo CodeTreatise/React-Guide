@@ -15,6 +15,7 @@
 
 #### Understanding Profiler Metrics
 ```jsx
+{% raw %}
 import { Profiler } from 'react';
 
 function DetailedProfiler({ children, id }) {
@@ -57,10 +58,12 @@ function DetailedProfiler({ children, id }) {
     </Profiler>
   );
 }
+{% endraw %}
 ```
 
 #### Custom Performance Hooks
 ```jsx
+{% raw %}
 // Hook for measuring component render times
 function useRenderTime(componentName) {
   const renderStartTime = useRef();
@@ -111,6 +114,7 @@ function useComponentLifecycle(componentName) {
   
   return { mountCount };
 }
+{% endraw %}
 ```
 
 ### 2. Web Vitals Integration
@@ -474,6 +478,7 @@ const utils = {
 
 ### 1. Memory Leak Detection
 ```jsx
+{% raw %}
 // Hook to detect memory leaks
 function useMemoryLeakDetection(componentName) {
   const mountTime = useRef(Date.now());
@@ -542,6 +547,7 @@ function ComponentWithCleanup() {
   
   return <div>Component with automatic cleanup</div>;
 }
+{% endraw %}
 ```
 
 ### 2. Reference Management
@@ -921,6 +927,7 @@ function useUser(userId) {
 
 ### 1. E-commerce Product List Optimization
 ```jsx
+{% raw %}
 // Optimized product list with advanced filtering
 function ProductList({ filters, sortBy, searchTerm }) {
   const [products, setProducts] = useState([]);
@@ -1022,6 +1029,7 @@ const ProductCard = React.memo(function ProductCard({ product, onAddToCart }) {
     </div>
   );
 });
+{% endraw %}
 ```
 
 ### 2. Dashboard with Real-time Updates

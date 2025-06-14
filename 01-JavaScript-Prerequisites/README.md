@@ -134,6 +134,7 @@ const sum = (...numbers) => numbers.reduce((a, b) => a + b, 0);
 
 ### 4. **Template Literals & Tagged Templates**
 ```javascript
+{% raw %}
 const name = 'React';
 const version = '18';
 const message = `Learning ${name} version ${version}!`;
@@ -145,6 +146,7 @@ const html = `
         <p>${description}</p>
     </div>
 `;
+{% endraw %}
 ```
 
 **React Relevance**: Dynamic content in JSX and string interpolation.

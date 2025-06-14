@@ -215,6 +215,7 @@ return (
 
 ### 3. Complex Expressions
 ```jsx
+{% raw %}
 const items = ['apple', 'banana', 'orange'];
 const isLoggedIn = true;
 
@@ -233,6 +234,7 @@ return (
     <p>{`You have ${items.length} items`}</p>
   </div>
 );
+{% endraw %}
 ```
 
 ---
@@ -543,6 +545,7 @@ function TableRow() {
 
 ### 1. Component Organization
 ```jsx
+{% raw %}
 // ✅ Good: Clean, readable component
 function UserCard({ user, onEdit, onDelete }) {
   const handleEdit = () => onEdit(user.id);
@@ -566,6 +569,7 @@ function UserCard({ user, onEdit, onDelete }) {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### 2. Meaningful Variable Names
@@ -841,6 +845,7 @@ function App() {
 
 ### 3. Conditional Prop Spreading
 ```jsx
+{% raw %}
 function Button({ 
   variant = 'primary', 
   disabled = false, 
@@ -861,6 +866,7 @@ function Button({
     </button>
   );
 }
+{% endraw %}
 ```
 
 ---

@@ -18,6 +18,7 @@ Component testing involves testing individual React components in isolation to e
 Basic tests that ensure components render without crashing.
 
 ```javascript
+{% raw %}
 // components/Button.jsx
 import React from 'react'
 
@@ -80,12 +81,14 @@ describe('Button Smoke Tests', () => {
     render(<Button onClick={() => {}}>With Handler</Button>)
   })
 })
+{% endraw %}
 ```
 
 ### 2. Snapshot Tests
 Capture component output to detect unintended changes.
 
 ```javascript
+{% raw %}
 // __tests__/Button.snapshot.test.jsx
 import React from 'react'
 import { render } from '@testing-library/react'
@@ -113,6 +116,7 @@ describe('Button Snapshot Tests', () => {
     expect(container.firstChild).toMatchSnapshot()
   })
 })
+{% endraw %}
 ```
 
 ### 3. Props Testing
@@ -511,6 +515,7 @@ describe('LoginForm', () => {
 ### Modal Components
 
 ```javascript
+{% raw %}
 // components/Modal.jsx
 import React, { useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
@@ -848,6 +853,7 @@ describe('Modal', () => {
     })
   })
 })
+{% endraw %}
 ```
 
 ## Testing Component State Management
@@ -1338,6 +1344,7 @@ describe('ErrorBoundary', () => {
 ## Performance Testing Strategies
 
 ```javascript
+{% raw %}
 // __tests__/performance.test.jsx
 import React from 'react'
 import { render, screen } from '@testing-library/react'
@@ -1455,6 +1462,7 @@ describe('Performance Tests', () => {
     expect(renderCount).toBe(2)
   })
 })
+{% endraw %}
 ```
 
 ## Test Organization Best Practices

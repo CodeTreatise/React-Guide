@@ -18,6 +18,7 @@ This week focuses on advanced data fetching patterns, real-time data management,
 Build a comprehensive data management system using React Query with advanced patterns.
 
 ```jsx
+{% raw %}
 // Advanced React Query configuration
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -177,6 +178,7 @@ const useUserDashboardData = (userId) => {
     },
   };
 };
+{% endraw %}
 ```
 
 **Your Task:**
@@ -200,6 +202,7 @@ const useUserDashboardData = (userId) => {
 Build a real-time collaboration system using WebSockets with React Query integration.
 
 ```jsx
+{% raw %}
 // WebSocket integration with React Query
 class WebSocketManager {
   constructor(url, options = {}) {
@@ -429,6 +432,7 @@ const useRealtimeDocument = (documentId) => {
     error: documentQuery.error,
   };
 };
+{% endraw %}
 ```
 
 **Your Task:**
@@ -1252,6 +1256,7 @@ const useThreeWayMerge = () => {
 Build a high-performance caching system with intelligent cache management.
 
 ```jsx
+{% raw %}
 // Advanced cache manager
 class AdvancedCacheManager {
   constructor() {
@@ -1516,6 +1521,7 @@ const useCacheInvalidation = () => {
   
   return invalidateStrategies;
 };
+{% endraw %}
 ```
 
 **Your Task:**

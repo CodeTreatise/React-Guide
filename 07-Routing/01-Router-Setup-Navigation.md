@@ -249,6 +249,7 @@ function Navigation() {
 
 ### Advanced NavLink Patterns
 ```jsx
+{% raw %}
 // Custom NavLink component
 function CustomNavLink({ to, children, ...props }) {
   return (
@@ -281,6 +282,7 @@ function IconNavLink({ to, icon, children }) {
     </NavLink>
   );
 }
+{% endraw %}
 ```
 
 ## Navigation Hooks
@@ -776,6 +778,7 @@ function SkipLinks() {
 
 ### Focus Management
 ```jsx
+{% raw %}
 import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -819,6 +822,7 @@ function FocusManager({ children }) {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ## Performance Optimization
@@ -877,6 +881,7 @@ function App() {
 
 ### Navigation Performance Monitoring
 ```jsx
+{% raw %}
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -914,6 +919,7 @@ function NavigationPerformanceMonitor() {
 
   return null;
 }
+{% endraw %}
 ```
 
 ## Best Practices
@@ -969,6 +975,7 @@ export function AppRoutes() {
 
 ### 2. Navigation Patterns
 ```jsx
+{% raw %}
 // components/Navigation.jsx
 import { NavLink, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -1021,6 +1028,7 @@ export function Navigation() {
     </nav>
   );
 }
+{% endraw %}
 ```
 
 ### 3. Error Boundaries for Routes
@@ -1082,6 +1090,7 @@ function App() {
 
 ### 1. Breadcrumb Navigation
 ```jsx
+{% raw %}
 import { useLocation, Link } from 'react-router-dom';
 
 function Breadcrumbs() {
@@ -1113,6 +1122,7 @@ function Breadcrumbs() {
     </nav>
   );
 }
+{% endraw %}
 ```
 
 ### 2. Route Guards with Hooks

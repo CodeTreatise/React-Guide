@@ -4,21 +4,33 @@ import glob
 import os
 
 def fix_template_literals(content):
-    """Fix template literals by escaping them for Jekyll."""
-    # Pattern to find code blocks and wrap them
+    """Fix template literals by wrapping entire code blocks with raw tags."""
     lines = content.split('\n')
-    in_code_block = False
     result_lines = []
+    in_code_block = False
+    code_block_lines = []
     
     for line in lines:
-        # Check if we're entering or leaving a code block
         if line.strip().startswith('```'):
-            in_code_block = not in_code_block
-            result_lines.append(line)
-        elif in_code_block and '${' in line:
-            # Escape template literals in code blocks
-            escaped_line = re.sub(r'\$\{([^}]+)\}', r'{% raw %}${\1}{% endraw %}', line)
-            result_lines.append(escaped_line)
+            if in_code_block:
+                # End of code block - check if it has template literals
+                code_content = '\n'.join(code_block_lines)
+                if '${' in code_content:
+                    # Wrap the entire code block content with raw tags
+                    result_lines.append('{% raw %}')
+                    result_lines.extend(code_block_lines)
+                    result_lines.append('{% endraw %}')
+                else:
+                    result_lines.extend(code_block_lines)
+                result_lines.append(line)  # Add closing ```
+                code_block_lines = []
+                in_code_block = False
+            else:
+                # Start of code block
+                result_lines.append(line)  # Add opening ```
+                in_code_block = True
+        elif in_code_block:
+            code_block_lines.append(line)
         else:
             result_lines.append(line)
     

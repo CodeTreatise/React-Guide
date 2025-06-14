@@ -113,6 +113,7 @@ Build an async data processing pipeline that fetches, transforms, and caches use
 
 ### Starter Code
 ```javascript
+{% raw %}
 // Mock API functions (simulate real APIs)
 function fetchUserBasicInfo(userId) {
     return new Promise((resolve, reject) => {
@@ -163,6 +164,7 @@ function fetchUserActivity(userId) {
         }, Math.random() * 600 + 200); // 200-800ms delay
     });
 }
+{% endraw %}
 ```
 
 ### Your Task
@@ -599,6 +601,7 @@ class DataSyncManager {
 
 ### Example Usage
 ```javascript
+{% raw %}
 const syncManager = new DataSyncManager({
     apiUrl: 'https://api.example.com',
     conflictResolver: 'lastWriteWins', // or 'manual' or custom function
@@ -617,6 +620,7 @@ const user = await syncManager.update('users', userId, userData);
 // Progressive loading
 const tasks = await syncManager.loadDataPage('tasks', 1, 20);
 // Load more as needed
+{% endraw %}
 ```
 
 ### Solution Tips

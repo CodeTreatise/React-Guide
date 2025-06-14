@@ -304,6 +304,7 @@ describe('Utility functions', () => {
 ## Testing Asynchronous Code
 
 ```javascript
+{% raw %}
 // api/userService.js
 export const fetchUser = async (id) => {
   const response = await fetch(`/api/users/${id}`)
@@ -402,6 +403,7 @@ describe('User Service', () => {
     })
   })
 })
+{% endraw %}
 ```
 
 ## Testing with Timers
@@ -763,6 +765,7 @@ describe('ErrorBoundary', () => {
 ## Testing Custom Hooks
 
 ```javascript
+{% raw %}
 // hooks/useApi.js
 import { useState, useEffect, useCallback } from 'react'
 
@@ -872,6 +875,7 @@ describe('useApi hook', () => {
     })
   })
 })
+{% endraw %}
 ```
 
 ## Code Coverage and Reporting
@@ -985,6 +989,7 @@ export const testUtils = {
 ## Continuous Integration Testing
 
 ```yaml
+{% raw %}
 # .github/workflows/test.yml
 name: Test Suite
 
@@ -1023,6 +1028,7 @@ jobs:
         file: ./coverage/lcov.info
         flags: unittests
         name: codecov-umbrella
+{% endraw %}
 ```
 
 ## Conclusion

@@ -15,6 +15,7 @@ Complex forms go beyond simple input fields to include dynamic sections, conditi
 ## Dynamic Form Builder
 
 ```jsx
+{% raw %}
 import React, { useState, useCallback, useMemo } from 'react'
 
 const FormFieldTypes = {
@@ -357,11 +358,13 @@ const exampleSchema = {
     }
   ]
 }
+{% endraw %}
 ```
 
 ## Multi-Step Form with Progress
 
 ```jsx
+{% raw %}
 const MultiStepForm = ({ steps, onComplete, initialData = {} }) => {
   const [currentStep, setCurrentStep] = useState(0)
   const [formData, setFormData] = useState(initialData)
@@ -540,11 +543,13 @@ const multiStepConfig = [
     }
   }
 ]
+{% endraw %}
 ```
 
 ## Data Visualization Integration
 
 ```jsx
+{% raw %}
 import { 
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, 
   LineChart, Line, PieChart, Pie, Cell, ResponsiveContainer 
@@ -726,11 +731,13 @@ const FormWithVisualization = () => {
     </div>
   )
 }
+{% endraw %}
 ```
 
 ## Real-time Data Form
 
 ```jsx
+{% raw %}
 const RealTimeDataForm = () => {
   const [metrics, setMetrics] = useState({
     cpu: 0,
@@ -908,6 +915,7 @@ const RealTimeDataForm = () => {
     </div>
   )
 }
+{% endraw %}
 ```
 
 ## Form Analytics Dashboard
@@ -1158,6 +1166,7 @@ const VirtualizedFormFields = ({ fields, formData, onChange }) => {
 ## Accessibility Features
 
 ```jsx
+{% raw %}
 const AccessibleComplexForm = ({ schema, onSubmit }) => {
   const [currentSection, setCurrentSection] = useState(0)
   const [announcements, setAnnouncements] = useState([])
@@ -1255,6 +1264,7 @@ const AccessibleComplexForm = ({ schema, onSubmit }) => {
     </div>
   )
 }
+{% endraw %}
 ```
 
 ## Testing Complex Forms

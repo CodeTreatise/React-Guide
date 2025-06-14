@@ -18,6 +18,7 @@
 The Context API provides a way to pass data through the component tree without having to pass props down manually at every level.
 
 ```jsx
+{% raw %}
 // Basic Context Setup
 import React, { createContext, useContext, useState } from 'react';
 
@@ -71,6 +72,7 @@ function Header() {
     </header>
   );
 }
+{% endraw %}
 ```
 
 ### Context with useReducer
@@ -291,6 +293,7 @@ function App() {
 Create reusable context factories:
 
 ```jsx
+{% raw %}
 // Generic Context Factory
 function createContext(name, defaultValue = null) {
   const Context = React.createContext(defaultValue);
@@ -323,6 +326,7 @@ function CounterApp() {
     </CounterProvider>
   );
 }
+{% endraw %}
 ```
 
 ### 3. Compound Context Pattern
@@ -559,6 +563,7 @@ export function AppConfigProvider({ children }) {
 Implement selectors to prevent unnecessary re-renders:
 
 ```jsx
+{% raw %}
 // Context with selector support
 function createContextWithSelector(name) {
   const Context = createContext();
@@ -614,6 +619,7 @@ function UserTheme() {
   const theme = useUserSelector(state => state.user.preferences.theme);
   return <div>Theme: {theme}</div>;
 }
+{% endraw %}
 ```
 
 ## Context Composition
@@ -678,6 +684,7 @@ function App() {
 ### Provider Factory Pattern
 
 ```jsx
+{% raw %}
 // Generic Provider Factory
 function createProvider(name, useHook) {
   const Context = createContext();
@@ -737,6 +744,7 @@ function useAuthState({ initialUser = null } = {}) {
 // Create providers using factory
 const [AuthProvider, useAuth] = createProvider('Auth', useAuthState);
 const [ThemeProvider, useTheme] = createProvider('Theme', useThemeState);
+{% endraw %}
 ```
 
 ## Type Safety with TypeScript
@@ -856,6 +864,7 @@ export function useAuthActions() {
 ### Generic Context Factory with TypeScript
 
 ```tsx
+{% raw %}
 // Generic context factory with full type safety
 function createTypedContext<T>(name: string) {
   const Context = createContext<T | null>(null);
@@ -907,6 +916,7 @@ function CounterApp() {
     </CounterProvider>
   );
 }
+{% endraw %}
 ```
 
 ## Testing Context Providers
@@ -1090,6 +1100,7 @@ describe('App Integration', () => {
 ### E-commerce Shopping Cart
 
 ```jsx
+{% raw %}
 // Complete shopping cart implementation
 const CartContext = createContext();
 
@@ -1235,6 +1246,7 @@ function CartItem({ item }) {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### Multi-Step Form Context
@@ -1514,6 +1526,7 @@ function App() {
 ### 6. Development Tools
 
 ```jsx
+{% raw %}
 // Development-only context debugging
 function ContextDevTools({ children, name, value }) {
   useEffect(() => {
@@ -1537,6 +1550,7 @@ function AuthProvider({ children }) {
     </AuthContext.Provider>
   );
 }
+{% endraw %}
 ```
 
 The Context API is a powerful tool for state management in React applications. When used correctly with proper optimization techniques and patterns, it can handle complex state requirements while maintaining good performance. Remember to balance between simplicity and performance, and always consider whether Context is the right solution for your specific use case.

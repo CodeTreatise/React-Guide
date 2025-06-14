@@ -49,6 +49,7 @@ const PERFORMANCE_THRESHOLDS = {
 ### Performance Monitoring Architecture
 
 ```jsx
+{% raw %}
 // Central performance monitoring system
 class PerformanceMonitor {
   constructor(config = {}) {
@@ -203,6 +204,7 @@ class PerformanceMonitor {
 
 // Global performance monitor instance
 const performanceMonitor = new PerformanceMonitor();
+{% endraw %}
 ```
 
 ## React DevTools Profiler
@@ -210,6 +212,7 @@ const performanceMonitor = new PerformanceMonitor();
 ### Advanced Profiler Integration
 
 ```jsx
+{% raw %}
 import { Profiler } from 'react';
 
 // Enhanced profiler component
@@ -334,6 +337,7 @@ function useComponentPerformance(componentName) {
       : 0
   };
 }
+{% endraw %}
 ```
 
 ### Profiler Data Analysis
@@ -451,6 +455,7 @@ function useProfilerAnalyzer() {
 ### User Interaction Metrics
 
 ```jsx
+{% raw %}
 // User interaction performance tracking
 function useInteractionTracking() {
   const interactions = useRef([]);
@@ -564,6 +569,7 @@ function TrackedButton({ onClick, children, ...props }) {
     </button>
   );
 }
+{% endraw %}
 ```
 
 ## Real-Time Performance Monitoring
@@ -571,6 +577,7 @@ function TrackedButton({ onClick, children, ...props }) {
 ### Performance Dashboard Hook
 
 ```jsx
+{% raw %}
 // Real-time performance dashboard
 function usePerformanceDashboard() {
   const [metrics, setMetrics] = useState({
@@ -708,6 +715,7 @@ function PerformanceDashboard() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ## Performance Budgets & Alerts
@@ -715,6 +723,7 @@ function PerformanceDashboard() {
 ### Performance Budget System
 
 ```jsx
+{% raw %}
 // Performance budget configuration
 const PERFORMANCE_BUDGETS = {
   // Bundle size budgets (in KB)
@@ -793,6 +802,7 @@ class PerformanceBudgetMonitor {
     return 'low';
   }
 }
+{% endraw %}
 ```
 
 ## Browser Performance APIs
@@ -900,6 +910,7 @@ class BrowserPerformanceAPI {
 ### Performance Test Suite
 
 ```jsx
+{% raw %}
 // Performance test framework
 class PerformanceTestSuite {
   constructor() {
@@ -984,6 +995,7 @@ class PerformanceTestSuite {
     return Array.from(this.results.values());
   }
 }
+{% endraw %}
 ```
 
 ## Performance Analytics & Reporting
@@ -991,6 +1003,7 @@ class PerformanceTestSuite {
 ### Analytics Integration
 
 ```jsx
+{% raw %}
 // Performance analytics service
 class PerformanceAnalytics {
   constructor(config = {}) {
@@ -1097,6 +1110,7 @@ function usePerformanceAnalytics() {
     trackComponentRender
   };
 }
+{% endraw %}
 ```
 
 ## Summary

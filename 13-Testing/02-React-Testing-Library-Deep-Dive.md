@@ -175,6 +175,7 @@ describe('Query Variants', () => {
 ## Testing Component Rendering
 
 ```javascript
+{% raw %}
 // components/UserCard.jsx
 import React from 'react'
 
@@ -309,6 +310,7 @@ describe('UserCard', () => {
     expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent('John Doe')
   })
 })
+{% endraw %}
 ```
 
 ## Testing User Interactions
@@ -592,6 +594,7 @@ describe('ContactForm', () => {
 ## Testing Async Behavior
 
 ```javascript
+{% raw %}
 // components/UserList.jsx
 import React, { useState, useEffect } from 'react'
 
@@ -804,11 +807,13 @@ describe('UserList', () => {
     expect(screen.getByText('John Doe (john@example.com)')).toBeInTheDocument()
   })
 })
+{% endraw %}
 ```
 
 ## Testing Custom Hooks
 
 ```javascript
+{% raw %}
 // hooks/useLocalStorage.js
 import { useState, useEffect } from 'react'
 
@@ -998,6 +1003,7 @@ describe('useLocalStorage', () => {
     expect(value.preferences).toEqual({ theme: 'dark', language: 'en' })
   })
 })
+{% endraw %}
 ```
 
 ## Testing Context and Providers
@@ -1320,6 +1326,7 @@ export const waitForLoadingToFinish = () =>
 ## Performance Testing
 
 ```javascript
+{% raw %}
 // __tests__/performance.test.jsx
 import React from 'react'
 import { render } from '@testing-library/react'
@@ -1373,6 +1380,7 @@ describe('Performance Tests', () => {
     expect(renderCount).toBe(2) // Should re-render
   })
 })
+{% endraw %}
 ```
 
 ## Conclusion

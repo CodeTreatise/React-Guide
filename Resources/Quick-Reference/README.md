@@ -99,6 +99,7 @@ const [state, setState] = useState(() => {
 
 ### useEffect
 ```jsx
+{% raw %}
 import { useEffect } from 'react';
 
 // Effect with no dependencies (runs on every render)
@@ -133,6 +134,7 @@ useEffect(() => {
   }, 1000);
   return () => clearInterval(interval);
 }, []);
+{% endraw %}
 ```
 
 ### useContext
@@ -370,6 +372,7 @@ const style = {
 
 ### CSS Classes
 ```jsx
+{% raw %}
 // Static class
 <div className="my-class">Content</div>
 
@@ -381,6 +384,7 @@ const style = {
 <div className={['class1', 'class2', isActive && 'active'].filter(Boolean).join(' ')}>
   Content
 </div>
+{% endraw %}
 ```
 
 ### CSS Modules
@@ -394,6 +398,7 @@ import styles from './Component.module.css';
 
 ### Styled Components
 ```jsx
+{% raw %}
 import styled from 'styled-components';
 
 const Button = styled.button`
@@ -406,6 +411,7 @@ const Button = styled.button`
 
 <Button primary>Primary Button</Button>
 <Button>Secondary Button</Button>
+{% endraw %}
 ```
 
 ---
@@ -767,6 +773,7 @@ function DataProvider({ children }) {
 
 ### Compound Components
 ```jsx
+{% raw %}
 function Tabs({ children, defaultTab = 0 }) {
   const [activeTab, setActiveTab] = useState(defaultTab);
   
@@ -799,6 +806,7 @@ function Tab({ children, isActive, onClick }) {
   <Tab>Tab 2</Tab>
   <Tab>Tab 3</Tab>
 </Tabs>
+{% endraw %}
 ```
 
 ---

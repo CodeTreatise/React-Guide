@@ -158,6 +158,7 @@ export const mockServer = new MockWebSocketServer();
 
 ### Step 3: WebSocket Client Service
 ```jsx
+{% raw %}
 // src/services/webSocketService.js
 import { mockServer } from './mockWebSocketServer';
 
@@ -332,6 +333,7 @@ class WebSocketClient {
 }
 
 export const webSocketService = new WebSocketClient();
+{% endraw %}
 ```
 
 ### Step 4: WebSocket Hook
@@ -629,6 +631,7 @@ export default RealTimeChat;
 
 #### Enhanced WebSocket Service
 ```jsx
+{% raw %}
 // src/services/webSocketService.js (Enhanced version)
 class EnhancedWebSocketClient {
   constructor() {
@@ -840,10 +843,12 @@ class EnhancedWebSocketClient {
 }
 
 export const webSocketService = new EnhancedWebSocketClient();
+{% endraw %}
 ```
 
 #### Real-time Message Component
 ```jsx
+{% raw %}
 // src/components/Chat/RealtimeMessage.jsx
 import React, { useState, useEffect } from 'react';
 import { format, formatDistanceToNow } from 'date-fns';
@@ -1029,6 +1034,7 @@ const RealtimeMessage = ({
 };
 
 export default RealtimeMessage;
+{% endraw %}
 ```
 
 #### Connection Quality Indicator
@@ -1098,6 +1104,7 @@ export default ConnectionQuality;
 
 #### Typing Indicator Component
 ```jsx
+{% raw %}
 // src/components/Chat/TypingIndicator.jsx
 import React from 'react';
 import './TypingIndicator.css';
@@ -1148,10 +1155,12 @@ const TypingIndicator = ({ typingUsers, currentUser }) => {
 };
 
 export default TypingIndicator;
+{% endraw %}
 ```
 
 #### Enhanced Message Input
 ```jsx
+{% raw %}
 // src/components/Chat/EnhancedMessageInput.jsx
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useDebounce } from '../../hooks/useDebounce';
@@ -1315,6 +1324,7 @@ const EnhancedMessageInput = ({
 };
 
 export default EnhancedMessageInput;
+{% endraw %}
 ```
 
 ### 3. Styling

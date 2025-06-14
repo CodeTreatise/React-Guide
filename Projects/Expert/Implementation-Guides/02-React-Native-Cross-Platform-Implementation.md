@@ -394,6 +394,7 @@ export class BiometricService {
 ```
 
 ```typescript
+{% raw %}
 // src/services/AuthService.ts
 import { Keychain } from 'react-native-keychain';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -531,6 +532,7 @@ export class AuthService {
     }
   }
 }
+{% endraw %}
 ```
 
 ## Advanced UI Components
@@ -538,6 +540,7 @@ export class AuthService {
 ### Platform-Specific Components
 
 ```typescript
+{% raw %}
 // src/components/common/PlatformButton.tsx
 import React from 'react';
 import {
@@ -669,11 +672,13 @@ const PlatformButton: React.FC<PlatformButtonProps> = ({
 };
 
 export default PlatformButton;
+{% endraw %}
 ```
 
 ### Advanced Animation Components
 
 ```typescript
+{% raw %}
 // src/components/common/AnimatedCard.tsx
 import React, { useRef, useEffect } from 'react';
 import {
@@ -813,6 +818,7 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
 };
 
 export default AnimatedCard;
+{% endraw %}
 ```
 
 ## Advanced API Integration
@@ -820,6 +826,7 @@ export default AnimatedCard;
 ### RTK Query API Service
 
 ```typescript
+{% raw %}
 // src/store/services/api.ts
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { RootState } from '../index';
@@ -1050,6 +1057,7 @@ export const offlineSync = {
     }
   },
 };
+{% endraw %}
 ```
 
 ## Performance Optimization
@@ -1057,6 +1065,7 @@ export const offlineSync = {
 ### Memory Management and Performance
 
 ```typescript
+{% raw %}
 // src/hooks/usePerformanceMonitor.ts
 import { useEffect, useRef } from 'react';
 import { InteractionManager, Platform } from 'react-native';
@@ -1104,6 +1113,7 @@ export const usePerformanceMonitor = (componentName: string) => {
     },
   };
 };
+{% endraw %}
 ```
 
 ```typescript
@@ -1181,6 +1191,7 @@ export default OptimizedFlatList;
 ### Image Optimization
 
 ```typescript
+{% raw %}
 // src/components/common/OptimizedImage.tsx
 import React, { useState, useCallback } from 'react';
 import {
@@ -1295,6 +1306,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 };
 
 export default OptimizedImage;
+{% endraw %}
 ```
 
 ## Advanced Testing Strategy
@@ -1547,6 +1559,7 @@ describe('Authentication', () => {
 ### GitHub Actions Workflow
 
 ```yaml
+{% raw %}
 # .github/workflows/ci-cd.yml
 name: React Native CI/CD
 
@@ -1708,6 +1721,7 @@ jobs:
       - name: Deploy to production
         run: echo "Deploying to production environment"
         # Add your production deployment steps here
+{% endraw %}
 ```
 
 ## Advanced Security Implementation
@@ -1715,6 +1729,7 @@ jobs:
 ### Security Best Practices
 
 ```typescript
+{% raw %}
 // src/security/SecurityManager.ts
 import CryptoJS from 'crypto-js';
 import { Platform } from 'react-native';
@@ -1830,6 +1845,7 @@ export class SecurityManager {
     return true;
   }
 }
+{% endraw %}
 ```
 
 ## Learning Checklist & Next Steps

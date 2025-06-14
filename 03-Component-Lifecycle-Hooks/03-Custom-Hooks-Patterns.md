@@ -892,6 +892,7 @@ function Timer() {
 ### Basic Fetch Hook
 
 ```javascript
+{% raw %}
 function useFetch(url, options = {}) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -1013,6 +1014,7 @@ function useAdvancedFetch(url, options = {}) {
     invalidateCache
   };
 }
+{% endraw %}
 ```
 
 ### Mutation Hook
@@ -1169,6 +1171,7 @@ function deepEqual(a, b) {
 ### Virtualization Hook
 
 ```javascript
+{% raw %}
 function useVirtualization({ 
   items, 
   itemHeight, 
@@ -1253,6 +1256,7 @@ function VirtualizedList({ items }) {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ---
@@ -1519,6 +1523,7 @@ function Modal({ isOpen, onClose, children }) {
 ### Local Storage Hook
 
 ```javascript
+{% raw %}
 function useLocalStorage(key, initialValue) {
   // State to store our value
   const [storedValue, setStoredValue] = useState(() => {
@@ -1638,6 +1643,7 @@ function UserPreferences() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ---
@@ -1647,6 +1653,7 @@ function UserPreferences() {
 ### Animation Hook
 
 ```javascript
+{% raw %}
 function useAnimation(duration, easing = (t) => t) {
   const [progress, setProgress] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -1762,6 +1769,7 @@ function AnimatedProgressBar() {
     </div>
   );
 }
+{% endraw %}
 ```
 
 ### Timeout Hook

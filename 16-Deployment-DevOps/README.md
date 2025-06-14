@@ -280,6 +280,7 @@ export class ReactAppStack extends cdk.Stack {
 
 #### **GitHub Actions Workflow**
 ```yaml
+{% raw %}
 # .github/workflows/deploy.yml
 name: Deploy React App
 
@@ -451,10 +452,12 @@ jobs:
           webhook_url: ${{ secrets.SLACK_WEBHOOK }}
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
+{% endraw %}
 ```
 
 #### **Advanced CI/CD Configuration**
 ```yaml
+{% raw %}
 # .github/workflows/advanced-deploy.yml
 name: Advanced Deploy Pipeline
 
@@ -553,6 +556,7 @@ jobs:
       - name: Monitor and rollback if needed
         run: |
           echo "Monitoring deployment..."
+{% endraw %}
 ```
 
 ### 5. Monitoring and Analytics
@@ -809,6 +813,7 @@ export const securityHeaders = {
 
 #### **Environment Variable Management**
 ```typescript
+{% raw %}
 // src/config/environment.ts
 interface EnvironmentConfig {
   apiUrl: string;
@@ -877,6 +882,7 @@ export const createApiClient = () => {
     }
   };
 };
+{% endraw %}
 ```
 
 ### 7. Containerization with Docker

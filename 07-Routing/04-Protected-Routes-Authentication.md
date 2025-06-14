@@ -27,6 +27,7 @@ By the end of this section, you will:
 
 ### Basic Authentication Setup
 ```jsx
+{% raw %}
 // context/AuthContext.jsx
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
@@ -172,10 +173,12 @@ export const useAuth = () => {
   }
   return context;
 };
+{% endraw %}
 ```
 
 ### Authentication Hook with Persistence
 ```jsx
+{% raw %}
 // hooks/useAuthPersistence.js
 import { useState, useEffect } from 'react';
 
@@ -257,6 +260,7 @@ export function useAuthPersistence() {
     clearAuth
   };
 }
+{% endraw %}
 ```
 
 ## Protected Route Implementation
@@ -602,6 +606,7 @@ function AdminPanel() {
 
 ### Enhanced Authentication Context
 ```jsx
+{% raw %}
 // context/EnhancedAuthContext.jsx
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 
@@ -810,6 +815,7 @@ export const useEnhancedAuth = () => {
   }
   return context;
 };
+{% endraw %}
 ```
 
 ## Route Guards & Middleware
@@ -878,6 +884,7 @@ export function useRouteGuard(options = {}) {
 
 ### Route Middleware Component
 ```jsx
+{% raw %}
 // components/RouteMiddleware.jsx
 import { useEffect, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
@@ -976,6 +983,7 @@ function AdminRoute({ children }) {
     </RouteMiddleware>
   );
 }
+{% endraw %}
 ```
 
 ## Redirect Handling
@@ -1345,6 +1353,7 @@ class AuthErrorBoundary extends React.Component {
 
 ### API Error Handler
 ```jsx
+{% raw %}
 // utils/apiErrorHandler.js
 import { useAuth } from '../context/AuthContext';
 
@@ -1408,6 +1417,7 @@ export function useAuthenticatedFetch() {
 
   return { authenticatedFetch };
 }
+{% endraw %}
 ```
 
 ## Performance Optimization
@@ -1449,6 +1459,7 @@ const LazyAdminDashboard = createAuthenticatedLazyComponent(
 
 ### Authentication State Optimization
 ```jsx
+{% raw %}
 // hooks/useOptimizedAuth.js
 import { useMemo } from 'react';
 import { useAuth } from '../context/AuthContext';
@@ -1474,6 +1485,7 @@ export function useOptimizedAuth() {
     ...authState
   };
 }
+{% endraw %}
 ```
 
 ## Best Practices
@@ -1525,6 +1537,7 @@ const secureApiCall = async (url, options = {}) => {
 
 ### 2. Route Organization
 ```jsx
+{% raw %}
 // routes/config.js
 export const routeConfig = {
   public: [
@@ -1571,6 +1584,7 @@ function generateRoutes(config) {
     });
   });
 }
+{% endraw %}
 ```
 
 This comprehensive guide covers protected routes and authentication patterns in React Router v6. Combined with the previous sections, you now have a complete routing system with authentication, authorization, and security best practices.

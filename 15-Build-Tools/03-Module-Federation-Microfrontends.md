@@ -99,6 +99,7 @@ module.exports = {
 
 ### Dynamic Remote Loading
 ```typescript
+{% raw %}
 // types/module-federation.d.ts
 declare global {
   interface Window {
@@ -207,10 +208,12 @@ class RemoteLoader {
 }
 
 export const remoteLoader = new RemoteLoader();
+{% endraw %}
 ```
 
 ### Remote Component Wrapper
 ```typescript
+{% raw %}
 // components/RemoteComponent.tsx
 import React, { Suspense, lazy, ComponentType } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
@@ -290,6 +293,7 @@ export const DashboardPage = () => {
     </div>
   );
 };
+{% endraw %}
 ```
 
 ## Micro-frontend Architecture
@@ -363,6 +367,7 @@ export default App;
 
 ### Micro-frontend Base Configuration
 ```typescript
+{% raw %}
 // shared/src/types/microfrontend.ts
 export interface MicrofrontendConfig {
   name: string;
@@ -482,6 +487,7 @@ class MicrofrontendService {
 }
 
 export const microfrontendService = new MicrofrontendService();
+{% endraw %}
 ```
 
 ## Advanced Federation Patterns
@@ -559,6 +565,7 @@ module.exports = {
 
 ### Dynamic Remote Discovery
 ```typescript
+{% raw %}
 // services/RemoteDiscoveryService.ts
 interface RemoteManifest {
   name: string;
@@ -660,10 +667,12 @@ class RemoteDiscoveryService {
 }
 
 export const remoteDiscoveryService = new RemoteDiscoveryService();
+{% endraw %}
 ```
 
 ### Micro-frontend Orchestration
 ```typescript
+{% raw %}
 // orchestration/MicrofrontendOrchestrator.ts
 interface MicrofrontendInstance {
   name: string;
@@ -788,12 +797,14 @@ class MicrofrontendOrchestrator {
 }
 
 export const microfrontendOrchestrator = new MicrofrontendOrchestrator();
+{% endraw %}
 ```
 
 ## Runtime Integration
 
 ### Event Bus Communication
 ```typescript
+{% raw %}
 // shared/src/events/EventBus.ts
 type EventHandler<T = any> = (data: T) => void;
 type UnsubscribeFunction = () => void;
@@ -947,6 +958,7 @@ export class TypedEventBus {
 }
 
 export const typedEventBus = new TypedEventBus();
+{% endraw %}
 ```
 
 ### React Hook for Event Bus
@@ -1041,6 +1053,7 @@ export const UserProfile: React.FC = () => {
 
 ### Cross-Microfrontend State Synchronization
 ```typescript
+{% raw %}
 // state/CrossMicrofrontendState.ts
 interface StateChange<T = any> {
   key: string;
@@ -1167,6 +1180,7 @@ export function useCrossMicrofrontendState<T>(
   
   return [value, updateValue];
 }
+{% endraw %}
 ```
 
 ## Shared Dependencies
@@ -1256,6 +1270,7 @@ module.exports = { sharedConfig };
 
 ### Version Compatibility Manager
 ```typescript
+{% raw %}
 // shared/src/version/VersionManager.ts
 interface VersionRequirement {
   name: string;
@@ -1364,10 +1379,12 @@ class VersionManager {
 }
 
 export const versionManager = new VersionManager();
+{% endraw %}
 ```
 
 ### Shared Library Factory
 ```typescript
+{% raw %}
 // shared/src/factory/SharedLibraryFactory.ts
 interface SharedLibraryConfig {
   name: string;
@@ -1484,6 +1501,7 @@ sharedLibraryFactory.register({
   factory: () => import('react-router-dom'),
   dependencies: ['react']
 });
+{% endraw %}
 ```
 
 This comprehensive guide covers Module Federation and micro-frontend architecture patterns, providing production-ready examples for building scalable, distributed React applications. The patterns shown enable teams to work independently while maintaining consistency and performance across the entire application ecosystem.

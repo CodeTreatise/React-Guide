@@ -346,6 +346,7 @@ export default WeatherDashboard;
 ### Step 4: Create the City Selector Component
 
 ```jsx
+{% raw %}
 // src/components/CitySelector.js
 import React from 'react';
 import { FaMapMarkerAlt } from 'react-icons/fa';
@@ -377,6 +378,7 @@ const CitySelector = ({ cities, selectedCityId, onCityChange }) => {
 };
 
 export default CitySelector;
+{% endraw %}
 ```
 
 **Key Learning Points:**
@@ -530,6 +532,7 @@ export default TemperatureDisplay;
 ### Step 8: Create the Weather Details Component
 
 ```jsx
+{% raw %}
 // src/components/WeatherDetails.js
 import React from 'react';
 import { 
@@ -633,6 +636,7 @@ const WeatherDetails = ({
 };
 
 export default WeatherDetails;
+{% endraw %}
 ```
 
 ### Step 9: Create the Weather Forecast Component
@@ -678,6 +682,7 @@ export default WeatherForecast;
 ### Step 10: Create the Forecast Item Component
 
 ```jsx
+{% raw %}
 // src/components/ForecastItem.js
 import React from 'react';
 import { weatherIcons } from '../data/mockWeatherData';
@@ -737,6 +742,7 @@ const ForecastItem = ({
 };
 
 export default ForecastItem;
+{% endraw %}
 ```
 
 ### Step 11: Add Comprehensive Styling
