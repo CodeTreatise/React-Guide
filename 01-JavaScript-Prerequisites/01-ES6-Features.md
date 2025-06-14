@@ -185,13 +185,16 @@ const age = 30;
 const message = 'Hello, my name is ' + name + ' and I am ' + age + ' years old.';
 
 // New way (template literals)
+{% raw %}
 const message = `Hello, my name is ${name} and I am ${age} years old.`;
+{% endraw %}
 ```
 
 ### Advanced Features
 
 ```javascript
 // Multi-line strings
+{% raw %}
 const html = `
     <div class="user-card">
         <h2>${user.name}</h2>
@@ -216,12 +219,14 @@ const userList = `
 // Function calls in templates
 const formatDate = (date) => date.toLocaleDateString();
 const message = `Today is ${formatDate(new Date())}`;
+{% endraw %}
 ```
 
 ### React Usage Examples
 
 ```javascript
 // Dynamic class names
+{% raw %}
 const Button = ({ variant, disabled }) => (
     <button 
         className={`btn btn-${variant} ${disabled ? 'btn-disabled' : ''}`}
@@ -233,9 +238,9 @@ const Button = ({ variant, disabled }) => (
 // Dynamic styles
 const Progress = ({ percentage }) => (
     <div 
-        style={{
+        style={{{% raw %}
             width: `${percentage}%`,
-            background: `hsl(${percentage * 1.2}, 70%, 50%)`
+            background: `hsl(${percentage * 1.2}, 70%, 50%)`{% endraw %}
         }}
     />
 );
@@ -245,6 +250,7 @@ const fetchUser = async (userId) => {
     const response = await fetch(`/api/users/${userId}`);
     return response.json();
 };
+{% endraw %}
 ```
 
 ---

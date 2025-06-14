@@ -25,6 +25,12 @@ kramdown:
     block:
       line_numbers: true
 
+# Liquid settings to handle template literals better
+liquid:
+  error_mode: warn
+  strict_filters: false
+  strict_variables: false
+
 # Navigation
 navigation:
   - title: "Home"
@@ -57,6 +63,9 @@ exclude:
   - node_modules/
   - vendor/
   - README.md
+  - fix_liquid.py
+  - fix_jekyll_syntax.py
+  - "*.py"
 
 # Include files that start with dot
 include:
